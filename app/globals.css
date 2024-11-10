@@ -2,26 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("truetype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYMEDIUM.OTF") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYLIGHT.OTF") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYSEMIBOLD.OTF") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYTHIN.OTF") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYULTRALIGHT.OTF") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYHEAVY.OTF") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYBLACK.OTF") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYLIGHTITALIC.OTF") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("/fonts/SFPRODISPLAYITALIC.OTF") format("truetype");
+  font-weight: 400;
+  font-style: italic;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-family: sfpro, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.fade-card {
+  animation: fadeIn 2s;
+}
+
+.myblob {
+  animation: rotate 20s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
