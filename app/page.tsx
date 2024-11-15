@@ -17,6 +17,7 @@ import {
 } from "./public/static";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import BlobMover from "@/components/Blob";
+import { useRouter } from 'next/navigation'
 
 interface FadeCardProps {
   children?: React.ReactNode;
@@ -39,44 +40,8 @@ const FadeCard: React.FC<FadeCardProps> = ({
   const intervalIdRef = React.useRef<NodeJS.Timeout | null>(null);
 
   let style: React.CSSProperties = {
-    animation: `fadeIn ${fadeDuration || 1}s`,
+    animation: `fadeIn ${fadeDuration-1.6 || 1}s`,
     backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundImage: (() => {
-      switch (cardName) {
-        case "Projects":
-          return `url(${projectImages[currentIndex!]})`;
-        case "Skillsa":
-          return `url(${miresume.src})`;
-        case "Achievements":
-          return `url(${miresume.src})`;
-        case "Work Experience":
-          return `url(${convchey.src})`;
-        case "Hobbies":
-          return `url(${youtube.src})`;
-        default:
-          return "none";
-      }
-    })(),
-  };
-
-  let getIndex = (prev: number, totalImg: number) => {
-    console.log("inside get index - ", currentIndex, prev, totalImg);
-    if (prev === undefined) {
-      return 0;
-    } else {
-      if (prev < totalImg - 1) {
-        return prev + 1;
-      } else {
-        return 0;
-      }
-    }
-  };
-
-  let onMouseEnter = () => {
-    setShowText(false);
-    console.log("inside");
-    let prevIndex = 0;
   };
 
   return (
@@ -84,7 +49,6 @@ const FadeCard: React.FC<FadeCardProps> = ({
       className={`p-5 bg-gray-50 rounded-md shadow-md font-light text-2xl flex items-center justify-center ${className} hover:scale-[1.03] duration-300 transition-all font-normal cursor-pointer bg-repeat`}
       style={style}
       onClick={onClick}
-      onMouseEnter={onMouseEnter}
       onMouseLeave={() => {
         setShowText(true);
         setCurrentIndex(undefined);
@@ -94,40 +58,54 @@ const FadeCard: React.FC<FadeCardProps> = ({
       }}
     >
       {children}
-      {/* <p className="text-5xl"> {showText && cardName}</p> */}
     </div>
   );
 };
 
-
-
 export default function Home() {
+  let router = useRouter();
+
   return (
     // can you center the content inside the div
     <div className="grid grid-cols-7 grid-rows-7 gap-8 w-11/12 m-auto h-screen py-12 overflow-hidden max-h-screen">
       <BlobMover />
       <FadeCard
-        className="col-span-2 row-span-3 text-5xl"
+        className="col-span-2 row-span-3 text-5xl 3xl:text-6xl"
         fadeDuration={2.3}
         cardName="Projects"
+        onClick={() => {
+          router.push("/projects");
+        }}
       >
-        <img src={projects.src} alt="achievements" className="w-36 mr-4" />
+        <img src={projects.src} alt="achievements" className="w-36 mr-4 3xl:w-48" />
         Projects
       </FadeCard>
       <FadeCard
         className="col-span-2 row-span-2 text-4xl"
         fadeDuration={2.7}
         cardName="Skills"
-        
+        onClick={() => {
+          router.push("/skills");
+        }}
       >
-        <div className="flex  gap-4 justify-center items-center">
-          <img src={skills.src} alt="achievements" className="w-28 mr-4" />
+        <div className="flex  gap-4 justify-center items-center 3xl:text-6xl">
+          <img
+            src={skills.src}
+            alt="achievements"
+            className="md:w-32 w-28 mr-4 3xl:w-40"
+          />
           Skills
         </div>
       </FadeCard>
-      <FadeCard className="col-span-3 row-span-2 text-4xl" fadeDuration={4.2}>
+      <FadeCard
+        className="col-span-3 row-span-2 3xl:text-5xl text-4xl"
+        fadeDuration={3.2}
+        onClick={() => {
+          router.push("/achievements");
+        }}
+      >
         Achievements
-        <img src={achievements.src} alt="achievements" className="w-48 ml-12" />
+        <img src={achievements.src} alt="achievements" className="3xl:w-64 w-48 ml-12 " />
       </FadeCard>
       <FadeCard
         className="col-span-2 row-start-4"
@@ -149,26 +127,25 @@ export default function Home() {
         <img src={github.src} alt="linkedin" className="w-1/2" />
       </FadeCard>
       <FadeCard
-        className="row-span-3 col-span-3 text-7xl font-normal"
-        fadeDuration={5}
+        className="row-span-3 col-span-3 text-7xl font-normal 3xl:text-8xl"
+        fadeDuration={4}
       >
-        <p onMouseEnter={() => console.log('hi')}>
-        Baalavignesh A
-
-        </p>
+        <p onMouseEnter={() => console.log("hi")}>Baalavignesh A</p>
       </FadeCard>
-      <FadeCard className="row-span-5 col-span-2 text-3xl" fadeDuration={4.5}>
-        <div className="flex flex-col gap-12 justify-center items-center">
+      <FadeCard className="row-span-5 col-span-2 text-3xl" fadeDuration={4.5} onClick={() => {
+          router.push("/experience");
+        }}>
+        <div className="flex flex-col gap-12 justify-center items-center 3xl:text-5xl text-4xl">
           <img
             src={workexperience.src}
-            alt="achievements"
-            className="w-48 mr-4"
+            alt="work experience"
+            className="w-48 mr-4 3xl:w-64"
           />
           Work Experience
         </div>
       </FadeCard>
-      <FadeCard className="row-span-2 col-span-3 text-2xl" fadeDuration={1.4}>
-        <img src={hobbies.src} alt="achievements" className="w-20 mr-12" />
+      <FadeCard className="row-span-2 col-span-3 text-3xl" fadeDuration={1.4}>
+        <img src={hobbies.src} alt="hobbies" className="w-24 mr-12 3xl:w-24" />
         Hobbies
       </FadeCard>
       <FadeCard
@@ -184,7 +161,7 @@ export default function Home() {
         </div>
       </FadeCard>
       <FadeCard className="col-span-1 row-span-2" fadeDuration={1}>
-        Baalavignesh
+        Hmm...
       </FadeCard>
     </div>
   );
