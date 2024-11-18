@@ -15,7 +15,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({project, key}) => {
   let router = useRouter();
 
   return (
-    <div className="bg-gray-50 rounded-lg  pb-6">
+    <div className="bg-gray-50 rounded-lg  pb-6 fade-projects">
       <img
         src={project.logo}
         alt=""

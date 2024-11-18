@@ -100,24 +100,10 @@ body {
   }
 }
 
+/* fade card welcome page */
 .fade-card {
   animation: fadeIn 2s;
 }
-
-.myblob {
-  animation: rotate 20s infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-  
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -129,11 +115,53 @@ body {
   }
 }
 
+/* blob animation */
+.myblob {
+  animation: rotate 20s infinite;
+}
+
 @keyframes rotate {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* fade projects individual card */
+.fade-projects {
+  animation: fadeProjects 1s;
+}
+
+@keyframes fadeProjects {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* fade projects bg image */
+.fade-projects-bg {
+  animation: fadeProjectsBg 1s;
+  inset-inline-start: -4rem !important;
+}
+
+@keyframes fadeProjectsBg {
+  0% {
+    opacity: 0;
+    
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -1,7 +1,7 @@
-import linkedin from "./linkedin.png";
-import github from "./github.png";
-import githubicon from "./githubicon.png";
-import youtube from "./youtube.png";
+import linkedin from "./home/linkedin.png";
+import github from "./home/github.png";
+import githubicon from "./home/githubicon.png";
+import youtube from "./home/youtube.png";
 
 export {linkedin, github, githubicon, youtube};
 

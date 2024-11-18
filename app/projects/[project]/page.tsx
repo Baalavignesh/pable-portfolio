@@ -35,10 +35,10 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
             <div className="h-3/5 w-full">
               <img
                 src={project.bg}
-                className="h-full w-full object-cover cursor-pointer"
+                className="h-full w-full object-cover cursor-pointer fade-projects-bg"
               />
             </div>
-            <div className="flex flex-col gap-16 w-2/3 3xl:w-1/2">
+            <div className="flex flex-col gap-16 w-2/3 3xl:w-1/2 fade-projects">
               <div className="flex gap-0">
                 <div className="flex flex-col mt-24 ">
                   <h1 className="text-6xl font-bold">{project.title}</h1>
