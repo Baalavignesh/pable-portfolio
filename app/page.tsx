@@ -132,7 +132,9 @@ export default function Home() {
       >
         <p onMouseEnter={() => console.log("hi")}>Baalavignesh A</p>
       </FadeCard>
-      <FadeCard className="row-span-5 col-span-2 text-3xl" fadeDuration={4.5} >
+      <FadeCard className="row-span-5 col-span-2 text-3xl" fadeDuration={4.5} onClick={() => {
+          router.push("/experience");
+        }}>
         <div className="flex flex-col gap-12 justify-center items-center 3xl:text-5xl text-4xl">
           <img
             src={workexperience.src}
