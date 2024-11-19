@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import allProjects from "../public/constants/projects";
+import {allProjects} from "../public/constants/projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faCode } from "@fortawesome/free-solid-svg-icons";
 import CustomNavbar from "@/components/customNavbar";
@@ -72,9 +72,11 @@ export default function Page() {
   return (
     <div>
       <CustomNavbar />
-      <div className="px-36">
-        <h1 className="text-5xl font-light text-center mt-12 pb-4">Projects</h1>
-        <hr></hr>
+      <div className="px-72">
+      <div className="w-fit">
+            <h1 className="text-6xl font-bold mt-28 pb-6 w-fit">Projects &nbsp;&nbsp;&nbsp;</h1>
+          <hr className="w-full" />
+        </div>
         <div className="grid grid-cols-3 gap-12 mt-8">
           {allProjects.map((project:IProject, index: number) => {
             return (

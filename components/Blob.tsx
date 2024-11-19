@@ -42,7 +42,7 @@ const BlobMover: React.FC = () => {
     return (
       <div
         id="blob"
-        className="absolute w-96 h-96 blur-2xl rounded-full -z-10 bg-gradient-to-r from-blue-100 to-purple-100 opacity-80 myblob"
+        className="absolute w-[38rem] h-[38rem] blur-2xl rounded-full -z-10 bg-gradient-to-r from-blue-100 to-purple-100 opacity-80 myblob"
         style={{
           left: "100%",
           top: "50%",

@@ -102,4 +102,50 @@ import { convchemybg, convchey, healthhub, justpaintbg, miresume, miresumebg, my
     }
   ];
 
-  export default allProjects;
+  let recentProjects:IProject[] = [
+    {
+      title: "MiResume",
+      key: "MiResume",
+      description: "MiResume generates personalized resumes using a uniform template based on LaTeX formatting using OpenAI. This ensures that the final document is not only aesthetically pleasing but also professional and organized.",
+      tags: ["React", "Node.js", "CosmoDB", "OpenAI", "Azure"],
+      bg: miresumebg.src,
+      logo: miresumebg.src,
+      inspiration: "Applying for part-time and summer internships often involves a tedious process of reading job descriptions and crafting personalized resumes and cover letters. This task can be extremely time-consuming, especially for students juggling assignments, college work, personal projects, and hobbies. MiResume aims to streamline this process, enabling users to create a tailored resume for their desired job role in under a minute.",
+      technologies: "We harnessed the powerful capabilities of Microsoft Azure AI to develop MiResume. The application utilizes Microsoft Cosmos DB to store user information, allowing for seamless access by the AI services. This integration leverages the full spectrum of Azure’s AI tools for enhanced functionality and user experience.",
+      what: "MiResume is an AI-powered tool that quickly creates tailored resumes for specific job roles. By analyzing job descriptions and user input, it generates a personalized, professionally formatted resume in under a minute using a LaTeX-based template. Built with Microsoft Azure AI and Cosmos DB, MiResume is ideal for students and job seekers needing high-quality resumes for internships and part-time roles.",
+    },
+    {
+      title: "SkillAgent",
+      key: "SkillAgent",
+      description: "The application is designed to help users acquire new skills efficiently using AI. Built with open-source AI, the platform provides personalized learning plans based on user preferences, helping individuals and businesses accelerate skill acquisition and onboarding processes.",
+      tags: ["React", "Node.js", "MongoDB"],
+      bg: skillagentbg.src,
+      logo: skillagentbg.src,
+    },
+    {
+      title: "Convchey",
+      key: "Convchey",
+      description: "ConvChemy was developed with a focus on creating an intuitive and addictive gameplay experience. Players can easily create a room and invite friends to join, kicking off the competition.",
+      tags: ["React", "Node.js", "Socket.io"],
+      bg: convchemybg.src,
+      logo: convchemybg.src,
+    },
+    {
+      title: "HealthHub",
+      key: "HealthHub",
+      description: "HealthHub is a comprehensive health management app that allows users to track their fitness, diet, and medical records in one place.",
+      tags: ["React Native", "Node.js", "Express"],
+      bg: healthhub.src,
+      logo: healthhub.src,
+    },
+    {
+      title: "Story3",
+      key: "Story3",
+      description: "Story3 is a collaborative storytelling platform where users can create and share stories with others. It features real-time editing and a variety of templates to choose from.",
+      tags: ["React", "Firebase", "TypeScript"],
+      bg: story3bg.src,
+      logo: story3bg.src,
+    },
+  ]
+
+  export {allProjects, recentProjects}

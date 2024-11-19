@@ -9,13 +9,13 @@ export default function Page() {
   return (
     <div>
       <CustomNavbar />
-      <div className="px-36">
-        <h1 className="text-5xl font-light text-center mt-12 pb-6">
-          Hobbies
-        </h1>
-        <hr></hr>
-        <div className="mx-80 mt-12">
-  
+      <div className="px-28">
+      <div className="w-fit">
+            <h1 className="text-6xl font-bold mt-36 pb-6 w-fit">Hobbies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <hr className="w-full" />
+        </div>
+        <div className="text-xl text-gray-500">
+    404 - Work under progress 
         </div>
       </div>
     </div>

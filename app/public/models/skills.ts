@@ -1,5 +1,10 @@
 interface ISkills {
-    languages: string[];
-    frameworks: string[];
-    tools: string[];
+    daily: ISkillInfo[];
+    other: ISkillInfo[];
+}
+
+interface ISkillInfo {
+    image: string;
+    heading: string;
+    subheading: string;
 }

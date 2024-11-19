@@ -31,40 +31,129 @@ import windows from "../../public/static/skills/windows.png";
 import tailwind from "../../public/static/skills/tailwind.svg";
 
 let myskills: ISkills = {
-  languages: [
-    ts.src,
-    js.src,
-    python.src,
-    html.src,
-    css.src,
-    dart.src,
-    c.src,
-    cpp.src,
+  daily: [
+    {
+      image: react.src,
+      heading: "React",
+      subheading: "Javascript Library",
+    },
+    {
+      image: nextjs.src,
+      heading: "NextJs",
+      subheading: "React Framework",
+    },
+    {
+      image: ts.src,
+      heading: "TypeScript",
+      subheading: "JavaScript Superset",
+    },
+    {
+      image: js.src,
+      heading: "JavaScript",
+      subheading: "Programming Language",
+    },
+    {
+      image: express.src,
+      heading: "Express",
+      subheading: "Node.js Framework",
+    },
+    {
+      image: python.src,
+      heading: "Python",
+      subheading: "Programming Language",
+    },
+    {
+      image: aws.src,
+      heading: "AWS",
+      subheading: "Cloud Services",
+    },
+    {
+      image: git.src,
+      heading: "Git",
+      subheading: "Version Control",
+    },
+    {
+      image: firebase.src,
+      heading: "Firebase",
+      subheading: "Backend as a Service",
+    },
+    {
+      image: mysql.src,
+      heading: "MySQL",
+      subheading: "Database",
+    },
+    {
+      image: tailwind.src,
+      heading: "Tailwind CSS",
+      subheading: "CSS Framework",
+    },
   ],
-  frameworks: [
-    react.src,
-    nextjs.src,
-    angular.src,
-    express.src,
-    net.src,
-    fastapi.src,
-  ],
-  tools: [
-    aws.src,
-    azure.src,
-    docker.src,
-    git.src,
-    firebase.src,
-    mongo.src,
-    mysql.src,
-    postgresql.src,
-    postman.src,
-    redux.src,
-    tailwind.src,
-    bootstrap.src,
-    node.src,
-    linux.src,
-    windows.src,
+  other: [
+    {
+      image: dart.src,
+      heading: "Dart",
+      subheading: "Programming Language",
+    },
+    {
+      image: c.src,
+      heading: "C",
+      subheading: "Programming Language",
+    },
+    {
+      image: cpp.src,
+      heading: "C++",
+      subheading: "Programming Language",
+    },
+    {
+      image: angular.src,
+      heading: "Angular",
+      subheading: "Web Framework",
+    },
+    {
+      image: net.src,
+      heading: ".NET",
+      subheading: "Framework",
+    },
+    {
+      image: fastapi.src,
+      heading: "FastAPI",
+      subheading: "Web Framework",
+    },
+    {
+      image: azure.src,
+      heading: "Azure",
+      subheading: "Cloud Services",
+    },
+    {
+      image: docker.src,
+      heading: "Docker",
+      subheading: "Containerization",
+    },
+    {
+      image: mongo.src,
+      heading: "MongoDB",
+      subheading: "Database",
+    },
+    {
+      image: postgresql.src,
+      heading: "PostgreSQL",
+      subheading: "Database",
+    },
+    {
+      image: postman.src,
+      heading: "Postman",
+      subheading: "API Testing",
+    },
+    {
+      image: node.src,
+      heading: "Node.js",
+      subheading: "JavaScript Runtime",
+    },
+    {
+      image: redux.src,
+      heading: "Redux",
+      subheading: "State Management",
+    },
   ],
 };
 

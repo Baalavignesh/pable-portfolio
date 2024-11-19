@@ -9,11 +9,11 @@ export default function Page() {
   return (
     <div>
       <CustomNavbar />
-      <div className="px-36">
-        <h1 className="text-5xl font-light text-center mt-12 pb-6">
-          Work Experience
-        </h1>
-        <hr></hr>
+      <div className="px-72">
+      <div className="w-fit">
+            <h1 className="text-6xl font-bold mt-28 pb-6 w-fit">Experience &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <hr className="w-full" />
+        </div>
         <div className="mx-32 mt-12">
           <ol className="flex gap-24 flex-col relative text-gray-500 border-s border-gray-200 mb-24">
             {experience.map((exp: IExperience, index) => {
