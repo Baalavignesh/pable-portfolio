@@ -123,7 +123,7 @@ export default function Home() {
         {/* <IdCard /> */}
       </FadeCard>
       <FadeCard
-        className="row-span-6 col-span-2 text-3xl w-full"
+        className="row-span-5 col-span-2 text-3xl w-full"
         fadeDuration={4.5}
         onClick={() => {
           router.push("/projects");
@@ -167,7 +167,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="text-2xl font-semibold">{project.title}</p>
-                  <p className="text-base ">
+                  <p className="text-base text-gray-500">
                     {project.description.split(" ").length > 15
                       ? project.description.split(" ").slice(0, 15).join(" ") +
                         "..."

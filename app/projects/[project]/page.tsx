@@ -1,6 +1,6 @@
 "use client";
 
-import allProjects from "@/app/public/constants/projects";
+import {allProjects} from "@/app/public/constants/projects";
 import { convchey, inspiration, miresume, tech, what } from "@/app/public/static";
 import CustomNavbar from "@/components/customNavbar";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
