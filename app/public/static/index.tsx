@@ -2,8 +2,9 @@ import linkedin from "./home/linkedin.png";
 import github from "./home/github.png";
 import githubicon from "./home/githubicon.png";
 import youtube from "./home/youtube.png";
+import face from "./home/face.svg";
 
-export {linkedin, github, githubicon, youtube};
+export {linkedin, github, githubicon, youtube, face};
 
 
 import convchey from "./projects/logo/convchemy_logo.png";

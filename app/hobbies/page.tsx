@@ -11,7 +11,7 @@ export default function Page() {
       <CustomNavbar />
       <div className="px-28">
       <div className="w-fit">
-            <h1 className="text-6xl font-bold mt-36 pb-6 w-fit">Hobbies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+            <h1 className="text-3xl 2xl:text-4xl 3xl:text-6xl font-bold mt-36 pb-6 w-fit">Hobbies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <hr className="w-full" />
         </div>
         <div className="text-xl text-gray-500">

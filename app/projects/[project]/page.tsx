@@ -41,7 +41,7 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
             <div className="flex flex-col gap-16 w-2/3 3xl:w-1/2 fade-projects">
               <div className="flex gap-0">
                 <div className="flex flex-col mt-24 ">
-                  <h1 className="text-6xl font-bold">{project.title}</h1>
+                  <h1 className="text-3xl 2xl:text-4xl 3xl:text-6xl font-bold">{project.title}</h1>
                   <div className="flex gap-2 mt-4">
                     {project.tags.map((tag: string, index: number) => {
                       return (
