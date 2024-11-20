@@ -7,9 +7,6 @@ const nextConfig = {
       });
       return config;
     },
-    typescript: {
-      ignoreBuildErrors: true,
-    }
   };
   
 export default nextConfig;
