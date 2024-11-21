@@ -46,3 +46,8 @@ import toast from "./experience/toast.png";
 import faaster from "./experience/faaster.png";
 
 export {zoho, presidio, toast, faaster};
+
+import practitioner from "./achievements/practitioner.png";
+import solution_architect from "./achievements/solutions-architect.png";
+
+export { practitioner, solution_architect };    

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faCode } from "@fortawesome/free-solid-svg-icons";
 import CustomNavbar from "@/components/customNavbar";
 import { useRouter } from "next/navigation";
+import PageHeading from "@/components/̦PageHeading";
 
 interface IProjectCardProps {
   project: IProject;
@@ -73,10 +74,8 @@ export default function Page() {
     <div>
       <CustomNavbar />
       <div className="px-72">
-      <div className="w-fit">
-            <h1 className="text-3xl 2xl:text-4xl 3xl:text-6xl font-bold mt-10 2xl:mt-12 3xl:mt-28 pb-6 w-fit">Projects &nbsp;&nbsp;&nbsp;</h1>
-          <hr className="w-full" />
-        </div>
+      <PageHeading title="Projects &nbsp;&nbsp;&nbsp;" />
+
         <div className="grid grid-cols-3 gap-12 mt-8">
           {allProjects.map((project:IProject, index: number) => {
             return (

@@ -6,7 +6,14 @@ import BlobMover from "@/components/Blob";
 import { useRouter } from "next/navigation";
 import { recentProjects } from "./public/constants/projects";
 import FontAwesome from "react-fontawesome";
-import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faCaretDown,
+  faCaretLeft,
+  faCaretRight,
+  faCaretUp,
+  faUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "react-animated-3d-card";
 import resume from "./public/myresume.pdf";
@@ -73,21 +80,28 @@ export default function Home() {
             teamwork and problem-solving skills.
           </span>
           <div className="flex gap-4  text-sm 2xl:text-base 3xl:text-xl">
-            <a className="p-4 text-center border-2 rounded-full w-full" 
-            onClick={(e) => {
+            <a
+              className="p-4 text-center border-2 rounded-full w-full"
+              onClick={(e) => {
                 window.location.href = "mailto:baalavignesh21@gmail.com";
                 e.preventDefault();
-            }}>
+              }}
+            >
               Contact Me
             </a>
-            <a className="p-4 text-center border-2 rounded-full w-full" href = {resume} target = "_blank" rel="noreferrer">
+            <a
+              className="p-4 text-center border-2 rounded-full w-full"
+              href={resume}
+              target="_blank"
+              rel="noreferrer"
+            >
               Resume
             </a>
           </div>
         </div>
       </FadeCard>
       <FadeCard
-        className="col-span-2 row-span-2 row-start-4 text-lg 2xl:text-3xl 3xl:text-6xl  items-center justify-center"
+        className="col-span-2 row-span-2 row-start-4 text-lg 2xl:text-3xl 3xl:text-6xl font-semibold items-center justify-center"
         fadeDuration={2.3}
         cardName="experience"
         onClick={() => {
@@ -97,7 +111,7 @@ export default function Home() {
         Work Experience
       </FadeCard>
       <FadeCard
-        className="col-span-2 row-span-1 row-start-6 text-lg 2xl:text-3xl 3xl:text-6xl  items-center justify-center"
+        className="col-span-1 row-span-2 row-start-6 text-lg 2xl:text-3xl 3xl:text-6xl font-semibold items-center justify-center"
         fadeDuration={2.3}
         cardName="experience"
         onClick={() => {
@@ -107,7 +121,7 @@ export default function Home() {
         Skills
       </FadeCard>
       <FadeCard
-        className="col-span-2 row-span-1 row-start-7 text-xl 2xl:text-3xl 3xl:text-5xl   items-center justify-center"
+        className="col-span-1 row-span-2 row-start-6 text-lg 2xl:text-2xl 3xl:text-4xl  font-semibold items-center justify-center"
         fadeDuration={3.2}
         onClick={() => {
           router.push("/achievements");
@@ -140,7 +154,7 @@ export default function Home() {
       >
         <Card
           style={{
-            backgroundColor: "#F9FAFB",
+            background: "radial-gradient(circle, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 100%)",
             borderRadius: "20px",
             border: "1px solid #e5e7eb",
             width: "450px",
@@ -149,16 +163,31 @@ export default function Home() {
           }}
           onClick={() => console.log("Card clicked")}
         >
-            <div className="absolute top-0 p-24 h-full w-full flex flex-col items-center justify-center">
-            <div className="absolute bottom-12 text-sm w-full text-center">
+          <p className="absolute right-0 p-6 text-sm font-semibold">Fairfax, VA</p>
+
+          <FontAwesomeIcon
+            icon={faBars}
+            className="absolute top-64 -left-12 w-32 text-gray-200"
+          />
+
+          <div>
+            <FontAwesomeIcon
+              icon={faCaretLeft}
+              className="absolute top-16 right-20 w-20 text-gray-200"
+            />
+            <FontAwesomeIcon
+              icon={faCaretRight}
+              className="absolute top-16 right-6 w-20 text-gray-200"
+            />
+          </div>
+          <div className="absolute top-0 p-24 h-full w-full flex flex-col items-center justify-center">
+            <div className="absolute bottom-12 text-base w-full text-center font-semibold">
               <img src={face.src} className="w-48 mx-auto mb-24"></img>
-              <h1 className="text-4xl pb-6">Baalavignesh Arunachalam</h1>
+              <h1 className="text-base 2:xl:text-xl 3xl:text-3xl pb-6">Baalavignesh Arunachalam</h1>
               <p>George Mason University</p>
-              <p>MS, Computer Science</p>
+              <p className="font-normal">MS, Computer Science</p>
             </div>
-            </div>
-
-
+          </div>
         </Card>
       </FadeCard>
       <FadeCard
@@ -174,52 +203,51 @@ export default function Home() {
             <p className="text-sm absolute right-0">View More</p>
           </div>
           <div className="overflow-scroll flex flex-col gap-6">
-          {recentProjects.map((project: IProject, index) => {
-            const [showIcon, setShowIcon] = React.useState(false);
-            return (
-              <div
-                key={index}
-                className="flex gap-8"
-                onMouseOver={() => {
-                  setShowIcon(true);
-                }}
-                onMouseLeave={() => {
-                  setShowIcon(false);
-                }}
-              >
-                <div className="relative">
-                  <div className="w-24 h-24">
-                    <img
-                      src={project.logo}
-                      alt=""
-                      className={`rounded-lg cursor-pointer z-40 object-cover h-full  transition-all duration-300 ${
-                        showIcon ? "brightness-75" : "blur-none"
-                      }`}
-                      onClick={() => {
-                        router.push(`/projects/${project.key}`);
-                      }}
-                    />
+            {recentProjects.map((project: IProject, index) => {
+              const [showIcon, setShowIcon] = React.useState(false);
+              return (
+                <div
+                  key={index}
+                  className="flex gap-8"
+                  onMouseOver={() => {
+                    setShowIcon(true);
+                  }}
+                  onMouseLeave={() => {
+                    setShowIcon(false);
+                  }}
+                >
+                  <div className="relative">
+                    <div className="w-24 h-24">
+                      <img
+                        src={project.logo}
+                        alt=""
+                        className={`rounded-lg cursor-pointer z-40 object-cover h-full  transition-all duration-300 ${
+                          showIcon ? "brightness-75" : "blur-none"
+                        }`}
+                        onClick={() => {
+                          router.push(`/projects/${project.key}`);
+                        }}
+                      />
+                    </div>
+                    {showIcon && (
+                      <FontAwesomeIcon
+                        icon={faUpRightFromSquare}
+                        className={`z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 text-white opacity-0 ${
+                          showIcon ? "opacity-100" : "opacity-0"
+                        }`}
+                      />
+                    )}
                   </div>
-                  {showIcon && (
-                    <FontAwesomeIcon
-                      icon={faUpRightFromSquare}
-                      className={`z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 text-white opacity-0 ${
-                        showIcon ? "opacity-100" : "opacity-0"
-                      }`}
-                    />
-                  )}
+                  <div className="flex flex-col gap-2">
+                    <p className="text-2xl font-semibold">{project.title}</p>
+                    <p className="text-base text-gray-500 line-clamp-2">
+                      {project.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-2xl font-semibold">{project.title}</p>
-                  <p className="text-base text-gray-500 line-clamp-2">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
           </div>
-
         </div>
       </FadeCard>
 
