@@ -4,7 +4,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import FontAwesome from "react-fontawesome";
 
 const CustomNavbar: React.FC = () => {
   let [pathname, setPathname] = useState<string>("");
@@ -76,7 +75,8 @@ const CustomNavbar: React.FC = () => {
 
 
  
-          <FontAwesomeIcon
+<div className="lg:hidden">
+<FontAwesomeIcon
             icon={faBars}
             className="text-2xl cursor-pointer"
             onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -140,6 +140,7 @@ const CustomNavbar: React.FC = () => {
               </a>
             </div>
           )}
+</div>
         </div>
 
       </div>

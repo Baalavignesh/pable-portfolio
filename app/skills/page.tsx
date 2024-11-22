@@ -1,25 +1,18 @@
 "use client";
 
 import React from "react";
-import CustomNavbar from "@/components/customNavbar";
-import { presidio } from "../public/static";
-import experience from "../public/constants/experience";
 import myskills from "../public/constants/skills";
-import PageHeading from "@/components/̦PageHeading";
+import PageTemplate from "@/components/PageTemplate";
 
 export default function Page() {
   return (
-    <div className="min-h-screen overflow-hidden noselect">
-      <CustomNavbar />
-      <div className="px-8 2xl:px-32 3xl:px-72 h-full">
-        <PageHeading title="Skills and Technologies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
-        <p></p> 
-        {/* <hr></hr> */}
-        <div className=" mt-6 gap-12 flex">
+    <>
+      <PageTemplate heading="Skills and Technologies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+        <div className="flex flex-col xl:flex-row gap-8 justify-center w-full">
           <div className="flex flex-col w-full justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
             <div className=" border-b-2 p-2 m-2 flex flex-col gap-2">
-              <p className=" text-4xl font-normal w-fit">Stack</p>
-              <p className="text-xl font-light text-gray-700">
+              <p className="text-2xl lg:text-4xl font-normal w-fit">Stack</p>
+              <p className="text-base lg:text-xl font-light text-gray-700">
                 Tools, resources, and technologies I use daily
               </p>
             </div>
@@ -28,7 +21,7 @@ export default function Page() {
               {myskills.daily.map((skill, index) => {
                 return (
                   <div className="flex gap-4 items-center" key={index}>
-                    <div className="3xl:h-20 3xl:w-20 h-14 w-14">
+                    <div className="h-6 w-6 md:h-14 md:w-14 3xl:h-20 3xl:w-20 ">
                       <img
                         src={skill.image}
                         alt="language"
@@ -37,10 +30,10 @@ export default function Page() {
                     </div>
 
                     <div>
-                      <h1 className="font-semibold text-sm 2xl:text-base 3xl:text-2xl">
+                      <h1 className="font-normal md:font-semibold text-sm md:text-lg xl:text-lg 2xl:text-base 3xl:text-2xl">
                         {skill.heading}
                       </h1>
-                      <p className="text-lg font-light text-gray-500">
+                      <p className="text-lg hidden lg:block font-light text-gray-500">
                         {skill.subheading}
                       </p>
                     </div>
@@ -51,8 +44,8 @@ export default function Page() {
           </div>
           <div className="flex flex-col w-full justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
             <div className=" border-b-2 p-2 m-2 flex flex-col gap-2">
-              <p className=" text-4xl font-normal w-fit">Other Technologies</p>
-              <p className="text-xl font-light text-gray-700">
+              <p className="text-2xl lg:text-4xl font-normal w-fit">Other Technologies</p>
+              <p className="text-base lg:text-xl font-light text-gray-700">
                 Tools, resources, and technologies I have used in the past
               </p>
             </div>
@@ -61,8 +54,8 @@ export default function Page() {
               {myskills.other.map((skill, index) => {
                 return (
                   <div className="flex gap-4 items-center" key={index}>
-                    <div className="3xl:h-20 3xl:w-20 h-14 w-14">
-                      <img
+                    <div className="h-6 w-6 md:h-14 md:w-14 3xl:h-20 3xl:w-20 ">
+                    <img
                         src={skill.image}
                         alt="language"
                         key={index}
@@ -70,10 +63,10 @@ export default function Page() {
                       />
                     </div>
                     <div>
-                      <h1 className="font-semibold text-sm 2xl:text-base 3xl:text-2xl">
-                        {skill.heading}
+                    <h1 className="font-normal md:font-semibold text-sm md:text-lg xl:text-lg 2xl:text-base 3xl:text-2xl">
+                    {skill.heading}
                       </h1>
-                      <p className="text-lg font-light text-gray-500">
+                      <p className="text-lg hidden lg:block font-light text-gray-500">
                         {skill.subheading}
                       </p>
                     </div>
@@ -83,7 +76,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </PageTemplate>
+    </>
   );
 }

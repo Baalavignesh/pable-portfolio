@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
-import {allProjects} from "../public/constants/projects";
+import { allProjects } from "../public/constants/projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faCode } from "@fortawesome/free-solid-svg-icons";
 import CustomNavbar from "@/components/customNavbar";
 import { useRouter } from "next/navigation";
 import PageHeading from "@/components/̦PageHeading";
+import PageTemplate from "@/components/PageTemplate";
 
 interface IProjectCardProps {
   project: IProject;
   key: number;
 }
-const ProjectCard: React.FC<IProjectCardProps> = ({project, key}) => {
+const ProjectCard: React.FC<IProjectCardProps> = ({ project, key }) => {
   let router = useRouter();
 
   return (
@@ -25,7 +26,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({project, key}) => {
           router.push(`/projects/${project.key}`);
         }}
       />
-      <div className="px-4">
+      <div className="px-4 flex flex-col justify-between">
         <h1
           className="font-light py-4 text-3xl pt-6 cursor-pointer"
           onClick={() => {
@@ -37,8 +38,8 @@ const ProjectCard: React.FC<IProjectCardProps> = ({project, key}) => {
         </h1>
         <p>{project.description}</p>
 
-        <div className="flex justify-between items-center pt-4 pr-4">
-          <div className="flex gap-2">
+        <div className="flex flex-col h-full justify-between items-start pt-4 pr-4">
+          <div className="flex flex-wrap gap-2">
             {project.tags.map((tag: string) => {
               return (
                 <div className="rounded-md flex items-center cursor-default bg-white py-0.5 px-2.5 border border-transparent text-sm text-gray-900 transition-all shadow-sm">
@@ -52,7 +53,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({project, key}) => {
               );
             })}
           </div>
-          <div className="animate-pulse flex gap-1 justify-center items-center cursor-pointer">
+          {/* <div className="m-4 p-2 border-[1px] border-gray-200 rounded-lg animate-pulse flex gap-1 justify-center items-center cursor-pointer self-end">
             <p
               className="font-light"
               onClick={() => {
@@ -62,7 +63,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({project, key}) => {
               Learn More
             </p>
             <FontAwesomeIcon icon={faChevronRight} size="sm" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -71,22 +72,12 @@ const ProjectCard: React.FC<IProjectCardProps> = ({project, key}) => {
 
 export default function Page() {
   return (
-    <div>
-      <CustomNavbar />
-      <div className="px-72">
-      <PageHeading title="Projects &nbsp;&nbsp;&nbsp;" />
-
-        <div className="grid grid-cols-3 gap-12 mt-8">
-          {allProjects.map((project:IProject, index: number) => {
-            return (
-              <ProjectCard
-                project={project}
-                key={index}
-              />
-            );
-          })}
-        </div>
+    <PageTemplate heading="Projects &nbsp;&nbsp;&nbsp;">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 mt-8">
+        {allProjects.map((project: IProject, index: number) => {
+          return <ProjectCard project={project} key={index} />;
+        })}
       </div>
-    </div>
+    </PageTemplate>
   );
 }
