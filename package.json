@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npm install --legacy-peer-deps"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -26,8 +27,8 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "@types/three": "^0.170.0",
     "file-loader": "^6.2.0",
     "postcss": "^8",
