@@ -7,7 +7,7 @@ interface PageTemplateProps {
   heading: string;
 }
 
-let PageTemplate: React.FC<PageTemplateProps> = ({ children, heading }) => {
+const PageTemplate: React.FC<PageTemplateProps> = ({ children, heading }) => {
   return (
     <div className="min-h-screen overflow-hidden noselect">
       <CustomNavbar />

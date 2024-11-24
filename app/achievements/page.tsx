@@ -1,13 +1,11 @@
 "use client";
 
 import React from "react";
-import CustomNavbar from "@/components/customNavbar";
 import {
   badges,
   certificates,
   hackathons,
 } from "../public/constants/achievements";
-import PageHeading from "@/components/̦PageHeading";
 import PageTemplate from "@/components/PageTemplate";
 
 export default function Page() {
