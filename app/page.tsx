@@ -15,7 +15,6 @@ import {
   faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Card from "react-animated-3d-card";
 import resume from "./public/myresume.pdf";
 import HomeCard from "@/components/HomeCard";
 interface FadeCardProps {
@@ -160,20 +159,6 @@ export default function Home() {
           className="flex row-span-7 col-span-3 row-start-1 bg-gray-200 text-7xl font-normal 3xl:text-8xl  justify-center items-center dotbg"
           fadeDuration={4}
         >
-          {/* <Card
-            style={{
-              background:
-                "radial-gradient(circle, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 100%)",
-              borderRadius: "20px",
-              border: "1px solid #e5e7eb",
-              width: "450px",
-              height: "600px",
-              cursor: "pointer",
-            }}
-            onClick={() => console.log("Card clicked")}
-          >
-
-          </Card> */}
           <HomeCard />
         </FadeCard>
         <FadeCard
@@ -248,42 +233,42 @@ export default function Home() {
 
       <div className="lg:hidden flex flex-col justify-center items-center">
         <div className="flex flex-col  gap-4 my-12">
-        <div className="flex flex-col p-4 h-full bg-gray-100 rounded-md m-4">
-              <span className="text-3xl pb-0 font-semibold">Hello!</span>
-              <span className="text-2xl font-normal  ">I'm Baalavignesh A</span>
-              <span className="text-sm font-light w-fit mt-4">
-                Full-stack developer with over two years of experience in cloud
-                computing, mobile, and web development. Hackathon winner with
-                teamwork and problem-solving skills.
-              </span>
-              <div className="flex gap-4  text-sm mt-4">
-                <a
-                  className="p-2 text-center border-2 rounded-xl w-full"
-                  onClick={(e) => {
-                    window.location.href = "mailto:baalavignesh21@gmail.com";
-                    e.preventDefault();
-                  }}
-                >
-                  Contact Me
-                </a>
-                <a
-                  className="p-2 text-center border-2 rounded-xl w-full"
-                  href={resume}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Resume
-                </a>
-              </div>
+          <div className="flex flex-col p-4 h-full bg-gray-100 rounded-md m-4">
+            <span className="text-3xl pb-0 font-semibold">Hello!</span>
+            <span className="text-2xl font-normal  ">I'm Baalavignesh A</span>
+            <span className="text-sm font-light w-fit mt-4">
+              Full-stack developer with over two years of experience in cloud
+              computing, mobile, and web development. Hackathon winner with
+              teamwork and problem-solving skills.
+            </span>
+            <div className="flex gap-4  text-sm mt-4">
+              <a
+                className="p-2 text-center border-2 rounded-xl w-full"
+                onClick={(e) => {
+                  window.location.href = "mailto:baalavignesh21@gmail.com";
+                  e.preventDefault();
+                }}
+              >
+                Contact Me
+              </a>
+              <a
+                className="p-2 text-center border-2 rounded-xl w-full"
+                href={resume}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+              </a>
             </div>
-            <div className="flex  gap-2 justify-center items-center">
+          </div>
+          <div className="flex  gap-2 justify-center items-center">
             <div
               className="flex items-center justify-center h-20 bg-gray-50 rounded-md  p-4 w-full"
               onClick={() => {
-              window.open(
-                "https://www.linkedin.com/in/baalavignesh21/",
-                "_blank"
-              );
+                window.open(
+                  "https://www.linkedin.com/in/baalavignesh21/",
+                  "_blank"
+                );
               }}
             >
               <img src={linkedin.src} alt="linkedin" className="w-28 mx-auto" />
@@ -291,14 +276,19 @@ export default function Home() {
             <div
               className="flex items-center justify-center  h-20 bg-gray-50 rounded-md  p-4 w-full"
               onClick={() => {
-              window.open("https://github.com/Baalavignesh", "_blank");
+                window.open("https://github.com/Baalavignesh", "_blank");
               }}
             >
               <div className="flex items-center justify-center">
-              <img src={githubicon.src} alt="github icon" className="w-8 h-8 mx-auto" />
-              <img src={github.src} alt="github" className="w-24 mx-auto" /></div>
+                <img
+                  src={githubicon.src}
+                  alt="github icon"
+                  className="w-8 h-8 mx-auto"
+                />
+                <img src={github.src} alt="github" className="w-24 mx-auto" />
+              </div>
             </div>
-            </div>
+          </div>
           <div
             className=" text-lg font-semibold items-center justify-center bg-gray-50 rounded-md mx-4 p-4 text-center"
             onClick={() => {
