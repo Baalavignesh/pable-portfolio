@@ -17,6 +17,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "react-animated-3d-card";
 import resume from "./public/myresume.pdf";
+import HomeCard from "@/components/HomeCard";
 interface FadeCardProps {
   children?: React.ReactNode;
   className?: string;
@@ -159,7 +160,7 @@ export default function Home() {
           className="flex row-span-7 col-span-3 row-start-1 bg-gray-200 text-7xl font-normal 3xl:text-8xl  justify-center items-center dotbg"
           fadeDuration={4}
         >
-          <Card
+          {/* <Card
             style={{
               background:
                 "radial-gradient(circle, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 100%)",
@@ -171,36 +172,9 @@ export default function Home() {
             }}
             onClick={() => console.log("Card clicked")}
           >
-            <p className="absolute right-0 p-6 text-sm font-semibold">
-              Fairfax, VA
-            </p>
 
-            <FontAwesomeIcon
-              icon={faBars}
-              className="absolute top-64 -left-12 w-32 text-gray-200"
-            />
-
-            <div>
-              <FontAwesomeIcon
-                icon={faCaretLeft}
-                className="absolute top-16 right-20 w-20 text-gray-200"
-              />
-              <FontAwesomeIcon
-                icon={faCaretRight}
-                className="absolute top-16 right-6 w-20 text-gray-200"
-              />
-            </div>
-            <div className="absolute top-0 p-24 h-full w-full flex flex-col items-center justify-center">
-              <div className="absolute bottom-12 text-base w-full text-center font-semibold">
-                <img src={face.src} className="w-48 mx-auto mb-24"></img>
-                <h1 className="text-base 2:xl:text-xl 3xl:text-3xl pb-6">
-                  Baalavignesh Arunachalam
-                </h1>
-                <p>George Mason University</p>
-                <p className="font-normal">MS, Computer Science</p>
-              </div>
-            </div>
-          </Card>
+          </Card> */}
+          <HomeCard />
         </FadeCard>
         <FadeCard
           className="row-span-5 col-span-2 text-3xl w-full"
@@ -214,7 +188,7 @@ export default function Home() {
               <p>Recent Projects</p>
               <p className="text-sm absolute right-0">View More</p>
             </div>
-            <div className="overflow-scroll flex flex-col gap-6">
+            <div className="overflow-scroll flex flex-col gap-10">
               {recentProjects.map((project: IProject, index) => {
                 const [showIcon, setShowIcon] = React.useState(false);
                 return (
