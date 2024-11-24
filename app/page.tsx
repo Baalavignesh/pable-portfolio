@@ -85,7 +85,7 @@ export default function Home() {
             </span>
             <div className="flex gap-4  text-sm 2xl:text-base 3xl:text-xl">
               <a
-                className="p-4 text-center border-2 rounded-xl w-full"
+                className="p-4 text-center border-2 rounded-xl w-full cursor-pointer"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
@@ -94,7 +94,7 @@ export default function Home() {
                 Contact Me
               </a>
               <a
-                className="p-4 text-center border-2 rounded-xl w-full"
+                className="p-4 text-center border-2 rounded-xl w-full cursor-pointer"
                 href={resume}
                 target="_blank"
                 rel="noreferrer"
