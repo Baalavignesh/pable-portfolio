@@ -4,93 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("truetype");
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYMEDIUM.OTF") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYLIGHT.OTF") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYSEMIBOLD.OTF") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYTHIN.OTF") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYULTRALIGHT.OTF") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYHEAVY.OTF") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYBLACK.OTF") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF") format("truetype");
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYLIGHTITALIC.OTF") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "sfpro";
-  src: url("/fonts/SFPRODISPLAYITALIC.OTF") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
 body {
   color: black;
   /* font-family: sfpro, sans-serif; */
@@ -106,12 +19,11 @@ body {
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 @layer utilities {
