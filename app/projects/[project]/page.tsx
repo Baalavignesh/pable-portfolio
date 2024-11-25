@@ -1,7 +1,7 @@
 "use client";
 
 import {allProjects} from "@/app/public/constants/projects";
-import { inspiration, tech, what } from "@/app/public/static";
+import { githubicon, inspiration, tech, what } from "@/app/public/static";
 import CustomNavbar from "@/components/customNavbar";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -38,10 +38,16 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                 className="h-full w-full object-cover cursor-pointer fade-projects-bg"
               />
             </div>
-            <div className="flex flex-col gap-16 mx-12 lg:mx-24 xl:mx-36  fade-projects">
+            <div className="flex flex-col gap-16 mx-12 lg:w-3/4 2xl:w-1/2 fade-projects">
               <div className="flex gap-0">
-                <div className="flex flex-col mt-24 ">
-                  <h1 className="text-3xl 2xl:text-4xl 3xl:text-6xl font-bold">{project.title}</h1>
+                <div className="flex flex-col mt-24 w-full lg:w-3/4">
+                <div className="flex gap-4 items-center">
+                <h1 className="text-3xl 2xl:text-4xl 3xl:text-6xl font-bold">{project.title}</h1>
+          <div className="flex gap-4 items-center text-lg bg-gray-100 p-2 rounded-md  mr-12">
+            <h1>Take me to Github</h1>
+            <img src={githubicon.src} className="h-12 w-12 inline-block" />
+          </div>
+                </div>
                   <div className="flex gap-2 mt-4">
                     {project.tags.map((tag: string, index: number) => {
                       return (
@@ -63,7 +69,7 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                     {project.description}
                   </p>
                 </div>
-                <div className="w-10/12  items-center justify-center mt-28 hidden lg:flex">
+                <div className="w-1/4 items-center justify-center mt-28 hidden lg:flex">
                   <div className="w-full overflow-hidden rounded-lg ">
                     <img
                       src={project.logo}

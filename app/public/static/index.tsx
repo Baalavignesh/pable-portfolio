@@ -51,3 +51,7 @@ import practitioner from "./achievements/practitioner.png";
 import solution_architect from "./achievements/solutions-architect.png";
 
 export { practitioner, solution_architect };    
+
+import profile from "./profile.jpg"
+export {profile};
+

@@ -5,7 +5,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { face } from "@/app/public/static";
+import {  profile } from "@/app/public/static";
 import {
   faBars,
   faCaretLeft,
@@ -105,7 +105,7 @@ const TiltCard = () => {
         </div>
         <div className="absolute top-0 p-24 h-full w-full flex flex-col items-center justify-center">
           <div className="absolute bottom-12 text-base w-full text-center font-semibold">
-            <img src={face.src} className="w-48 mx-auto mb-24"></img>
+            <img src={profile.src} className="w-48 h-48 mx-auto mb-24 rounded-full object-cover border-8 border-gray-200 opacity-90"></img>
             <h1 className="text-base 2:xl:text-xl 3xl:text-3xl pb-6">
               Baalavignesh Arunachalam
             </h1>
