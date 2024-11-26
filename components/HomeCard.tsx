@@ -75,7 +75,7 @@ const TiltCard = () => {
           width: "450px",
           height: "600px",
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-gray-100 to-slate-300"
+      className="relative rounded-xl bg-gradient-to-br from-gray-100 to-slate-300 "
     >
       <div
         style={{

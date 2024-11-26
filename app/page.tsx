@@ -83,9 +83,9 @@ export default function Home() {
               computing, mobile, and web development. Hackathon winner with
               teamwork and problem-solving skills.
             </span>
-            <div className="flex gap-4  text-sm 2xl:text-base 3xl:text-xl">
+            <div className="flex justify-center items-center gap-4  text-sm 2xl:text-base 3xl:text-xl">
               <a
-                className="p-4 text-center border-2 rounded-xl w-full cursor-pointer"
+                className="p-4 text-center border-4  h-full border-gray-300 rounded-xl w-full cursor-pointer bg-slate-500 text-white"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
@@ -94,7 +94,7 @@ export default function Home() {
                 Contact Me
               </a>
               <a
-                className="p-4 text-center border-2 rounded-xl w-full cursor-pointer"
+                className="p-4 text-center border-4 h-full border-gray-300 rounded-xl w-full cursor-pointer bg-slate-200 text-black"
                 href={resume}
                 target="_blank"
                 rel="noreferrer"
@@ -243,7 +243,7 @@ export default function Home() {
             </span>
             <div className="flex gap-4  text-sm mt-4">
               <a
-                className="p-2 text-center border-2 rounded-xl w-full"
+                className="p-2 text-center border-2 rounded-xl w-full shadow-lg"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
@@ -252,7 +252,7 @@ export default function Home() {
                 Contact Me
               </a>
               <a
-                className="p-2 text-center border-2 rounded-xl w-full"
+                className="p-2 text-center border-2 rounded-xl w-full shadow-xl"
                 href={resume}
                 target="_blank"
                 rel="noreferrer"
@@ -312,6 +312,44 @@ export default function Home() {
             }}
           >
             Achievements
+          </div>
+
+          <div className="flex flex-col gap-4 text-lg  font-semibold items-center justify-center bg-gray-50 rounded-md mx-4 p-4 text-center">
+            <div className="flex w-full flex-between items-end text-xl border-b-2 p-2">
+              <p>Recent Projects</p>
+            </div>
+            <div className="overflow-scroll flex flex-col gap-10">
+              {recentProjects.map((project: IProject, index) => {
+                const [showIcon, setShowIcon] = React.useState(false);
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col gap-8 justify-start items-start"
+                    onMouseOver={() => {
+                      setShowIcon(true);
+                    }}
+                    onMouseLeave={() => {
+                      setShowIcon(false);
+                    }}
+                  >
+                      <img
+                        src={project.bg}
+                        alt=""
+                        className={`rounded-lg cursor-pointer object-cover w-full h-full  transition-all duration-300`}
+                        onClick={() => {
+                          router.push(`/projects/${project.key}`);
+                        }}
+                      />
+                    <div className="flex flex-col gap-2 justify-start items-start text-left">
+                      <p className="text- font-semibold">{project.title}</p>
+                      <p className="text-base text-gray-500 line-clamp-2">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
