@@ -3,10 +3,11 @@ interface IProject {
     key: string;
     description: string;
     tags: string[];
-    logo?: string;
-    bg?: string;
-    inspiration?: string;
-    what?: string;
-    technologies?:  string;
-    how?: string; 
+    bg: string;
+    inspiration: string;
+    what: string;
+    technologies:  string;
+    when: string;
+    github: string;
+    other?: string;
   }

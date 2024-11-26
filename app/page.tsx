@@ -190,7 +190,7 @@ export default function Home() {
                     <div className="relative">
                       <div className="w-24 h-24">
                         <img
-                          src={project.logo}
+                          src={project.bg}
                           alt=""
                           className={`rounded-lg cursor-pointer z-40 object-cover h-full  transition-all duration-300 ${
                             showIcon ? "brightness-75" : "blur-none"

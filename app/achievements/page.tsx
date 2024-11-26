@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <PageTemplate heading="Achievements &nbsp;&nbsp;&nbsp;">
       <div className="flex flex-col gap-12 w-full">
-        <div className="flex flex-col xl:flex-row w-full gap-0 lg:gap-12">
-          <div className="flex flex-col w-1/2 justify-start p-6 mt-4 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
+        <div className="flex flex-col xl:flex-row w-full  gap-6 lg:gap-12">
+          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6 mt-4 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
             <h1 className="text-2xl xl:text-5xl my-4 xl:my-12 border-b-2 pb-2 lg:pb-4">2X Hackathon Winner</h1>
 
             <div className="p-0 flex flex-col gap-6">
@@ -34,10 +34,10 @@ export default function Page() {
               })}
             </div>
           </div>
-          <div className="flex flex-col w-1/2 justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8 ">
+          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8 ">
           <h1 className="text-2xl xl:text-5xl my-4 xl:my-12 border-b-2 pb-4">Badges</h1>
 
-          <div className="p-4 flex gap-6 flex-wrap lg:flex-row">
+          <div className="p-4 flex gap-6 flex-wrap lg:flex-row justify-center items-center lg:justify-start">
             {badges.map((badge, index) => {
               return (
                 <img

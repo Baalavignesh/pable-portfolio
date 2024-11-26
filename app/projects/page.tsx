@@ -19,7 +19,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project, key }) => {
   return (
     <div className="bg-gray-50 rounded-lg  pb-6 fade-projects">
       <img
-        src={project.logo}
+        src={project.bg}
         alt=""
         className="h-56 object-cover w-full rounded-lg cursor-pointer"
         onClick={() => {
