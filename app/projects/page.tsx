@@ -8,6 +8,7 @@ import CustomNavbar from "@/components/customNavbar";
 import { useRouter } from "next/navigation";
 import PageHeading from "@/components/̦PageHeading";
 import PageTemplate from "@/components/PageTemplate";
+import tagToImage from "../public/constants/project_tags";
 
 interface IProjectCardProps {
   project: IProject;
@@ -42,11 +43,15 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project, key }) => {
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag: string) => {
               return (
-                <div className="rounded-md flex items-center cursor-default bg-white py-0.5 px-2.5 border border-transparent text-sm text-gray-900 transition-all shadow-sm">
-                  <FontAwesomeIcon
-                    icon={faCode}
-                    className="text-slate-500 mr-1"
-                  />
+                <div className="rounded-md flex items-center justify-center cursor-default bg-white py-2 px-3 border border-transparent text-sm text-gray-900 transition-all shadow-sm">
+                  {tagToImage[tag] ? (
+                      <img src={tagToImage[tag]} className="w-6 h-6  object-contain mr-2"></img>
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={faCode}
+                      className="text-slate-500 mr-2"
+                    />
+                  )}
 
                   <span>{tag}</span>
                 </div>
@@ -73,7 +78,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project, key }) => {
 export default function Page() {
   return (
     <PageTemplate heading="Projects &nbsp;&nbsp;&nbsp;">
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 mt-8">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 mt-8 mb-12">
         {allProjects.map((project: IProject, index: number) => {
           return <ProjectCard project={project} key={index} />;
         })}

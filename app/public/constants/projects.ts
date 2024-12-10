@@ -1,15 +1,12 @@
 import {
   convchemybg,
-  convchey,
   healthhub,
   justpaintbg,
-  miresume,
   miresumebg,
   myclipbookbg,
   securefilestorebg,
   seeyanonymouschatbg,
   shareitpythonbg,
-  skillagent,
   skillagentbg,
   social2,
   story3bg,
@@ -86,7 +83,7 @@ let allProjects: IProject[] = [
     key: "HealthHub",
     description:
       "HealthHub is a comprehensive healthcare appointment platform enabling seamless doctor recommendations, appointment booking, and real-time community health alerts based on user symptoms and location.",
-    tags: ["React", "Node.js", "MySQL", "Databricks", "AWS", "Customer.io"],
+    tags: ["React", "Node.js", "MySQL", "Databricks", "AWS"],
     bg: healthhub.src,
     inspiration:
       "Inspired by the evolving challenges in healthcare, HealthHub aims to enhance accessibility to medical services, promote proactive health management, and foster community health awareness through innovative technology.",
@@ -116,7 +113,7 @@ let allProjects: IProject[] = [
     key: "SecureFileStore",
     description:
       "SecureFileStore is a secure file storage solution that uses encryption to protect user data. It allows users to upload, share, and manage files securely.",
-    tags: ["FastAPI", "AWS S3", "MySQL", "Encryption", "JWT"],
+    tags: ["FastAPI", "AWS S3", "MySQL", "JWT"],
     bg: securefilestorebg.src,
     inspiration:
       "During a time when numerous data breaches were reported across major MNCs, I was motivated to create a platform where user data could remain confidential. The goal was to build a file storage system where only the user could access their files, ensuring high levels of security and privacy.",
