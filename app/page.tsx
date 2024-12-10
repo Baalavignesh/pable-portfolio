@@ -79,13 +79,13 @@ export default function Home() {
               I'm Baalavignesh A
             </span>
             <span className="text-sm 2xl:text-base 3xl:text-xl font-light">
-              Full-stack developer with over two years of experience in cloud
-              computing, mobile, and web development. Hackathon winner with
-              teamwork and problem-solving skills.
+              Full-stack developer with professional experience in cloud
+              computing, web, and mobile development. Proficient in designing
+              scalable solutions and collaborating effectively within teams.
             </span>
-            <div className="flex justify-center items-center gap-4  text-sm 2xl:text-base 3xl:text-xl">
+            <div className="flex justify-center items-center gap-4  text-sm 2xl:text-base 3xl:text-xl mt-2">
               <a
-                className="p-4 text-center border-4  h-full border-gray-300 rounded-xl w-full cursor-pointer bg-slate-500 text-white"
+                className="p-4 text-center outline outline-none  h-full outline-gray-800 rounded-xl w-full cursor-pointer bg-gray-200 text-black hover:outline-2 hover:scale-[102%] transition-all duration-300"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
@@ -94,7 +94,7 @@ export default function Home() {
                 Contact Me
               </a>
               <a
-                className="p-4 text-center border-4 h-full border-gray-300 rounded-xl w-full cursor-pointer bg-slate-200 text-black"
+                className="p-4 text-center outline outline-2 h-full outline-gray-600 rounded-xl w-full cursor-pointer bg-black text-white hover:outline-2 hover:scale-[102%] transition-all duration-300"
                 href={resume}
                 target="_blank"
                 rel="noreferrer"
@@ -332,14 +332,14 @@ export default function Home() {
                       setShowIcon(false);
                     }}
                   >
-                      <img
-                        src={project.bg}
-                        alt=""
-                        className={`rounded-lg cursor-pointer object-cover w-full h-full  transition-all duration-300`}
-                        onClick={() => {
-                          router.push(`/projects/${project.key}`);
-                        }}
-                      />
+                    <img
+                      src={project.bg}
+                      alt=""
+                      className={`rounded-lg cursor-pointer object-cover w-full h-full  transition-all duration-300`}
+                      onClick={() => {
+                        router.push(`/projects/${project.key}`);
+                      }}
+                    />
                     <div className="flex flex-col gap-2 justify-start items-start text-left">
                       <p className="text- font-semibold">{project.title}</p>
                       <p className="text-base text-gray-500 line-clamp-2">
