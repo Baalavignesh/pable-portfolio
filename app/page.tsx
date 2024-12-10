@@ -85,7 +85,7 @@ export default function Home() {
             </span>
             <div className="flex justify-center items-center gap-4  text-sm 2xl:text-base 3xl:text-xl mt-2">
               <a
-                className="p-4 text-center outline outline-none  h-full outline-gray-800 rounded-xl w-full cursor-pointer bg-gray-200 text-black hover:outline-2 hover:scale-[102%] transition-all duration-300"
+                className="p-4 text-center   h-full outline-gray-800 rounded-xl w-full cursor-pointer bg-gray-200  text-black hover:scale-[102%] transition-all duration-300"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
