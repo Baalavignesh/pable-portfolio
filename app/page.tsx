@@ -85,7 +85,7 @@ export default function Home() {
             </span>
             <div className="flex justify-center items-center gap-4  text-sm 2xl:text-base 3xl:text-xl mt-2">
               <a
-                className="p-4 text-center   h-full outline-gray-800 rounded-xl w-full cursor-pointer bg-gray-200  text-black hover:scale-[102%] transition-all duration-300"
+                className="p-4 text-center h-full outline-gray-800 rounded-lg w-full cursor-pointer bg-gray-200  text-black  transition-all duration-300"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
@@ -94,7 +94,7 @@ export default function Home() {
                 Contact Me
               </a>
               <a
-                className="p-4 text-center outline outline-2 h-full outline-gray-600 rounded-xl w-full cursor-pointer bg-black text-white hover:outline-2 hover:scale-[102%] transition-all duration-300"
+                className="p-4 text-center outline outline-2 h-full outline-white rounded-lg w-full cursor-pointer bg-black text-white   transition-all duration-300"
                 href={resume}
                 target="_blank"
                 rel="noreferrer"
@@ -243,7 +243,7 @@ export default function Home() {
             </span>
             <div className="flex gap-4  text-sm mt-4">
               <a
-                className="p-2 text-center border-2 rounded-xl w-full shadow-lg"
+                className="p-4 text-center   h-full outline-gray-800 rounded-lg w-full cursor-pointer bg-gray-200  text-black  transition-all duration-300"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
@@ -252,7 +252,7 @@ export default function Home() {
                 Contact Me
               </a>
               <a
-                className="p-2 text-center border-2 rounded-xl w-full shadow-xl"
+                className="p-4 text-center outline outline-2 h-full outline-white rounded-lg w-full cursor-pointer bg-black text-white  transition-all duration-300"
                 href={resume}
                 target="_blank"
                 rel="noreferrer"

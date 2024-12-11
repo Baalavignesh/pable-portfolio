@@ -1,7 +1,8 @@
 "use client";
 
+import tagToImage from "@/app/public/constants/project_tags";
 import { allProjects } from "@/app/public/constants/projects";
-import { githubicon, inspiration, tech, what } from "@/app/public/static";
+import { githubdark, githubicon, githublight, inspiration, tech, what } from "@/app/public/static";
 import CustomNavbar from "@/components/customNavbar";
 import { faCode, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,62 +42,66 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
 
             <div className="flex flex-col gap-8 px-12 w-full lg:w-3/4 2xl:w-2/3 fade-projects">
               {/* description and image */}
-                <div className="flex flex-col w-full pt-24 ">
-                  <div className="flex gap-4 items-center justify-between flex-wrap">
-                    <h1 className="text-3xl 2xl:text-4xl 3xl:text-6xl font-bold">
-                      {project.title}{" "}
-                      <span className="text-lg font-light pl-2">
-                        {project.when}
-                      </span>
-                    </h1>
+              <div className="flex flex-col w-full pt-24 ">
+                <div className="flex gap-4 items-center justify-between flex-wrap">
+                  <h1 className="text-3xl 2xl:text-4xl 3xl:text-6xl font-bold">
+                    {project.title}{" "}
+                    <span className="text-lg font-light pl-2">
+                      {project.when}
+                    </span>
+                  </h1>
 
-                    <div className="flex gap-1">
-                      {project.other && (
-                        <div
-                          className="flex  items-center text-sm xl:text-lg bg-gray-100 p-2 lg:p-4 rounded-md  mr-4 cursor-pointer"
-                          onClick={() => {
-                            window.open(project.other, "_blank");
-                          }}
-                        >
-                          DevPost
-                          <FontAwesomeIcon
-                            icon={faUpRightFromSquare}
-                            className={`transition-opacity duration-500 text-black ml-4 `}
-                          />
-                        </div>
-                      )}
+                  <div className="flex gap-1">
+                    {project.other && (
                       <div
-                        className="flex gap-4 items-center text-sm xl:text-lg bg-gray-100 p-2 lg:p-4 rounded-md  cursor-pointer"
+                        className="flex  items-center text-sm xl:text-lg bg-gray-100 p-2 lg:p-4 rounded-md  mr-4 cursor-pointer"
                         onClick={() => {
-                          window.open(project.github, "_blank");
+                          window.open(project.other, "_blank");
                         }}
                       >
-                        <h1>Take me to Github</h1>
-                        <img
-                          src={githubicon.src}
-                          className="h-8 w-8 inline-block"
+                        DevPost
+                        <FontAwesomeIcon
+                          icon={faUpRightFromSquare}
+                          className={`transition-opacity duration-500 text-black ml-4 `}
                         />
                       </div>
+                    )}
+                    <div
+                      className="flex gap-4 items-center text-sm xl:text-lg bg-black text-white p-2 lg:p-4 rounded-md  cursor-pointer"
+                      onClick={() => {
+                        window.open(project.github, "_blank");
+                      }}
+                    >
+                      <h1>Take me to Github</h1>
+                      <img
+                        src={githubdark.src}
+                        className="h-8 w-8 inline-block text-white"
+                      />
                     </div>
                   </div>
-                  <div className="flex gap-2 mt-4 flex-wrap">
-                    {project.tags.map((tag: string, index: number) => {
-                      return (
-                        <div
-                          className="rounded-md flex items-center cursor-default bg-white py-0.5 px-2.5 border border-transparent text-sm text-gray-900 transition-all shadow-sm"
-                          key={index}
-                        >
+                </div>
+                <div className="flex gap-2 mt-4 flex-wrap">
+                  {project.tags.map((tag: string, index: number) => {
+                    return (
+                      <div className="rounded-md flex items-center justify-center cursor-default bg-white py-2 px-3 border border-transparent text-sm text-gray-900 transition-all shadow-sm">
+                        {tagToImage[tag] ? (
+                          <img
+                            src={tagToImage[tag]}
+                            className="w-6 h-6  object-contain mr-2"
+                          ></img>
+                        ) : (
                           <FontAwesomeIcon
                             icon={faCode}
-                            className="text-slate-500 mr-1"
+                            className="text-slate-500 mr-2"
                           />
+                        )}
 
-                          <span>{tag}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
+                        <span>{tag}</span>
+                      </div>
+                    );
+                  })}
                 </div>
+              </div>
               <div className="flex gap-0">
                 <div className="flex flex-col mt-2 w-full lg:w-3/4">
                   <p className="text-xl 2xl:text-2xl w-full pr-0 lg:pr-12 ">

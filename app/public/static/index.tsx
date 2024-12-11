@@ -3,8 +3,10 @@ import github from "./home/github.png";
 import githubicon from "./home/githubicon.png";
 import youtube from "./home/youtube.png";
 import face from "./home/face.svg";
+import githublight from "./home/githublight.svg";
+import githubdark from "./home/githubdark.svg";
 
-export {linkedin, github, githubicon, youtube, face};
+export {linkedin, github, githubicon, youtube, face, githublight, githubdark};
 
 
 import convchey from "./projects/logo/convchemy_logo.png";
