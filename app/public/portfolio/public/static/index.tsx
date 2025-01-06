@@ -1,0 +1,31 @@
+import profilepic from "./home/profilepic.jpg";
+
+import faaster from "./experience/faaster.png";
+import presidio from "./experience/presidio.png";
+import toast from "./experience/toast.png";
+import zoho from "./experience/zoho.png";
+
+import practitioner from "./achievements/practitioner.png"
+import associate from "./achievements/solutions-architect.png"
+
+import github from "./home/github.svg"
+import gmail from "./home/gmail.svg"
+import linkedin from "./home/linkedin.svg"
+
+import aws from "./skill/aws.svg";
+import express from "./skill/express.svg";
+import mysql from "./skill/mysql.svg";
+import nextjs from "./skill/nextjs.svg";
+import python from "./skill/python.svg";
+import node from "./skill/node.svg";
+import tailwind from "./skill/tailwind.svg";
+import react from "./skill/react.svg";
+import js from "./skill/javascript.svg";
+import ts from "./skill/typescript.svg";
+import openai from "./skill/openai.svg";
+
+
+
+export { aws, express, mysql, nextjs, python, node, tailwind, react, js, ts, openai };
+
+export { profilepic, faaster, presidio, toast, zoho, practitioner, associate, github, gmail, linkedin };

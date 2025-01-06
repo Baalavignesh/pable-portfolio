@@ -1,0 +1,57 @@
+import { github, gmail, linkedin, profilepic } from "../static";
+import Heading from "./heading";
+
+const Profile = () => {
+  return (
+    <div className="flex flex-col w-full  p-3 rounded-md border-gray-200 border-2 shadow-sm items-start h-fit">
+      <img
+        src={profilepic.src}
+        className="w-72 h-72 rounded-full object-cover border-gray-200 border-4 self-center"
+      ></img>
+      <p className="py-2 pt-4 font-bold text-2xl text-center">
+        Baalavignesh Arunachalam
+      </p>
+      <div className="text-gray-500 text-base">
+        {/* <p>Software Developer</p> */}
+        <p>George Mason University</p>
+        <p>Masters in Computer Science</p>
+        <hr className="my-4" />
+        <p className="text-base">
+          Software developer with professional experience in cloud computing,
+          web, and app development.
+        </p>
+      </div>
+
+      <a
+        className="p-2 text-center outline outline-2 h-fit text-lg outline-white rounded-lg w-full cursor-pointer bg-black text-white   transition-all duration-300 mt-4"
+        onClick={(e) => {
+          window.location.href = "mailto:baalavignesh21@gmail.com";
+          e.preventDefault();
+        }}
+      >
+        Contact Me
+      </a>
+
+      <hr className="my-4 w-full" />
+      <div className="text-base flex flex-col gap-2 mt-4">
+        <div
+          className="flex gap-2  items-center cursor-pointer"
+          onClick={() => window.open("https://github.com/Baalavignesh")}
+        >
+          <img src={github.src} className="w-4 h-4"></img>
+          <span>Baalavignesh A</span>
+        </div>
+        <div className="flex gap-2  items-center cursor-pointer">
+          <img src={linkedin.src} className="w-4 h-4"></img>
+          <span> Baalavignesh Arunachalam</span>
+        </div>
+        <div className="flex gap-2  items-center cursor-pointer">
+          <img src={gmail.src} className="w-4 h-4"></img>
+          <span> baalavignesh21@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Profile;
