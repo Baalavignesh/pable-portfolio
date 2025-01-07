@@ -6,10 +6,10 @@ const Profile = () => {
     <div className="flex flex-col w-full  p-3 rounded-md border-gray-200 border-2 shadow-sm items-start h-fit">
       <img
         src={profilepic.src}
-        className="w-72 h-72 rounded-full object-cover border-gray-200 border-4 self-center"
+        className="w-56 h-56 mt-4 rounded-full object-cover border-gray-200 border-4 self-center"
       ></img>
-      <p className="py-2 pt-4 font-bold text-2xl text-center">
-        Baalavignesh Arunachalam
+      <p className="py-2 pt-4 font-semibold text-3xl text-left">
+        Baalavignesh A
       </p>
       <div className="text-gray-500 text-base">
         {/* <p>Software Developer</p> */}

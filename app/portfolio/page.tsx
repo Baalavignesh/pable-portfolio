@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <div className="text-xl flex justify-center">
-        <div className="container max-w-screen-xl mx-auto px-4 py-8 flex gap-4">
+        <div className="container max-w-screen-lg mx-auto px-4 py-8 flex gap-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-1">
               <Profile />

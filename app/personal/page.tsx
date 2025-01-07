@@ -69,13 +69,13 @@ export default function Page() {
         >
           <div className="flex flex-col p-4 h-full justify-between">
             <div className="flex flex-col">
-            <span className="text-3xl xl:text-4xl 2xl:text-6xl 3xl:text-8xl pb-0 font-semibold mt-4">
+            <span className="text-3xl xl:text-4xl 2xl:text-6xl 3xl:text-8xl pb-0 font-semibold mt-0">
               Hello!
             </span>
             <span className="text-xl xl:text-3xl 2xl:text-4xl 3xl:text-6xl font-normal mt-2">
               I'm Baalavignesh A
             </span>
-            <span className="text-sm md:text-lg xl:text-xl font-light mt-6">
+            <span className="text-sm md:text-lg font-light mt-6">
               Full-stack developer with professional experience in cloud
               computing, web, and app development. 
             </span>
