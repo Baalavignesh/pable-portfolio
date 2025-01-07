@@ -11,6 +11,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import resume from "../public/myresume.pdf";
 import HomeCard from "@/components/HomeCard";
+import HomeCardSmall from "@/components/HomeCardSmall";
 
 interface FadeCardProps {
   children?: React.ReactNode;
@@ -67,29 +68,31 @@ export default function Page() {
           cardName="about"
         >
           <div className="flex flex-col p-4 h-full justify-between">
-            <span className="text-3xl xl:text-4xl 2xl:text-6xl 3xl:text-8xl pb-0 font-semibold">
+            <div className="flex flex-col">
+            <span className="text-3xl xl:text-4xl 2xl:text-6xl 3xl:text-8xl pb-0 font-semibold mt-4">
               Hello!
             </span>
-            <span className="text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-6xl font-normal  ">
+            <span className="text-xl xl:text-3xl 2xl:text-4xl 3xl:text-6xl font-normal mt-2">
               I'm Baalavignesh A
             </span>
-            <span className="text-sm 2xl:text-base 3xl:text-xl font-light">
+            <span className="text-sm md:text-lg xl:text-xl font-light mt-6">
               Full-stack developer with professional experience in cloud
-              computing, web, and mobile development. Proficient in designing
-              scalable solutions and collaborating effectively within teams.
+              computing, web, and app development. 
             </span>
+            </div>
+            
             <div className="flex justify-center items-center gap-4  text-sm 2xl:text-base 3xl:text-xl mt-2">
               <a
-                className="p-4 text-center h-full outline-gray-800 rounded-lg w-full cursor-pointer bg-gray-200  text-black  transition-all duration-300"
+                className="p-4 px-2 xl:p-4 text-center truncate line-clamp-1 h-full outline-gray-800 rounded-lg w-full cursor-pointer bg-gray-200  text-black  transition-all duration-300"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
                 }}
               >
-                Contact Me
+                Contact
               </a>
               <a
-                className="p-4 text-center outline outline-2 h-full outline-white rounded-lg w-full cursor-pointer bg-black text-white   transition-all duration-300"
+                className="p-4 px-2 xl:p-4 text-center outline outline-2 h-full outline-white rounded-lg w-full cursor-pointer bg-black text-white   transition-all duration-300"
                 href={resume}
                 target="_blank"
                 rel="noreferrer"
@@ -100,17 +103,17 @@ export default function Page() {
           </div>
         </FadeCard>
         <FadeCard
-          className="col-span-2 row-span-2 row-start-4 text-lg 2xl:text-3xl 3xl:text-6xl font-semibold items-center justify-center"
+          className="col-span-2 row-span-1 row-start-4 text-lg 2xl:text-3xl 3xl:text-6xl font-semibold items-center justify-center"
           fadeDuration={2.3}
           cardName="experience"
           onClick={() => {
             router.push("/experience");
           }}
         >
-          Work Experience
+          Experience
         </FadeCard>
         <FadeCard
-          className="col-span-1 row-span-2 row-start-6 text-lg 2xl:text-3xl 3xl:text-6xl font-semibold items-center justify-center"
+          className="col-span-2 row-span-1 row-start-5 text-lg 2xl:text-3xl 3xl:text-6xl font-semibold items-center justify-center"
           fadeDuration={2.3}
           cardName="experience"
           onClick={() => {
@@ -120,13 +123,22 @@ export default function Page() {
           Skills
         </FadeCard>
         <FadeCard
-          className="col-span-1 row-span-2 row-start-6 text-lg 2xl:text-2xl 3xl:text-4xl  font-semibold items-center justify-center"
+          className="col-span-2 row-span-1 row-start-6 text-lg 2xl:text-3xl 3xl:text-6xl font-semibold items-center justify-center"
           fadeDuration={2.2}
           onClick={() => {
             router.push("/achievements");
           }}
         >
           Achievements
+        </FadeCard>
+        <FadeCard
+          className="col-span-2 row-span-1 row-start-7 text-lg 2xl:text-3xl 3xl:text-6xl font-semibold items-center justify-center"
+          fadeDuration={2.2}
+          onClick={() => {
+            router.push("/portfolio");
+          }}
+        >
+          Portfolio
         </FadeCard>
         <FadeCard
           className="col-span-2 col-start-6 row-span-1 items-center justify-center"
@@ -151,7 +163,13 @@ export default function Page() {
           <img src={github.src} alt="linkedin" className="w-1/2" />
         </FadeCard>
         <FadeCard
-          className="flex row-span-7 col-span-3 row-start-1 bg-gray-200 text-7xl font-normal 3xl:text-8xl  justify-center items-center dotbg"
+          className="block xl:hidden row-span-7 col-span-3 row-start-1 bg-gray-200 text-7xl font-normal 3xl:text-8xl  justify-center items-center dotbg"
+          fadeDuration={2.5}
+        >
+          <HomeCardSmall />
+        </FadeCard>
+        <FadeCard
+          className="hidden xl:block row-span-7 col-span-3 row-start-1 bg-gray-200 text-7xl font-normal 3xl:text-8xl  justify-center items-center dotbg"
           fadeDuration={2.5}
         >
           <HomeCard />
@@ -165,10 +183,10 @@ export default function Page() {
         >
           <div className="flex flex-col gap-12 w-full relative">
             <div className="flex w-96 flex-between items-end">
-              <p>Recent Projects</p>
-              <p className="text-sm absolute right-0">View More</p>
+              <p className="text-lg lg:text-xl">Recent Projects</p>
+              {/* <p className="text-sm absolute right-0">View More</p> */}
             </div>
-            <div className="overflow-scroll flex flex-col gap-10">
+            <div className=" flex flex-col gap-10">
               {recentProjects.map((project: IProject, index) => {
                 const [showIcon, setShowIcon] = React.useState(false);
                 return (
@@ -182,7 +200,7 @@ export default function Page() {
                       setShowIcon(false);
                     }}
                   >
-                    <div className="relative">
+                    <div className="relative hidden lg:block">
                       <div className="w-24 h-24">
                         <img
                           src={project.bg}
@@ -205,8 +223,8 @@ export default function Page() {
                       )}
                     </div>
                     <div className="flex flex-col gap-2">
-                      <p className="text-2xl font-semibold">{project.title}</p>
-                      <p className="text-base text-gray-500 line-clamp-2">
+                      <p className="text-base lg:text-2xl  font-semibold">{project.title}</p>
+                      <p className="text-base xl:text-xl  text-gray-500 line-clamp-2">
                         {project.description}
                       </p>
                     </div>
@@ -233,9 +251,9 @@ export default function Page() {
               computing, mobile, and web development. Hackathon winner with
               teamwork and problem-solving skills.
             </span>
-            <div className="flex gap-4  text-sm mt-4">
+            <div className="flex gap-4 text-sm mt-4">
               <a
-                className="p-4 text-center   h-full outline-gray-800 rounded-lg w-full cursor-pointer bg-gray-200  text-black  transition-all duration-300"
+                className="p-4 text-center truncate line-clamp-1 outline-gray-800 rounded-lg w-full cursor-pointer bg-gray-200  text-black  transition-all duration-300"
                 onClick={(e) => {
                   window.location.href = "mailto:baalavignesh21@gmail.com";
                   e.preventDefault();
@@ -244,7 +262,7 @@ export default function Page() {
                 Contact Me
               </a>
               <a
-                className="p-4 text-center outline outline-2 h-full outline-white rounded-lg w-full cursor-pointer bg-black text-white  transition-all duration-300"
+                className="p-4 text-center outline outline-2  outline-white rounded-lg w-full cursor-pointer bg-black text-white  transition-all duration-300"
                 href={resume}
                 target="_blank"
                 rel="noreferrer"
@@ -287,7 +305,7 @@ export default function Page() {
               router.push("/experience");
             }}
           >
-            Work Experience
+            Experience
           </div>
           <div
             className=" text-lg font-semibold items-center justify-center bg-gray-50 rounded-md mx-4 p-4 text-center"

@@ -13,10 +13,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const HomeCard = () => {
+const HomeCardSmall = () => {
   return (
     <div
-      className=" w-full place-content-center flex justify-center items-center h-full px-4 py-12 text-slate-900"
+      className="grid w-full place-content-center  px-4 py-12 text-slate-900"
     >
       <TiltCard />
     </div>
@@ -68,8 +68,8 @@ const TiltCard = () => {
       style={{
         transformStyle: "preserve-3d",
         transform,
-          width: "380px",
-          height: "550px",
+          width: "280px",
+          height: "350px",
       }}
       className="relative rounded-xl bg-gradient-to-br from-gray-100 to-slate-300"
     >
@@ -80,33 +80,20 @@ const TiltCard = () => {
         }}
         className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
       >
-        <p className="absolute right-0 p-6 text-sm font-semibold">
+        <p className="absolute right-0 p-4 text-sm font-semibold text-gray-500">
           Fairfax, VA
         </p>
 
-        <FontAwesomeIcon
-          icon={faBars}
-          className="absolute top-64 left-6 w-12 text-gray-200"
-        />
 
-        <div>
-          <FontAwesomeIcon
-            icon={faCaretLeft}
-            className="absolute top-14 right-20 w-10 text-gray-200"
-          />
-          <FontAwesomeIcon
-            icon={faCaretRight}
-            className="absolute top-12 right-6 w-10 text-gray-200"
-          />
-        </div>
-        <div className="absolute top-0 p-24 h-full w-full flex flex-col items-center justify-center">
+
+        <div className="absolute top-0 h-full w-full flex flex-col items-center justify-center">
           <div className="absolute bottom-12 text-base w-full text-center font-semibold">
-            <img src={profile.src} className="w-48 h-48 mx-auto mb-24 rounded-full object-cover border-8 border-gray-200 opacity-90"></img>
-            <h1 className="text-base 2:xl:text-xl 3xl:text-3xl pb-6">
+            <img src={profile.src} className="w-24 h-24 mx-auto mb-8 rounded-full object-cover border-8 border-gray-200 opacity-90"></img>
+            <h1 className="text-lg  pb-6">
               Baalavignesh Arunachalam
             </h1>
-            <p>George Mason University</p>
-            <p className="font-normal">MS, Computer Science</p>
+            <p className="text-gray-800">George Mason University</p>
+            <p className="font-normal text-gray-500">MS, Computer Science</p>
           </div>
         </div>
       </div>
@@ -114,4 +101,4 @@ const TiltCard = () => {
   );
 };
 
-export default HomeCard;
+export default HomeCardSmall;

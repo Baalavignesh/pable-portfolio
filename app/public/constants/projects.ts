@@ -204,8 +204,7 @@ let recentProjects: IProject[] = [
   {
     title: "MiResume",
     key: "MiResume",
-    description:
-      "MiResume generates personalized resumes using a uniform template based on LaTeX formatting using OpenAI. This ensures that the final document is not only aesthetically pleasing but also professional and organized.",
+    description: "Generates personalized resumes using LaTeX and OpenAI.",
     tags: ["React", "Node.js", "CosmoDB", "OpenAI", "Azure"],
     bg: miresumebg.src,
     inspiration:
@@ -219,8 +218,7 @@ let recentProjects: IProject[] = [
   {
     title: "SkillAgent",
     key: "SkillAgent",
-    description:
-      "SkillAgent helps users acquire new skills efficiently using AI. The platform generates personalized learning plans tailored to user preferences, enabling both individuals and businesses to streamline skill acquisition and onboarding processes.",
+    description: "Helps users acquire new skills efficiently using OpenAI.",
     tags: ["React", "Node.js", "Firebase", "OpenAI", "Tailwind CSS", "Vite.js"],
     bg: skillagentbg.src,
     inspiration:
@@ -234,8 +232,7 @@ let recentProjects: IProject[] = [
   {
     title: "ConvChemy",
     key: "ConvChemy",
-    description:
-      "ConvChemy is an alchemy-based real-time multiplayer game where players challenge friends to create the most elements within a set time. Built with Convex for seamless real-time updates, the game delivers an intuitive and addictive gaming experience.",
+    description: "Real-time multiplayer game with alchemy-based challenges.",
     tags: ["React", "Convex", "Tailwind CSS"],
     bg: convchemybg.src,
     inspiration:
@@ -249,8 +246,7 @@ let recentProjects: IProject[] = [
   {
     title: "Story3",
     key: "Story3",
-    description:
-      "NewEnd GenMode revolutionizes storytelling with AI-powered customization. Users can create personalized stories, explore narrative twists, and track story performance using the Story3 API, offering endless creative possibilities.",
+    description: "AI-powered storytelling with customization and performance.",
     tags: ["React", "OpenAI", "Story3 API", "TypeScript", "Firebase"],
     bg: story3bg.src,
     inspiration:
@@ -261,21 +257,7 @@ let recentProjects: IProject[] = [
     github: "https://github.com/Baalavignesh/NewEnd-GenMode",
     when: "2024",
   },
-  {
-    title: "HealthHub",
-    key: "HealthHub",
-    description:
-      "HealthHub is a comprehensive healthcare appointment platform enabling seamless doctor recommendations, appointment booking, and real-time community health alerts based on user symptoms and location.",
-    tags: ["React", "Node.js", "MySQL", "Databricks", "AWS", "Customer.io"],
-    bg: healthhub.src,
-    inspiration:
-      "Inspired by the evolving challenges in healthcare, HealthHub aims to enhance accessibility to medical services, promote proactive health management, and foster community health awareness through innovative technology.",
-    technologies:
-      "The app utilizes React for its user-friendly frontend, Node.js for a scalable backend, MySQL for reliable data management, Databricks for advanced analytics, Customer.io for communication services, and AWS for secure cloud infrastructure.",
-    what: "HealthHub empowers users to book doctor appointments, receive location-based recommendations, and stay informed about potential health risks through community health alerts. It streamlines healthcare access while promoting community well-being.",
-    github: "https://github.com/Baalavignesh/HealthHub",
-    when: "2023",
-  },
+
 ];
 
 export { allProjects, recentProjects };
