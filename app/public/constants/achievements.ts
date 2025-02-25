@@ -16,6 +16,16 @@ let badges: Badge[] = [
 
 let certificates: Certificate[] = [
   {
+    title: "Kubernetes for the Absolute Beginners - Hands-on Tutorial",
+    issuedBy: "KodeKloud",
+    instructor: "Mumshad Mannambeth"
+  },
+  {
+    title: "Docker Training Course for the Absolute Beginner",
+    issuedBy: "KodeKloud",
+    instructor: "Mumshad Mannambeth"
+  },
+  {
     title: "The Complete 2024 Web Development Bootcamp",
     issuedBy: "Udemy",
     instructor: "Dr. Angela Yu",
@@ -44,7 +54,7 @@ let certificates: Certificate[] = [
 
 let hackathons: Hackathon[] = [
   {
-    title: "Story3 Hackathon",
+    title: "Story3",
     issuedBy: "HackerEarth",
     company: "Story3",
     award: "Best Prototype Award",

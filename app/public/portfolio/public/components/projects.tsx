@@ -5,7 +5,7 @@ import ProjectCard from "./smallcomponents/projectcard";
 const Projects = () => {
   return (
     <div className="pt-4">
-      <Heading heading="Featured Projects"></Heading>
+      <Heading heading="Featured Projects" linkto="projects"></Heading>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 mt-2">
         {portProjects.map((project: PortProjects, index: number) => (
           <ProjectCard

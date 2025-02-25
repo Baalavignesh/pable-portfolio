@@ -23,9 +23,10 @@ import react from "./skill/react.svg";
 import js from "./skill/javascript.svg";
 import ts from "./skill/typescript.svg";
 import openai from "./skill/openai.svg";
+import docker from "./skill/docker.svg";
+import kubernetes from "./skill/kubernetes.svg";
 
 
-
-export { aws, express, mysql, nextjs, python, node, tailwind, react, js, ts, openai };
+export { aws, express, mysql, nextjs, python, node, tailwind, react, js, ts, openai, docker, kubernetes };
 
 export { profilepic, faaster, presidio, toast, zoho, practitioner, associate, github, gmail, linkedin };

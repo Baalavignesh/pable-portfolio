@@ -3,3 +3,4 @@ interface ISkill {
     heading: string;
     subheading: string;
 }
+

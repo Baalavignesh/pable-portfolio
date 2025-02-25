@@ -1,3 +1,4 @@
+import { kubernetes } from "../portfolio/public/static";
 import { nextjs, ts, js, express, python, aws, git, firebase, mysql, tailwind, dart, c, cpp, angular, net, fastapi, azure, docker, mongo, postgresql, postman, node, redux, reactjs, flutter } from "../static";
 
 
@@ -37,6 +38,16 @@ let myskills: ISkills = {
       image: aws.src,
       heading: "AWS",
       subheading: "Cloud Services",
+    },
+    {
+      image: docker.src,
+      heading: "Docker",
+      subheading: "Containerization Platform"
+    },
+    {
+      image: kubernetes.src,
+      heading: "Kubernetes",
+      subheading: "Container Orchestration"
     },
     {
       image: git.src,
@@ -94,11 +105,6 @@ let myskills: ISkills = {
       image: azure.src,
       heading: "Azure",
       subheading: "Cloud Services",
-    },
-    {
-      image: docker.src,
-      heading: "Docker",
-      subheading: "Containerization",
     },
     {
       image: mongo.src,

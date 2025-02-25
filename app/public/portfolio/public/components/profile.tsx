@@ -1,5 +1,6 @@
 import { github, gmail, linkedin, profilepic } from "../static";
 import Heading from "./heading";
+import resume from "../../../myresume.pdf";
 
 const Profile = () => {
   return (
@@ -15,15 +16,17 @@ const Profile = () => {
         {/* <p>Software Developer</p> */}
         <p>George Mason University</p>
         <p>Masters in Computer Science</p>
-        <hr className="my-4" />
-        <p className="text-base">
-          Software developer with professional experience in cloud computing,
-          web, and app development.
-        </p>
       </div>
-
       <a
-        className="p-2 text-center outline outline-2 h-fit text-lg outline-white rounded-lg w-full cursor-pointer bg-black text-white   transition-all duration-300 mt-4"
+        className="p-2 text-center outline outline-2 h-fit text-lg outline-gray-300 rounded-lg w-full cursor-pointer bg-white text-black   transition-all duration-300 mt-4"
+        href={resume}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+              </a>
+      <a
+        className="p-2 text-center outline outline-2 h-fit text-lg outline-white rounded-lg w-full cursor-pointer bg-black text-white   transition-all duration-300 mt-3"
         onClick={(e) => {
           window.location.href = "mailto:baalavignesh21@gmail.com";
           e.preventDefault();

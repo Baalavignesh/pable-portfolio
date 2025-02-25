@@ -11,16 +11,16 @@ import PageTemplate from "@/components/PageTemplate";
 export default function Page() {
   return (
     <PageTemplate heading="Achievements &nbsp;&nbsp;&nbsp;">
-      <div className="flex flex-col gap-12 w-full">
-        <div className="flex flex-col xl:flex-row w-full  gap-6 lg:gap-12">
-          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6 mt-4 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
-            <h1 className="text-2xl xl:text-5xl my-4 xl:my-12 border-b-2 pb-2 lg:pb-4">2X Hackathon Winner</h1>
+      <div className="flex flex-col gap-6 w-full">
+        <div className="flex flex-col md:flex-row w-full  gap-6">
+          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6  pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
+            <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">2X Hackathon Winner</h1>
 
             <div className="p-0 flex flex-col gap-6">
               {hackathons.map((hackathon: Hackathon, index) => {
                 return (
                   <div className="flex gap-4 justify-start items-start" key={index}>
-                    <p className="w-1/3 text-sm lg:text-2xl xl:text-3xl"> {hackathon.title}</p>
+                    <p className="w-1/3 text-sm lg:text-xl"> {hackathon.title}</p>
                     <div className="">
                       <h1 className="font-semibold text-sm 2xl:text-base 3xl:text-2xl">
                         {hackathon.award}
@@ -35,15 +35,15 @@ export default function Page() {
             </div>
           </div>
           <div className="flex flex-col w-full lg:w-1/2 justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8 ">
-          <h1 className="text-2xl xl:text-5xl my-4 xl:my-12 border-b-2 pb-4">Badges</h1>
+          <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">Badges</h1>
 
-          <div className="p-4 flex gap-6 flex-wrap lg:flex-row justify-center items-center lg:justify-start">
+          <div className="p-4 flex gap-2 flex-wrap lg:flex-row lg:justify-start">
             {badges.map((badge, index) => {
               return (
                 <img
                   src={badge.badge}
                   alt={badge.name}
-                  className="w-52 h-52"
+                  className="w-28 h-28 lg:w-44 lg:h-44"
                   key={index}
                 ></img>
               );
@@ -53,8 +53,8 @@ export default function Page() {
         </div>
 
 
-        <div className="flex flex-col w-full justify-start p-6 mt-4 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
-            <h1 className="text-2xl xl:text-5xl my-4 xl:my-12 border-b-2 pb-4">Certificates</h1>
+          <div className="flex flex-col w-full  justify-start p-6  pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
+            <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">Certificates</h1>
 
             <div className="p-4 flex flex-col gap-2 w-full">
               {certificates.map((certificate: Certificate, index) => {

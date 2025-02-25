@@ -17,7 +17,7 @@ interface IExperience {
 const Experience = () => {
   return (
     <div className="p-0">
-      <Heading heading="Professional Experience"></Heading>
+      <Heading heading="Professional Experience" linkto="experience"></Heading>
       <div className="flex gap-4 flex-col p-6 rounded-md  border-2 w-full">
       {portExperience.map((experience: IExperience, index) => (
         <div key={index} className="flex flex-col gap-2">

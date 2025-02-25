@@ -58,17 +58,6 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project, key }) => {
               );
             })}
           </div>
-          {/* <div className="m-4 p-2 border-[1px] border-gray-200 rounded-lg animate-pulse flex gap-1 justify-center items-center cursor-pointer self-end">
-            <p
-              className="font-light"
-              onClick={() => {
-                router.push(`/projects/${project.key}`);
-              }}
-            >
-              Learn More
-            </p>
-            <FontAwesomeIcon icon={faChevronRight} size="sm" />
-          </div> */}
         </div>
       </div>
     </div>
@@ -78,7 +67,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project, key }) => {
 export default function Page() {
   return (
     <PageTemplate heading="Projects &nbsp;&nbsp;&nbsp;">
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 mt-8 mb-12">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 mb-12">
         {allProjects.map((project: IProject, index: number) => {
           return <ProjectCard project={project} key={index} />;
         })}
