@@ -17,7 +17,7 @@ let badges:IAchievements[] = [
 
 let achievements: IAchievements[]= [
     {
-        title: "Story3 Hackathon",
+        title: "Story3",
         award: "Best Prototype Award",
         link: "https://story3.hackerearth.com/"
       },
