@@ -61,7 +61,7 @@ const CustomNavbar: React.FC = () => {
             Achievements
           </a>
 
-          <a
+          {/* <a
             onClick={() => router.replace("/hobbies")}
             className={`h-fit  font-light text-gray-500 hover:text-gray-900 transition-all duration-200 cursor-pointer ${
               pathname.includes("hobbies")
@@ -70,7 +70,7 @@ const CustomNavbar: React.FC = () => {
             }`}
           >
             Hobbies
-          </a>
+          </a> */}
         </div>
 
 

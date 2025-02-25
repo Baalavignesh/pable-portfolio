@@ -10,9 +10,6 @@ import Skills from "./public/portfolio/public/components/skills";
 import React from "react";
 
 export default function Home() {
-
-
-
   return (
     <>
       <div className="text-xl flex justify-center fade-card">
