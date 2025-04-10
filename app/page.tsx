@@ -18,7 +18,7 @@ export default function Home() {
             <div className="md:col-span-1 flex flex-col gap-4">
               <Profile />
               <div className="hidden md:block">
-                <Skills />
+                
                 <Badges />
                 <Achievements />
               </div>
@@ -26,10 +26,11 @@ export default function Home() {
             <div className="md:col-span-2 flex flex-col gap-4">
               <AboutMe />
               <div className="block md:hidden">
-                <Skills />
+                
                 <Badges />
                 <Achievements />
               </div>
+              <Skills />
               <Projects />
               <Experience />
             </div>

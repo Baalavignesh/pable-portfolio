@@ -1,6 +1,16 @@
+import { fastapi, tailwind } from "@/app/public/static";
 import { aws, js, mysql, node, openai, python, react, ts } from "../static";
 
 let portProjects: PortProjects[] = [
+  {
+    title: "HealthBridge AI",
+    key: "HealthBridgeAI",
+    description: "AI platform removes language barriers in healthcare communication.",
+    tags: ["React", "AWS", "OpenAI"],
+    tagImg: [react.src, aws.src, openai.src],
+    github: "https://github.com/Baalavignesh/HealthBridge-AI",
+    when: "2024",
+  },
   {
     title: "MiResume",
     key: "MiResume",
@@ -17,15 +27,6 @@ let portProjects: PortProjects[] = [
     tags: ["React", "TypeScript", "OpenAI"],
     tagImg: [react.src, ts.src, openai.src],
     github: "https://github.com/Baalavignesh/SkillAgent-React",
-    when: "2024",
-  },
-  {
-    title: "ConvChemy",
-    key: "ConvChemy",
-    description: "Real-time multiplayer game with alchemy-based challenges.",
-    tags: ["React", "TypeScript"],
-    tagImg: [react.src, ts.src],
-    github: "https://github.com/Baalavignesh/ConvChemy",
     when: "2024",
   },
   {

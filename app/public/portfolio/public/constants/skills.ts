@@ -4,12 +4,13 @@ let portlang: string[] = [
     "Python",
     "Docker",
     "Kubernetes",
-    "MySQL",
     "React",
     "NextJs",
     "Express", 
     "AWS",
-    "Tailwind CSS"
+    "Tailwind CSS",
+    "MySQL",
+    "DevOps"
 ]
 
   export {portlang}

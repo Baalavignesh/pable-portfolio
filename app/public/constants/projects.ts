@@ -1,5 +1,6 @@
 import {
   convchemybg,
+  healthbridgebg,
   healthhub,
   justpaintbg,
   miresumebg,
@@ -11,9 +12,36 @@ import {
   social2,
   story3bg,
   vitruhealbg,
+  donatelifebg,
 } from "../static";
 
 let allProjects: IProject[] = [
+  {
+    title: "Donate Life",
+    key: "DonateLife",
+    description: "Donate Life is a real-time blood donation platform that connects blood banks with nearby donors during emergencies. The platform uses geospatial search to find and notify potential donors via SMS and email, while also leveraging machine learning to predict future blood demand patterns.",
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "AWS", "Tailwind CSS"],
+    bg: donatelifebg.src,
+    inspiration: "Blood banks often struggle to maintain adequate supplies and quickly find donors during emergencies. Donate Life addresses this critical healthcare challenge by creating an efficient, technology-driven connection between blood banks and willing donors, potentially saving countless lives through timely donations.",
+    technologies: "The platform utilizes React.js with Leaflet for interactive maps and Tailwind CSS for the frontend. The backend runs on Node.js and Express.js, with MongoDB's geospatial indexing enabling location-based donor searches. AWS services (Lambda, EC2, S3, SES) handle cloud infrastructure and notifications, while a machine learning model predicts blood demand trends.",
+    what: "Donate Life revolutionizes blood donation by enabling real-time connections between blood banks and donors. Key features include instant SMS/email notifications to nearby donors, dynamic search radius expansion, interactive donor mapping, and AI-powered demand prediction. The platform ensures a reliable and efficient blood donation ecosystem.",
+    github: "https://github.com/Baalavignesh/donatelife",
+    when: "2024",
+    other: "https://devpost.com/software/donate-life"
+  },
+  {
+    title: "HealthBridge AI",
+    key: "HealthBridgeAI",
+    description: "HealthBridge AI is a telemedicine platform that breaks down language barriers in healthcare using AI-driven multilingual support. It enables seamless communication between patients and doctors through features like voice-based symptom analysis, intelligent doctor matching, and real-time translation.",
+    tags: ["React", "FastAPI", "AWS", "OpenAI", "Tailwind CSS"],
+    bg: healthbridgebg.src,
+    inspiration: "The healthcare industry faces significant challenges in providing equitable care due to language barriers and cultural differences. HealthBridge AI aims to bridge this gap by leveraging AI technologies to create a more inclusive and accessible healthcare experience for patients from diverse linguistic backgrounds.",
+    technologies: "The platform integrates multiple AI services including OpenAI for voice-to-text conversion, Hugging Face for symptom analysis, and Amazon Translate for multilingual support. The frontend is built with React and Tailwind CSS, while FastAPI powers the backend. DynamoDB handles data storage, and Socket.io will enable real-time communication features.",
+    what: "HealthBridge AI revolutionizes telemedicine by offering AI-powered symptom analysis through voice messages, automated doctor specialization recommendations, and seamless multilingual communication. The platform matches patients with nearby doctors in real-time while ensuring language barriers don't impede quality healthcare delivery.",
+    github: "https://github.com/Baalavignesh/HealthBridge-AI",
+    when: "2024",
+    other: "https://devpost.com/software/healthbridge-ai"
+  },
   {
     title: "MiResume",
     key: "MiResume",
@@ -200,64 +228,4 @@ let allProjects: IProject[] = [
   },
 ];
 
-let recentProjects: IProject[] = [
-  {
-    title: "MiResume",
-    key: "MiResume",
-    description: "Generates personalized resumes using LaTeX and OpenAI.",
-    tags: ["React", "Node.js", "CosmoDB", "OpenAI", "Azure"],
-    bg: miresumebg.src,
-    inspiration:
-      "Applying for part-time and summer internships often involves a tedious process of reading job descriptions and crafting personalized resumes and cover letters. This task can be extremely time-consuming, especially for students juggling assignments, college work, personal projects, and hobbies. MiResume aims to streamline this process, enabling users to create a tailored resume for their desired job role in under a minute.",
-    technologies:
-      "We harnessed the powerful capabilities of Microsoft Azure AI to develop MiResume. The application utilizes Microsoft Cosmos DB to store user information, allowing for seamless access by the AI services. This integration leverages the full spectrum of Azure’s AI tools for enhanced functionality and user experience.",
-    what: "MiResume is an AI-powered tool that quickly creates tailored resumes for specific job roles. By analyzing job descriptions and user input, it generates a personalized, professionally formatted resume in under a minute using a LaTeX-based template. Built with Microsoft Azure AI and Cosmos DB, MiResume is ideal for students and job seekers needing high-quality resumes for internships and part-time roles.",
-    github: "https://github.com/Baalavignesh/MiResume-React",
-    when: "2024",
-  },
-  {
-    title: "SkillAgent",
-    key: "SkillAgent",
-    description: "Helps users acquire new skills efficiently using OpenAI.",
-    tags: ["React", "Node.js", "Firebase", "OpenAI", "Tailwind CSS", "Vite.js"],
-    bg: skillagentbg.src,
-    inspiration:
-      "The need to rapidly acquire skills for personal growth or professional onboarding can be daunting and time-intensive. SkillAgent aims to simplify this process by leveraging AI to create customized learning plans, making it easier for users and businesses to adapt to evolving skill demands in a fast-paced world.",
-    technologies:
-      "SkillAgent leverages modern technologies including React with Tailwind CSS for an interactive UI, Node.js with TypeScript for backend operations, and Firebase for authentication and data storage. OpenAI's Assistant powers personalized learning experiences, while Vite.js, Redux Toolkit, and Axios ensure a seamless development and user experience.",
-    what: "SkillAgent is an AI-powered learning platform that helps users achieve skill development goals efficiently. It provides personalized learning plans, AI-tutor conversations, and tracks progress, making it an ideal tool for individuals seeking skill improvement and businesses streamlining employee onboarding processes.",
-    github: "https://github.com/Baalavignesh/SkillAgent-React",
-    when: "2024",
-  },
-  {
-    title: "ConvChemy",
-    key: "ConvChemy",
-    description: "Real-time multiplayer game with alchemy-based challenges.",
-    tags: ["React", "Convex", "Tailwind CSS"],
-    bg: convchemybg.src,
-    inspiration:
-      "The inspiration behind ConvChemy stems from a passion for both gaming and science. By combining alchemy concepts with competitive gameplay, ConvChemy challenges players to engage in an intellectually stimulating yet fun experience.",
-    technologies:
-      "ConvChemy uses Convex as the backend to provide real-time updates without WebSocket complexities. The frontend is built with React and styled using Tailwind CSS, ensuring a dynamic and engaging gaming experience.",
-    what: "ConvChemy allows players to host rooms, invite friends, and compete to create unique elements in a limited time. With seamless updates powered by Convex, players enjoy a collaborative and competitive environment where creativity and speed are key.",
-    github: "https://github.com/Baalavignesh/ConvChemy",
-    when: "2024",
-  },
-  {
-    title: "Story3",
-    key: "Story3",
-    description: "AI-powered storytelling with customization and performance.",
-    tags: ["React", "OpenAI", "Story3 API", "TypeScript", "Firebase"],
-    bg: story3bg.src,
-    inspiration:
-      "NewEnd GenMode draws inspiration from the limitless potential of storytelling and the desire to put creative control in the hands of users. It combines AI innovation with interactive storytelling for a truly unique experience.",
-    technologies:
-      "The platform utilizes React for its interactive frontend, OpenAI for generating stories, Story3 API for analytics and twists, and Firebase for seamless data management and authentication.",
-    what: "NewEnd GenMode enables users to generate AI-driven stories based on their preferences. With dynamic twists, narrative branches, and comprehensive analytics through Story3 API, it empowers storytellers to craft unique and immersive tales.",
-    github: "https://github.com/Baalavignesh/NewEnd-GenMode",
-    when: "2024",
-  },
-
-];
-
-export { allProjects, recentProjects };
+export { allProjects };

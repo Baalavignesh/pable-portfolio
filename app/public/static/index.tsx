@@ -25,8 +25,11 @@ import social2 from "./projects/social2_bg.png"
 import shareitpythonbg from "./projects/shareitpython_bg.png"
 import justpaintbg from "./projects/justpaint_bg.png"
 import myclipbookbg from    "./projects/myclipbook_bg.png";
+import healthbridgebg from "./projects/healthbridge_bg.png"
+import donatelifebg from "./projects/donatelife_bg.png"
+
 export {convchey, miresume, skillagent};
-export {miresumebg, convchemybg, story3bg, vitruhealbg, healthhub, skillagentbg, securefilestorebg, seeyanonymouschatbg, social2, shareitpythonbg, justpaintbg, myclipbookbg};
+export {miresumebg, convchemybg, story3bg, vitruhealbg, healthhub, skillagentbg, securefilestorebg, seeyanonymouschatbg, social2, shareitpythonbg, justpaintbg, myclipbookbg, healthbridgebg, donatelifebg};
 
 
 import achievements from "./svg/achievements.svg";
