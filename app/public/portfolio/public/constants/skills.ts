@@ -21,6 +21,11 @@ let portlang: { name: string; tag: string; color: string }[] = [
     color: "bg-green-500",
   },
   {
+    name: "Swift",
+    tag: "frontend",
+    color: "bg-green-500",
+  },
+  {
     name: "AWS",
     tag: "devops",
     color: "bg-blue-500",

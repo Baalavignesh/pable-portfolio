@@ -1,5 +1,5 @@
 import { kubernetes } from "../portfolio/public/static";
-import { nextjs, ts, js, express, python, aws, git, firebase, mysql, tailwind, dart, c, cpp, angular, net, fastapi, azure, docker, mongo, postgresql, postman, node, redux, reactjs, flutter } from "../static";
+import { nextjs, ts,  python, aws, git, firebase, mysql, c, cpp, angular, net, fastapi, azure, docker, mongo, postgresql, postman, node, redux, reactjs, flutter, terraform, swift } from "../static";
 
 
 let myskills: ISkills = {
@@ -9,25 +9,11 @@ let myskills: ISkills = {
       heading: "React",
       subheading: "Javascript Library",
     },
+
     {
-      image: nextjs.src,
-      heading: "NextJs",
-      subheading: "React Framework",
-    },
-    {
-      image: ts.src,
-      heading: "TypeScript",
-      subheading: "JavaScript Superset",
-    },
-    {
-      image: js.src,
-      heading: "JavaScript",
-      subheading: "Programming Language",
-    },
-    {
-      image: express.src,
-      heading: "Express",
-      subheading: "Node.js Framework",
+      image: node.src,
+      heading: "Node.js",
+      subheading: "JavaScript Runtime",
     },
     {
       image: python.src,
@@ -35,9 +21,24 @@ let myskills: ISkills = {
       subheading: "Programming Language",
     },
     {
+      image: ts.src,
+      heading: "TypeScript",
+      subheading: "JavaScript Superset",
+    },
+    {
       image: aws.src,
       heading: "AWS",
       subheading: "Cloud Services",
+    },
+    {
+      image: terraform.src,
+      heading: "Terraform",
+      subheading: "Infrastructure as Code",
+    },
+    {
+      image: swift.src,
+      heading: "Swift",
+      subheading: "Programming Language",
     },
     {
       image: docker.src,
@@ -55,22 +56,48 @@ let myskills: ISkills = {
       subheading: "Version Control",
     },
     {
-      image: firebase.src,
-      heading: "Firebase",
-      subheading: "Backend as a Service",
+      image: nextjs.src,
+      heading: "NextJs",
+      subheading: "React Framework",
     },
     {
       image: mysql.src,
       heading: "MySQL",
       subheading: "Database",
     },
-    {
-      image: tailwind.src,
-      heading: "Tailwind CSS",
-      subheading: "CSS Framework",
-    },
+
   ],
   other: [
+    {
+      image: firebase.src,
+      heading: "Firebase",
+      subheading: "Backend as a Service",
+    },
+    {
+      image: fastapi.src,
+      heading: "FastAPI",
+      subheading: "Web Framework",
+    },
+    {
+      image: azure.src,
+      heading: "Azure",
+      subheading: "Cloud Services",
+    },
+    {
+      image: mongo.src,
+      heading: "MongoDB",
+      subheading: "Database",
+    },
+    {
+      image: postman.src,
+      heading: "Postman",
+      subheading: "API Testing",
+    },
+    {
+      image: redux.src,
+      heading: "Redux",
+      subheading: "State Management",
+    },
     {
       image: flutter.src,
       heading: "Flutter",
@@ -96,41 +123,13 @@ let myskills: ISkills = {
       heading: ".NET",
       subheading: "Framework",
     },
-    {
-      image: fastapi.src,
-      heading: "FastAPI",
-      subheading: "Web Framework",
-    },
-    {
-      image: azure.src,
-      heading: "Azure",
-      subheading: "Cloud Services",
-    },
-    {
-      image: mongo.src,
-      heading: "MongoDB",
-      subheading: "Database",
-    },
+    
     {
       image: postgresql.src,
       heading: "PostgreSQL",
       subheading: "Database",
     },
-    {
-      image: postman.src,
-      heading: "Postman",
-      subheading: "API Testing",
-    },
-    {
-      image: node.src,
-      heading: "Node.js",
-      subheading: "JavaScript Runtime",
-    },
-    {
-      image: redux.src,
-      heading: "Redux",
-      subheading: "State Management",
-    },
+
   ],
 };
 

@@ -1,6 +1,17 @@
-import { faaster, presidio, toast, zoho } from "../static";
+import { faaster, presidio, toast, zoho, motate } from "../static";
 
 let experience: IExperience[] = [
+  {
+    company: "Motate",
+    role: "Software Engineer",
+    type: "Internship",
+    location: "United States",
+    duration: "May 2025 - Present",
+    length: "3 months",
+    description: "Building a serverless multilingual content platform using AWS Lambda/API Gateway with automated scaling. Implemented Terraform/GitHub Actions for AWS environments and optimized DynamoDB schemas with secondary indexes for improved query performance.",
+    skills: ["Amazon Web Services (AWS)", "Terraform", "Next.js"],
+    logo: motate.src,
+  },
   {
     company: "Presidio",
     role: "Associate Engineer",

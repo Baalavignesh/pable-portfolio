@@ -4,6 +4,7 @@ import faaster from "./experience/faaster.png";
 import presidio from "./experience/presidio.png";
 import toast from "./experience/toast.png";
 import zoho from "./experience/zoho.png";
+import motate from "./experience/motate.jpeg";
 
 import practitioner from "./achievements/practitioner.png"
 import associate from "./achievements/solutions-architect.png"
@@ -29,4 +30,4 @@ import kubernetes from "./skill/kubernetes.svg";
 
 export { aws, express, mysql, nextjs, python, node, tailwind, react, js, ts, openai, docker, kubernetes };
 
-export { profilepic, faaster, presidio, toast, zoho, practitioner, associate, github, gmail, linkedin };
+export { profilepic, faaster, presidio, toast, zoho, practitioner, associate, github, gmail, linkedin, motate };

@@ -49,8 +49,9 @@ import zoho from "./experience/zoho.png";
 import presidio from "./experience/presidio.png";
 import toast from "./experience/toast.png";
 import faaster from "./experience/faaster.png";
+import motate from "./experience/motate.jpeg";
 
-export {zoho, presidio, toast, faaster};
+export {zoho, presidio, toast, faaster, motate};
 
 import practitioner from "./achievements/practitioner.png";
 import solution_architect from "./achievements/solutions-architect.png";
@@ -98,5 +99,8 @@ import cosmo from "../../public/static/skills/cosmo.svg";
 import s3 from "../../public/static/skills/s3.svg";
 import jwt from "../../public/static/skills/jwt.svg";
 import socketio from "../../public/static/skills/socketio.svg";
+import swift from "../../public/static/skills/swift.svg";
+import terraform from "../../public/static/skills/terraform.svg";
 
-export { js, ts, python, dart, c, cpp, reactjs, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio };
+
+export { js, ts, python, dart, c, cpp, reactjs, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio, swift, terraform };
