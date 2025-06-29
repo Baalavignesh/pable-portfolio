@@ -37,12 +37,13 @@ export default function Page() {
           <div className="flex flex-col w-full lg:w-1/2 justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8 ">
           <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">Badges</h1>
 
-          <div className="p-4 flex gap-2 flex-wrap lg:flex-row lg:justify-start">
+          <div className="p-4 flex gap-2 flex-wrap lg:flex-row lg:justify-start cursor-pointer">
             {badges.map((badge, index) => {
               return (
                 <img
                   src={badge.badge}
                   alt={badge.name}
+                  onClick={() => window.open(badge.link, "_blank")}
                   className="w-28 h-28 lg:w-44 lg:h-44"
                   key={index}
                 ></img>

@@ -1,7 +1,12 @@
-import { associate, practitioner } from "../static";
+import { associate, practitioner, terraform } from "../static";
 
 
 let badges:IAchievements[] = [
+  {
+    title: "HashiCorp Certified: Terraform Associate (003)",
+    image: terraform.src,
+    link: "https://www.credly.com/badges/ff42c6c7-1d83-4609-b678-c695ed78667a/public_url"
+  },
     {
         title: "AWS Certified Solutions Architect",
         image: associate.src,

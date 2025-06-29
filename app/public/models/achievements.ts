@@ -1,6 +1,7 @@
 interface Badge {
     name: string;
     badge: string;
+    link: string;
 }
 
 interface Certificate {

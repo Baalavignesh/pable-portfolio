@@ -6,8 +6,9 @@ import toast from "./experience/toast.png";
 import zoho from "./experience/zoho.png";
 import motate from "./experience/motate.jpeg";
 
-import practitioner from "./achievements/practitioner.png"
-import associate from "./achievements/solutions-architect.png"
+import practitioner from "./badges/practitioner.png"
+import associate from "./badges/solutions-architect.png"
+import terraform from "./badges/terraform.png"
 
 import github from "./home/github.svg"
 import gmail from "./home/gmail.svg"
@@ -30,4 +31,4 @@ import kubernetes from "./skill/kubernetes.svg";
 
 export { aws, express, mysql, nextjs, python, node, tailwind, react, js, ts, openai, docker, kubernetes };
 
-export { profilepic, faaster, presidio, toast, zoho, practitioner, associate, github, gmail, linkedin, motate };
+export { profilepic, faaster, presidio, toast, zoho, practitioner, associate, github, gmail, linkedin, motate, terraform };
