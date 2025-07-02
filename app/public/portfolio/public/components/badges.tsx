@@ -21,7 +21,7 @@ const Badges: React.FC = () => {
             <div key={index} className="flex gap-2 items-center justify-center rounded-md p-2 py-1 text-black font-medium">
                 {/* <p className="text-sm">{achievements.title}</p> */}
                 <a href={achievements.link} target="_blank" rel="noreferrer">
-                    <img src={achievements.image} className="w-28 h-28"></img>
+                    <img src={achievements.image} className="w-32 h-32 hover:scale-[103%] transition-all duration-300"></img>
                 </a>
             </div>  
             
