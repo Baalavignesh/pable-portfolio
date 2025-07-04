@@ -22,7 +22,6 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.3 }}
       onClick={() => router.push(`/projects/${project.key}`)}
       className="bg-white dark:bg-dark-secondary rounded-lg shadow-sm border border-gray-200 dark:border-gray-800/50 overflow-hidden cursor-pointer group hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/30 transition-all"
     >
@@ -30,7 +29,6 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
         <motion.img
           initial={{ scale: 1.1 }}
           whileHover={{ scale: 1.15 }}
-          transition={{ duration: 0.4 }}
           src={project.bg}
           alt={project.title}
           className="w-full h-full object-cover"
