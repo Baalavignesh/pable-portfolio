@@ -2,11 +2,11 @@
 
 import tagToImage from "@/app/public/constants/project_tags";
 import { allProjects } from "@/app/public/constants/projects";
-import { githubdark, inspiration, tech, what } from "@/app/public/static";
+import { githubdark, githublight, inspiration, tech, what } from "@/app/public/static";
 import { faCode, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import PageTemplate from "@/components/PageTemplate";
+import { motion } from "motion/react";
 
 interface IndividualProjectProps {
   params: {
@@ -25,103 +25,181 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
   }, []);
 
   if (!isLoaded || !project) {
-    return <div>Loading...</div>;
+    return <div className="text-gray-900 dark:text-white">Loading...</div>;
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-white dark:bg-dark-primary min-h-screen">
       {/* Full-width image section */}
-      <div className="w-full h-[40vh] relative">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="w-full h-[40vh] relative"
+      >
         <img
           src={project.bg}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover dark:opacity-90"
           alt={project.title}
         />
-      </div>
+      </motion.div>
 
       {/* Content section using PageTemplate */}
-        <div className="flex flex-col gap-8 px-96 mx-auto py-12">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
+        className="flex flex-col gap-8 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 max-w-7xl mx-auto w-full py-12"
+      >
           {/* Header section with buttons */}
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
-            <span className="text-lg text-gray-500">{project.when}</span>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+            className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4"
+          >
+            <span className="text-lg text-gray-500 dark:text-gray-400">{project.when}</span>
             <div className="flex gap-4">
               {project.other && (
-                <button
-                  className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center gap-2 px-4 py-2 dark:bg-gray-100 bg-gray-900 text-white dark:text-gray-900 rounded-md  transition-colors"
                   onClick={() => window.open(project.other, "_blank")}
                 >
                   DevPost
                   <FontAwesomeIcon icon={faUpRightFromSquare} className="ml-2" />
-                </button>
+                </motion.button>
               )}
-              <button
-                className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-2 px-4 py-2 dark:bg-gray-900 bg-white dark:text-white text-gray-900 rounded-md    transition-colors"
                 onClick={() => window.open(project.github, "_blank")}
               >
                 GitHub
-                <img src={githubdark.src} className="h-5 w-5" alt="GitHub" />
-              </button>
+                <img 
+                  src={githublight.src} 
+                  className="h-5 w-5 block dark:hidden" 
+                  alt="GitHub Light" 
+                />
+                <img 
+                  src={githubdark.src} 
+                  className="h-5 w-5 hidden dark:block" 
+                  alt="GitHub Dark" 
+                />
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Tags */}
-          <div className="flex gap-2 flex-wrap">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+            className="flex gap-2 flex-wrap"
+          >
             {project.tags.map((tag: string, index: number) => (
-              <div key={index} className="flex items-center gap-2 px-3 py-2 bg-white rounded-md border text-sm text-gray-900 shadow-sm">
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.2, delay: 0.4 + index * 0.05 }}
+                className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-dark-secondary rounded-md border border-gray-200/50 dark:border-gray-800/50 text-sm text-gray-900 dark:text-white shadow-sm dark:shadow-lg dark:shadow-black/10"
+              >
                 {tagToImage[tag] ? (
-                  <img src={tagToImage[tag]} className="w-5 h-5 object-contain" alt={tag} />
+                  <img src={tagToImage[tag]} className="w-5 h-5 object-contain dark:opacity-90" alt={tag} />
                 ) : (
-                  <FontAwesomeIcon icon={faCode} className="text-gray-500" />
+                  <FontAwesomeIcon icon={faCode} className="text-gray-500 dark:text-gray-400" />
                 )}
                 <span>{tag}</span>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Description */}
-          <div className="text-gray-600 text-justify">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
+            className="text-gray-600 dark:text-gray-300 text-justify"
+          >
             {project.description}
-          </div>
+          </motion.div>
 
-          <hr className="my-4" />
+          <motion.hr 
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.3, delay: 0.6 }}
+            className="border-gray-200/50 dark:border-gray-800/50" 
+          />
 
           {/* Sections */}
           <div className="flex flex-col gap-12">
             {/* Inspiration */}
-            <div className="flex flex-col lg:flex-row items-center gap-8 justify-between">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.7 }}
+              className="flex flex-col lg:flex-row items-center gap-8 justify-between"
+            >
               <div className="w-full lg:w-2/3">
-                <h2 className="text-2xl font-medium mb-4">Inspiration</h2>
-                <p className="text-gray-600 text-justify">{project.inspiration}</p>
+                <h2 className="text-2xl font-medium mb-4 text-gray-900 dark:text-white">Inspiration</h2>
+                <p className="text-gray-600 dark:text-gray-300 text-justify">{project.inspiration}</p>
               </div>
-              <div className="hidden lg:block ">
-                <img src={inspiration.src} className="w-48 object-contain" alt="Inspiration" />
-              </div>
-            </div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: 0.8 }}
+                className="hidden lg:block"
+              >
+                <img src={inspiration.src} className="w-48 object-contain dark:opacity-90" alt="Inspiration" />
+              </motion.div>
+            </motion.div>
 
             {/* What it does */}
-            <div className="flex flex-col lg:flex-row items-center gap-8 justify-between">
-            <div className="hidden lg:block ">
-                <img src={what.src} className="w-48 object-contain" alt="What it does" />
-              </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.9 }}
+              className="flex flex-col lg:flex-row items-center gap-8 justify-between"
+            >
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: 1 }}
+                className="hidden lg:block"
+              >
+                <img src={what.src} className="w-48 object-contain dark:opacity-90" alt="What it does" />
+              </motion.div>
               <div className="w-full lg:w-2/3">
-                <h2 className="text-2xl font-medium mb-4">What it does</h2>
-                <p className="text-gray-600 text-justify">{project.what}</p>
+                <h2 className="text-2xl font-medium mb-4 text-gray-900 dark:text-white">What it does</h2>
+                <p className="text-gray-600 dark:text-gray-300 text-justify">{project.what}</p>
               </div>
-             
-            </div>
+            </motion.div>
 
             {/* Technologies */}
-            <div className="flex flex-col lg:flex-row items-center gap-8 justify-between">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 1.1 }}
+              className="flex flex-col lg:flex-row items-center gap-8 justify-between"
+            >
               <div className="w-full lg:w-2/3">
-                <h2 className="text-2xl font-medium mb-4">Technologies</h2>
-                <p className="text-gray-600 text-justify">{project.technologies}</p>
+                <h2 className="text-2xl font-medium mb-4 text-gray-900 dark:text-white">Technologies</h2>
+                <p className="text-gray-600 dark:text-gray-300 text-justify">{project.technologies}</p>
               </div>
-              <div className="hidden lg:block ">
-                <img src={tech.src} className="w-48 object-contain" alt="Technologies" />
-              </div>
-            </div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: 1.2 }}
+                className="hidden lg:block"
+              >
+                <img src={tech.src} className="w-48 object-contain dark:opacity-90" alt="Technologies" />
+              </motion.div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
     </div>
   );
 };

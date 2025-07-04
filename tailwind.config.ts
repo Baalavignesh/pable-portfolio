@@ -6,11 +6,19 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        dark: {
+          primary: '#030303',
+          secondary: '#0f0f0f',
+          tertiary: '#1a1a1a',
+          text: '#ffffff',
+          accent: '#6366f1',
+        },
       },
       screens: {
         'sm': '640px',

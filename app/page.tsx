@@ -17,7 +17,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-xl flex flex-col justify-center"
+        className="text-xl flex flex-col justify-center bg-white dark:bg-dark-primary"
       >
         <motion.div 
           initial={{ opacity: 0 }}

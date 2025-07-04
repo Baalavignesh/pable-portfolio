@@ -22,14 +22,14 @@ const Experience = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="p-0"
+      className="p-0 mt-4"
     >
       <Heading heading="Professional Experience" linkto="experience" />
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="flex gap-4 flex-col p-6 rounded-md border-2 w-full"
+        className="flex gap-4 flex-col p-6 rounded-lg border border-gray-200/50 dark:border-gray-800/50 w-full bg-white dark:bg-dark-secondary shadow-sm dark:shadow-lg dark:shadow-black/10"
       >
         {portExperience.map((experience: IExperience, index) => (
           <motion.div 
@@ -48,28 +48,28 @@ const Experience = () => {
                 whileHover={{ scale: 1.1 }}
                 src={experience.logo}
                 alt={experience.company}
-                className="w-14 h-14 rounded-md border-2 border-gray-100 shadow-md object-cover"
+                className="w-14 h-14 rounded-md border border-gray-100 dark:border-gray-700 shadow-sm dark:shadow-md dark:shadow-black/20 object-cover bg-white dark:bg-dark-tertiary"
               />
               <div>
-                <motion.h1 className="font-semibold">
+                <motion.h1 className="font-semibold text-gray-900 dark:text-white">
                   {experience.company}
                 </motion.h1>
-                <motion.p className="text-base text-gray-500">
+                <motion.p className="text-base text-gray-500 dark:text-gray-400">
                   {experience.role}
                 </motion.p>
               </div>
             </motion.div>
             <motion.div 
-              className="flex gap-2 text-gray-400 items-center pl-0"
+              className="flex gap-2 text-gray-400 dark:text-gray-500 items-center pl-0"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 + (index * 0.1), duration: 0.3 }}
             >
-              <FontAwesomeIcon icon={faCalendarDays} className="text-gray-400" size="xs" />
+              <FontAwesomeIcon icon={faCalendarDays} className="text-gray-400 dark:text-gray-500" size="xs" />
               <p className="text-sm">{experience.duration}</p>
             </motion.div>
             <motion.p 
-              className="text-base text-gray-500"
+              className="text-base text-gray-500 dark:text-gray-400"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 + (index * 0.1), duration: 0.3 }}
@@ -77,7 +77,7 @@ const Experience = () => {
               {experience.description}
             </motion.p>
             <motion.div 
-              className="flex gap-2"
+              className="flex flex-wrap gap-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 + (index * 0.1), duration: 0.3 }}
@@ -86,7 +86,7 @@ const Experience = () => {
                 <motion.span
                   key={skillIndex}
                   whileHover={{ scale: 1.05 }}
-                  className="text-xs text-gray-500 bg-gray-200 rounded-md p-1"
+                  className="text-xs text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-dark-tertiary hover:bg-gray-200 dark:hover:bg-dark-primary rounded-md px-2 py-1 transition-colors"
                 >
                   {skill}
                 </motion.span>
@@ -97,7 +97,7 @@ const Experience = () => {
                 initial={{ opacity: 0, scaleX: 0 }}
                 animate={{ opacity: 1, scaleX: 1 }}
                 transition={{ delay: 0.7 + (index * 0.1), duration: 0.3 }}
-                className="my-4" 
+                className="my-4 border-gray-200 dark:border-gray-800" 
               />
             )}
           </motion.div>

@@ -89,11 +89,7 @@ let myskills: ISkills = {
       heading: "MongoDB",
       subheading: "Database",
     },
-    {
-      image: postman.src,
-      heading: "Postman",
-      subheading: "API Testing",
-    },
+
     {
       image: redux.src,
       heading: "Redux",
@@ -103,16 +99,6 @@ let myskills: ISkills = {
       image: flutter.src,
       heading: "Flutter",
       subheading: "UI Toolkit",
-    },
-    {
-      image: c.src,
-      heading: "C",
-      subheading: "Programming Language",
-    },
-    {
-      image: cpp.src,
-      heading: "C++",
-      subheading: "Programming Language",
     },
     {
       image: angular.src,

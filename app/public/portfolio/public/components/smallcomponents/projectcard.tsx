@@ -21,11 +21,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <motion.div 
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
-      className="flex flex-col p-4 rounded-md border-gray-200 shadow-sm border-2 w-full hover:shadow-md"
+      className="flex flex-col p-4 rounded-lg border-gray-200/50 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 w-full hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/20 bg-white dark:bg-dark-secondary"
     >
       <div className="flex justify-between items-center">
         <motion.h1 
-          className="text-lg font-semibold"
+          className="text-lg font-semibold text-gray-900 dark:text-white"
         >
           {title}
         </motion.h1>
@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="text-sm text-gray-600 hover:text-gray-900 transition-all duration-150"
+          className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-150"
         >
           View Project
           <motion.span 
@@ -47,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </motion.a>
       </div>
       <motion.p 
-        className="text-sm text-gray-500 line-clamp-3 pt-4"
+        className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3 pt-4"
       >
         {description}
       </motion.p>
@@ -57,14 +57,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             key={index}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            className="text-xs text-gray-800 bg-gray-100 rounded-md p-[6px] flex gap-1 items-center"
+            className="text-xs text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-dark-tertiary rounded-md p-[6px] flex gap-1 items-center hover:bg-gray-200 dark:hover:bg-dark-primary transition-colors"
           >
-            <motion.img 
-              whileHover={{ rotate: 10 }}
-              src={tagImg[index]} 
-              className="w-4 h-4"
-              alt={tag}
-            />
             {tag}
           </motion.span>
         ))}
