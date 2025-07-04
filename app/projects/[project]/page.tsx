@@ -2,8 +2,7 @@
 
 import tagToImage from "@/app/public/constants/project_tags";
 import { allProjects } from "@/app/public/constants/projects";
-import { githubdark, githubicon, githublight, inspiration, tech, what } from "@/app/public/static";
-import CustomNavbar from "@/components/customNavbar";
+import { githubdark, inspiration, tech, what } from "@/app/public/static";
 import { faCode, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
@@ -29,18 +28,17 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
 
   return (
     <div>
-      <CustomNavbar />
       <div className="h-screen flex flex-col items-center text-center lg:text-left">
         {isLoaded && project ? (
           <>
             <div className="h-3/5 w-full">
               <img
                 src={project.bg}
-                className="h-full w-full object-cover cursor-pointer fade-projects-bg"
+                className="h-full w-full object-cover cursor-pointer -bg"
               />
             </div>
 
-            <div className="flex flex-col gap-8 px-12 w-full lg:w-3/4 2xl:w-2/3 fade-projects">
+            <div className="flex flex-col gap-8 px-12 w-full lg:w-3/4 2xl:w-2/3 ">
               {/* description and image */}
               <div className="flex flex-col w-full pt-24 ">
                 <div className="flex gap-4 items-center justify-between flex-wrap">

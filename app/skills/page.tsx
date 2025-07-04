@@ -9,7 +9,7 @@ export default function Page() {
     <>
       <PageTemplate heading="Skills and Technologies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
         <div className="flex flex-col xl:flex-row gap-8 justify-center w-full">
-          <div className="flex flex-col w-full justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
+          <div className="flex flex-col w-full justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50   py-8">
             <div className=" border-b-2 p-2 m-2 flex flex-col gap-2">
               <p className="text-2xl lg:text-4xl font-normal w-fit">Stack</p>
               <p className="text-base lg:text-xl font-light text-gray-700">
@@ -42,7 +42,7 @@ export default function Page() {
               })}
             </div>
           </div>
-          <div className="flex flex-col w-full justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
+          <div className="flex flex-col w-full justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50   py-8">
             <div className=" border-b-2 p-2 m-2 flex flex-col gap-2">
               <p className="text-2xl lg:text-4xl font-normal w-fit">Other Technologies</p>
               <p className="text-base lg:text-xl font-light text-gray-700">

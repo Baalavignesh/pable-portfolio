@@ -13,7 +13,7 @@ export default function Page() {
     <PageTemplate heading="Achievements &nbsp;&nbsp;&nbsp;">
       <div className="flex flex-col gap-6 w-full">
         <div className="flex flex-col md:flex-row w-full  gap-6">
-          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6  pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
+          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6  pt-2 gap-2 rounded-lg bg-gray-50   py-8">
             <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">2X Hackathon Winner</h1>
 
             <div className="p-0 flex flex-col gap-6">
@@ -34,7 +34,7 @@ export default function Page() {
               })}
             </div>
           </div>
-          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8 ">
+          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50   py-8 ">
           <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">Badges</h1>
 
           <div className="p-4 flex gap-2 flex-wrap lg:flex-row lg:justify-start cursor-pointer">
@@ -54,7 +54,7 @@ export default function Page() {
         </div>
 
 
-          <div className="flex flex-col w-full  justify-start p-6  pt-2 gap-2 rounded-lg bg-gray-50  fade-projects py-8">
+          <div className="flex flex-col w-full  justify-start p-6  pt-2 gap-2 rounded-lg bg-gray-50   py-8">
             <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">Certificates</h1>
 
             <div className="p-4 flex flex-col gap-2 w-full">

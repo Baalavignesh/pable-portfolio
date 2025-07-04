@@ -8,76 +8,11 @@ body {
   color: black;
   /* font-family: sfpro, sans-serif; */
   font-family: "DM Sans", sans-serif;
+  padding-top: 1rem; 
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-}
-
-.fade-heading {
-  animation: headingFadeIn 1s;
-}
-
-@keyframes headingFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-/* fade card welcome page */
-.fade-card {
-  animation: fadeIn 1s;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* fade projects individual card */
-.fade-projects {
-  animation: fadeProjects 0.7s;
-}
-
-@keyframes fadeProjects {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-  0% {
-    transform: translateY(150px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-
-/* fade projects bg image */
-.fade-projects-bg {
-  animation: fadeProjectsBg 1s;
-  inset-inline-start: -4rem !important;
-}
-
-@keyframes fadeProjectsBg {
-  0% {
-    opacity: 0;
-    
-  }
-  100% {
-    opacity: 1;
   }
 }

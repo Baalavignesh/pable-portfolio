@@ -3,10 +3,8 @@
 import React from "react";
 import { allProjects } from "../public/constants/projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faCode } from "@fortawesome/free-solid-svg-icons";
-import CustomNavbar from "@/components/customNavbar";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
-import PageHeading from "@/components/̦PageHeading";
 import PageTemplate from "@/components/PageTemplate";
 import tagToImage from "../public/constants/project_tags";
 
@@ -18,7 +16,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project, key }) => {
   let router = useRouter();
 
   return (
-    <div className="bg-gray-50 rounded-lg  pb-6 fade-projects">
+    <div className="bg-gray-50 rounded-lg  pb-6 ">
       <img
         src={project.bg}
         alt=""
@@ -27,7 +25,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project, key }) => {
           router.push(`/projects/${project.key}`);
         }}
       />
-      <div className="px-4 flex flex-col justify-between">
+      <div className=" flex flex-col justify-between">
         <h1
           className="font-light py-4 text-3xl pt-6 cursor-pointer"
           onClick={() => {
