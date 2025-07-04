@@ -9,11 +9,10 @@ let myskills: ISkills = {
       heading: "React",
       subheading: "Javascript Library",
     },
-
     {
-      image: node.src,
-      heading: "Node.js",
-      subheading: "JavaScript Runtime",
+      image: aws.src,
+      heading: "AWS",
+      subheading: "Cloud Services",
     },
     {
       image: python.src,
@@ -21,15 +20,17 @@ let myskills: ISkills = {
       subheading: "Programming Language",
     },
     {
+      image: node.src,
+      heading: "Node.js",
+      subheading: "JavaScript Runtime",
+    },
+
+    {
       image: ts.src,
       heading: "TypeScript",
       subheading: "JavaScript Superset",
     },
-    {
-      image: aws.src,
-      heading: "AWS",
-      subheading: "Cloud Services",
-    },
+
     {
       image: terraform.src,
       heading: "Terraform",

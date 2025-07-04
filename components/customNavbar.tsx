@@ -77,7 +77,7 @@ const CustomNavbar: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-between items-center py-2 max-w-screen-lg w-full mx-auto sticky bg-white bg-opacity-60 top-0 z-50 backdrop-filter backdrop-blur-2xl hover:bg-white transition-all duration-300"
+      className="flex justify-between items-center py-6 border-b-2 border-gray-100  w-full mx-auto sticky bg-white bg-opacity-60 top-0 z-50 backdrop-filter backdrop-blur-2xl hover:bg-white transition-all duration-300"
     >
       <div className="flex gap-4 justify-between xl:justify-start items-center w-full">
         <div className="flex text-base gap-12 w-full justify-center" id="items">

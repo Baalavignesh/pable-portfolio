@@ -10,71 +10,96 @@ import PageTemplate from "@/components/PageTemplate";
 
 export default function Page() {
   return (
-    <PageTemplate heading="Achievements &nbsp;&nbsp;&nbsp;">
+    <PageTemplate heading="Achievements">
       <div className="flex flex-col gap-6 w-full">
-        <div className="flex flex-col md:flex-row w-full  gap-6">
-          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6  pt-2 gap-2 rounded-lg bg-gray-50   py-8">
-            <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">2X Hackathon Winner</h1>
 
-            <div className="p-0 flex flex-col gap-6">
-              {hackathons.map((hackathon: Hackathon, index) => {
-                return (
-                  <div className="flex gap-4 justify-start items-start" key={index}>
-                    <p className="w-1/3 text-sm lg:text-xl"> {hackathon.title}</p>
-                    <div className="">
-                      <h1 className="font-semibold text-sm 2xl:text-base 3xl:text-2xl">
-                        {hackathon.award}
-                      </h1>
-                      <p className="text-sm font-light text-gray-500">
-                        {hackathon.company} - {hackathon.issuedBy}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+
+        {/* Badges Section */}
+        <section className="bg-gray-50 rounded-lg p-4">
+          <div className="border-b-2 mb-4">
+            <h2 className="text-lg lg:text-xl font-medium mb-1">Professional Badges</h2>
+            <p className="text-gray-600 text-xs lg:text-sm mb-3">
+              Certifications and professional achievements
+            </p>
           </div>
-          <div className="flex flex-col w-full lg:w-1/2 justify-start p-6 pt-2 gap-2 rounded-lg bg-gray-50   py-8 ">
-          <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">Badges</h1>
 
-          <div className="p-4 flex gap-2 flex-wrap lg:flex-row lg:justify-start cursor-pointer">
-            {badges.map((badge, index) => {
-              return (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {badges.map((badge, index) => (
+              <div 
+                key={index}
+                className="group cursor-pointer transition-transform duration-300 hover:scale-105"
+                onClick={() => window.open(badge.link, "_blank")}
+              >
                 <img
                   src={badge.badge}
                   alt={badge.name}
-                  onClick={() => window.open(badge.link, "_blank")}
-                  className="w-28 h-28 lg:w-44 lg:h-44"
-                  key={index}
-                ></img>
-              );
-            })}
+                  className="w-48 h-auto object-contain "
+                />
+              </div>
+            ))}
           </div>
-        </div>
-        </div>
+        </section>
 
-
-          <div className="flex flex-col w-full  justify-start p-6  pt-2 gap-2 rounded-lg bg-gray-50   py-8">
-            <h1 className="text-2xl xl:text-4xl xl:py-6 my-4 border-b-2 pb-1">Certificates</h1>
-
-            <div className="p-4 flex flex-col gap-2 w-full">
-              {certificates.map((certificate: Certificate, index) => {
-                return (
-                  <div className="flex flex-col gap-2 bg-gray-100 rounded-md p-4" key={index}>
-                    <p className="text-sm lg:text-xl xl:text-2xl">
-                      {" "}
-                      {certificate.title} - {certificate.issuedBy}
-                    </p>
-
-                    <p className="text-sm lg:text-lg font-light text-gray-500">
-                      {certificate.instructor}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+        {/* Hackathons Section */}
+        <section className="bg-gray-50 rounded-lg p-4">
+          <div className="border-b-2 mb-4">
+            <h2 className="text-lg lg:text-xl font-medium mb-1">Hackathon Achievements</h2>
+            <p className="text-gray-600 text-xs lg:text-sm mb-3">
+              Notable hackathon wins and participations
+            </p>
           </div>
 
+          <div className="grid grid-cols-1 gap-4">
+            {hackathons.map((hackathon, index) => (
+              <div 
+                key={index}
+                className="flex flex-col sm:flex-row gap-4 bg-white p-4 rounded-lg shadow-sm"
+              >
+                <div className="sm:w-1/3">
+                  <h3 className="font-medium text-sm lg:text-base text-gray-900">
+                    {hackathon.title}
+                  </h3>
+                </div>
+                <div className="sm:w-2/3">
+                  <h4 className="font-semibold text-sm lg:text-base text-gray-800">
+                    {hackathon.award}
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    {hackathon.company} - {hackathon.issuedBy}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Certificates Section */}
+        <section className="bg-gray-50 rounded-lg p-4">
+          <div className="border-b-2 mb-4">
+            <h2 className="text-lg lg:text-xl font-medium mb-1">Certificates</h2>
+            <p className="text-gray-600 text-xs lg:text-sm mb-3">
+              Educational and professional certifications
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {certificates.map((certificate, index) => (
+              <div 
+                key={index}
+                className="bg-white px-3 py-2 rounded-md"
+              >
+                <h3 className="font-medium text-sm lg:text-base text-gray-900">
+                  {certificate.title}
+                </h3>
+                <div className="flex items-center mt-1 gap-2">
+                  <p className="text-xs text-gray-600">
+                    {certificate.issuedBy} | {certificate.instructor}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </PageTemplate>
   );

@@ -6,6 +6,7 @@ import { githubdark, inspiration, tech, what } from "@/app/public/static";
 import { faCode, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import PageTemplate from "@/components/PageTemplate";
 
 interface IndividualProjectProps {
   params: {
@@ -22,141 +23,105 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
     setProject(allProjects[index]);
     setIsLoaded(true);
   }, []);
-  if (!isLoaded) {
+
+  if (!isLoaded || !project) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div>
-      <div className="h-screen flex flex-col items-center text-center lg:text-left">
-        {isLoaded && project ? (
-          <>
-            <div className="h-3/5 w-full">
-              <img
-                src={project.bg}
-                className="h-full w-full object-cover cursor-pointer -bg"
-              />
-            </div>
-
-            <div className="flex flex-col gap-8 px-12 w-full lg:w-3/4 2xl:w-2/3 ">
-              {/* description and image */}
-              <div className="flex flex-col w-full pt-24 ">
-                <div className="flex gap-4 items-center justify-between flex-wrap">
-                  <h1 className="text-3xl 2xl:text-4xl 3xl:text-6xl font-bold">
-                    {project.title}{" "}
-                    <span className="text-lg font-light pl-2">
-                      {project.when}
-                    </span>
-                  </h1>
-
-                  <div className="flex gap-1">
-                    {project.other && (
-                      <div
-                        className="flex  items-center text-sm xl:text-lg bg-gray-100 p-2 lg:p-4 rounded-md  mr-4 cursor-pointer"
-                        onClick={() => {
-                          window.open(project.other, "_blank");
-                        }}
-                      >
-                        DevPost
-                        <FontAwesomeIcon
-                          icon={faUpRightFromSquare}
-                          className={`transition-opacity duration-500 text-black ml-4 `}
-                        />
-                      </div>
-                    )}
-                    <div
-                      className="flex gap-4 items-center text-sm xl:text-lg bg-black text-white p-2 lg:p-4 rounded-md  cursor-pointer"
-                      onClick={() => {
-                        window.open(project.github, "_blank");
-                      }}
-                    >
-                      <h1>Take me to Github</h1>
-                      <img
-                        src={githubdark.src}
-                        className="h-8 w-8 inline-block text-white"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex gap-2 mt-4 flex-wrap">
-                  {project.tags.map((tag: string, index: number) => {
-                    return (
-                      <div className="rounded-md flex items-center justify-center cursor-default bg-white py-2 px-3 border border-transparent text-sm text-gray-900 transition-all shadow-sm">
-                        {tagToImage[tag] ? (
-                          <img
-                            src={tagToImage[tag]}
-                            className="w-6 h-6  object-contain mr-2"
-                          ></img>
-                        ) : (
-                          <FontAwesomeIcon
-                            icon={faCode}
-                            className="text-slate-500 mr-2"
-                          />
-                        )}
-
-                        <span>{tag}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="flex gap-0">
-                <div className="flex flex-col mt-2 w-full lg:w-3/4">
-                  <p className="text-xl 2xl:text-2xl w-full pr-0 lg:pr-12 ">
-                    {project.description}
-                  </p>
-                </div>
-                <div className="w-1/4 items-center justify-center mt-2 hidden lg:flex">
-                  <div className="w-full overflow-hidden rounded-lg ">
-                    <img
-                      src={project.bg}
-                      className="w-full object-cover transform hover:scale-[3] transition-transform duration-500 scale-[2.8] cursor-pointer "
-                    />
-                  </div>
-                </div>
-              </div>
-              <hr></hr>
-
-              <div className="flex justify-around items-center pt-0  gap-20">
-                <img
-                  src={inspiration.src}
-                  className="h-52 w-72 hidden lg:block "
-                />
-                <div className="flex flex-col gap-8">
-                  <div className="text-4xl font-medium">Inspiration</div>
-
-                  <p className=" text-xl ">{project.inspiration}</p>
-                </div>
-              </div>
-              <hr></hr>
-              <div className="flex justify-around items-center pt-0  gap-20">
-                <div className="flex flex-col gap-8">
-                  <div className="text-4xl font-medium">What it does</div>
-
-                  <p className=" text-xl ">{project.what}</p>
-                </div>
-
-                <img
-                  src={what.src}
-                  className="h-52 w-72 hidden lg:block mr-12"
-                />
-              </div>
-              <hr></hr>
-              <div className="flex justify-around items-center pt-0  gap-20 mb-16">
-                <img src={tech.src} className="h-52 w-72 hidden lg:block" />
-
-                <div className="flex flex-col gap-8">
-                  <div className="text-4xl font-medium">Technologies</div>
-
-                  <p className=" text-xl ">{project.technologies}</p>
-                </div>
-              </div>
-            </div>
-          </>
-        ) : (
-          <>hi</>
-        )}
+    <div className="flex flex-col">
+      {/* Full-width image section */}
+      <div className="w-full h-[40vh] relative">
+        <img
+          src={project.bg}
+          className="h-full w-full object-cover"
+          alt={project.title}
+        />
       </div>
+
+      {/* Content section using PageTemplate */}
+        <div className="flex flex-col gap-8 px-96 mx-auto py-12">
+          {/* Header section with buttons */}
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+            <span className="text-lg text-gray-500">{project.when}</span>
+            <div className="flex gap-4">
+              {project.other && (
+                <button
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                  onClick={() => window.open(project.other, "_blank")}
+                >
+                  DevPost
+                  <FontAwesomeIcon icon={faUpRightFromSquare} className="ml-2" />
+                </button>
+              )}
+              <button
+                className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"
+                onClick={() => window.open(project.github, "_blank")}
+              >
+                GitHub
+                <img src={githubdark.src} className="h-5 w-5" alt="GitHub" />
+              </button>
+            </div>
+          </div>
+
+          {/* Tags */}
+          <div className="flex gap-2 flex-wrap">
+            {project.tags.map((tag: string, index: number) => (
+              <div key={index} className="flex items-center gap-2 px-3 py-2 bg-white rounded-md border text-sm text-gray-900 shadow-sm">
+                {tagToImage[tag] ? (
+                  <img src={tagToImage[tag]} className="w-5 h-5 object-contain" alt={tag} />
+                ) : (
+                  <FontAwesomeIcon icon={faCode} className="text-gray-500" />
+                )}
+                <span>{tag}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Description */}
+          <div className="text-gray-600 text-justify">
+            {project.description}
+          </div>
+
+          <hr className="my-4" />
+
+          {/* Sections */}
+          <div className="flex flex-col gap-12">
+            {/* Inspiration */}
+            <div className="flex flex-col lg:flex-row items-center gap-8 justify-between">
+              <div className="w-full lg:w-2/3">
+                <h2 className="text-2xl font-medium mb-4">Inspiration</h2>
+                <p className="text-gray-600 text-justify">{project.inspiration}</p>
+              </div>
+              <div className="hidden lg:block ">
+                <img src={inspiration.src} className="w-48 object-contain" alt="Inspiration" />
+              </div>
+            </div>
+
+            {/* What it does */}
+            <div className="flex flex-col lg:flex-row items-center gap-8 justify-between">
+            <div className="hidden lg:block ">
+                <img src={what.src} className="w-48 object-contain" alt="What it does" />
+              </div>
+              <div className="w-full lg:w-2/3">
+                <h2 className="text-2xl font-medium mb-4">What it does</h2>
+                <p className="text-gray-600 text-justify">{project.what}</p>
+              </div>
+             
+            </div>
+
+            {/* Technologies */}
+            <div className="flex flex-col lg:flex-row items-center gap-8 justify-between">
+              <div className="w-full lg:w-2/3">
+                <h2 className="text-2xl font-medium mb-4">Technologies</h2>
+                <p className="text-gray-600 text-justify">{project.technologies}</p>
+              </div>
+              <div className="hidden lg:block ">
+                <img src={tech.src} className="w-48 object-contain" alt="Technologies" />
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   );
 };
