@@ -7,10 +7,18 @@ import Experience from "./public/portfolio/public/components/experience";
 import Profile from "./public/portfolio/public/components/profile";
 import Projects from "./public/portfolio/public/components/projects";
 import Skills from "./public/portfolio/public/components/skills";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
+import posthog from "posthog-js";
 
 export default function Home() {
+  
+  useEffect(() => {
+    posthog.capture("page_view", {
+      page: "home",
+    });
+  }, []);
+  
   return (
     <>
       <motion.div 
