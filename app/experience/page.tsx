@@ -39,7 +39,8 @@ export default function Page() {
                   transition={{ duration: 0.2 }}
                   src={exp.logo} 
                   alt={`${exp.company} logo`}
-                  className="w-[80%] h-[80%] rounded-full object-contain dark:opacity-90 dark:hover:opacity-100 transition-all"
+                  onClick={() => window.open(exp.url, "_blank")}
+                  className="w-[80%] h-[80%] rounded-full cursor-pointer object-contain dark:opacity-90 dark:hover:opacity-100 transition-all"
                 />
               </motion.span>
 

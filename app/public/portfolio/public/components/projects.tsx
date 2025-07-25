@@ -28,7 +28,7 @@ const Projects = () => {
             <ProjectCard
               title={project.title}
               description={project.description}
-              link={project.github}
+              link={project.url}
               tags={project.tags}
               tagImg={project.tagImg}
             />

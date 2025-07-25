@@ -5,6 +5,6 @@ interface PortProjects {
     description: string;
     tags: string[];
     tagImg: any[];
-    github: string;
+    url: string;
     when: string;
 }

@@ -8,7 +8,7 @@ let portProjects: PortProjects[] = [
     description: "AI platform removes language barriers in healthcare communication.",
     tags: ["React", "AWS", "OpenAI"],
     tagImg: [react.src, aws.src, openai.src],
-    github: "https://github.com/Baalavignesh/HealthBridge-AI",
+    url: "projects/HealthBridgeAI",
     when: "2024",
   },
   {
@@ -17,7 +17,7 @@ let portProjects: PortProjects[] = [
     description: "Generates personalized resumes using LaTeX and OpenAI.",
     tags: ["React", "TypeScript"],
     tagImg: [react.src, ts.src],
-    github: "https://github.com/Baalavignesh/MiResume-React",
+    url: "projects/MiResume",
     when: "2024",
   },
   {
@@ -26,7 +26,7 @@ let portProjects: PortProjects[] = [
     description: "Helps users acquire new skills efficiently using OpenAI Assistant.",
     tags: ["React", "TypeScript", "OpenAI"],
     tagImg: [react.src, ts.src, openai.src],
-    github: "https://github.com/Baalavignesh/SkillAgent-React",
+    url: "projects/SkillAgent",
     when: "2024",
   },
   {
@@ -35,7 +35,7 @@ let portProjects: PortProjects[] = [
     description: "AI-powered storytelling with customization and performance.",
     tags: ["React", "OpenAI"],
     tagImg: [react.src, openai.src],
-    github: "https://github.com/Baalavignesh/NewEnd-GenMode",
+    url: "projects/Story3",
     when: "2024",
   },
   {
@@ -44,7 +44,7 @@ let portProjects: PortProjects[] = [
     description: "Healthcare platform for appointments and health alerts.",
     tags: ["React", "AWS"],
     tagImg: [react.src, aws.src],
-    github: "https://github.com/Baalavignesh/HealthHub",
+    url: "projects/HealthHub",
     when: "2023",
   },
   {
@@ -53,7 +53,7 @@ let portProjects: PortProjects[] = [
     description: "Secure file storage with encryption for user data.",
     tags: ["Python", "AWS", "MySQL"],
     tagImg: [python.src, aws.src, mysql.src],
-    github: "https://github.com/Baalavignesh/secure_filestore",
+    url: "projects/SecureFileStore",
     when: "2022",
   },
 ];

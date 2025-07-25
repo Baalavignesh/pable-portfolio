@@ -8,4 +8,5 @@ interface IExperience {
     description?: string;
     skills: string[];
     logo: string;
+    url: string;
   }

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
 
 interface ProjectCardProps {
   title: string;
@@ -17,6 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   tags,
   tagImg,
 }) => {
+  const router = useRouter();
   return (
     <motion.div 
       whileHover={{ scale: 1.02 }}
@@ -25,16 +27,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     >
       <div className="flex justify-between items-center">
         <motion.h1 
-          className="text-lg font-semibold text-gray-900 dark:text-white"
+          className="text-lg font-semibold text-gray-900 dark:text-white cursor-default"
         >
           {title}
         </motion.h1>
-        <motion.a
+        <motion.div
           whileHover={{ scale: 1.05 }}
-          href={link}
-          target="_blank"
-          rel="noreferrer"
-          className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-150"
+          onClick={() => router.push(link)}
+          className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-150 cursor-pointer"
         >
           View Project
           <motion.span 
@@ -44,10 +44,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           >
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" />
           </motion.span>
-        </motion.a>
+        </motion.div>
       </div>
       <motion.p 
-        className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3 pt-4"
+        className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3 pt-4 cursor-default"
       >
         {description}
       </motion.p>
@@ -57,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             key={index}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            className="text-xs text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-dark-tertiary rounded-md p-[6px] flex gap-1 items-center hover:bg-gray-200 dark:hover:bg-dark-primary transition-colors"
+            className="text-xs cursor-default text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-dark-tertiary rounded-md p-[6px] flex gap-1 items-center hover:bg-gray-200 dark:hover:bg-dark-primary transition-colors"
           >
             {tag}
           </motion.span>

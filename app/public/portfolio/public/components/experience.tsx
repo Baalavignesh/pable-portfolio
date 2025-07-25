@@ -14,6 +14,7 @@ interface IExperience {
   description?: string;
   skills: string[];
   logo: string;
+  url: string;
 }
 
 const Experience = () => {
@@ -37,18 +38,17 @@ const Experience = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 + (index * 0.1), duration: 0.5 }}
-            className="flex flex-col gap-2"
+            className="flex flex-col gap-2 cursor-pointer"
+            onClick={() => window.open(experience.url, "_blank")}
           >
             <motion.div 
               className="flex gap-3 items-center"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
             >
               <motion.img
                 whileHover={{ scale: 1.1 }}
                 src={experience.logo}
                 alt={experience.company}
-                className="w-14 h-14 rounded-md border border-gray-100 dark:border-gray-700 shadow-sm dark:shadow-md dark:shadow-black/20 object-cover bg-white dark:bg-dark-tertiary"
+                className="w-14 h-14 mb-2 rounded-md border border-gray-100 dark:border-gray-700 shadow-sm dark:shadow-md dark:shadow-black/20 object-cover bg-white dark:bg-dark-tertiary"
               />
               <div>
                 <motion.h1 className="font-semibold text-gray-900 dark:text-white">
