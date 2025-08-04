@@ -9,7 +9,7 @@ const Profile = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col w-full p-4 h-full rounded-lg border-gray-200/50 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 items-start  bg-white dark:bg-dark-secondary"
+      className="flex flex-col w-full p-4 h-full rounded-lg border-gray-300 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 items-start  bg-white dark:bg-dark-secondary"
     >
       <motion.img
         initial={{ opacity: 0, scale: 0.8 }}

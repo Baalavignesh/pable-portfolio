@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
       onClick={() => router.push(link)}
-      className="flex flex-col p-4 rounded-lg cursor-pointer select-none border-gray-200/50 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 w-full hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/20 bg-white dark:bg-dark-secondary"
+      className="flex flex-col p-4 rounded-lg cursor-pointer select-none border-gray-300 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 w-full hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/20 bg-white dark:bg-dark-secondary"
     >
       <div className="flex justify-between items-center">
         <motion.h1 

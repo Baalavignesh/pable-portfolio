@@ -23,7 +23,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.02 }}
       onClick={() => router.push(`/projects/${project.key}`)}
-      className="bg-white dark:bg-dark-secondary rounded-lg shadow-sm border border-gray-200 dark:border-gray-800/50 overflow-hidden cursor-pointer group hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/30 transition-all"
+      className="bg-white dark:bg-dark-secondary rounded-lg shadow-sm border border-gray-300 dark:border-gray-800/50 overflow-hidden cursor-pointer group hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/30 transition-all"
     >
       <div className="relative h-48 overflow-hidden">
         <motion.img

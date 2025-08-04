@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col w-full p-4 rounded-lg border-gray-200/50 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 items-start h-fit mt-4 bg-white dark:bg-dark-secondary"
+      className="flex flex-col w-full p-4 rounded-lg border-gray-300 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 items-start h-fit mt-4 bg-white dark:bg-dark-secondary"
     >
       <Heading heading="Skills" linkto="skills" />
       <motion.div 

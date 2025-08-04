@@ -15,7 +15,7 @@ const Badges: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="bg-white dark:bg-dark-secondary rounded-lg p-4 mt-4 border border-gray-200/50 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
+          className="bg-white dark:bg-dark-secondary rounded-lg p-4 mt-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
         >
           <Heading heading="Professional Badges" linkto="achievements" />
 

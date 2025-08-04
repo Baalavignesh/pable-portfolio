@@ -23,7 +23,7 @@ export default function Page() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-200/50 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
+          className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
         >
           <div className="border-b border-gray-200/50 dark:border-gray-800/50 mb-4">
             <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">Professional Badges</h2>
@@ -57,7 +57,7 @@ export default function Page() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-200/50 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
+          className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
         >
           <div className="border-b border-gray-200/50 dark:border-gray-800/50 mb-4">
             <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">Hackathon Achievements</h2>
@@ -98,7 +98,7 @@ export default function Page() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-200/50 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
+          className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
         >
           <div className="border-b border-gray-200/50 dark:border-gray-800/50 mb-4">
             <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">Certificates</h2>
