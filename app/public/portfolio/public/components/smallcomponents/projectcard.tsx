@@ -23,11 +23,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <motion.div 
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
-      className="flex flex-col p-4 rounded-lg border-gray-200/50 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 w-full hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/20 bg-white dark:bg-dark-secondary"
+      onClick={() => router.push(link)}
+      className="flex flex-col p-4 rounded-lg cursor-pointer select-none border-gray-200/50 dark:border-gray-800/50 border shadow-sm dark:shadow-lg dark:shadow-black/10 w-full hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/20 bg-white dark:bg-dark-secondary"
     >
       <div className="flex justify-between items-center">
         <motion.h1 
-          className="text-lg font-semibold text-gray-900 dark:text-white cursor-default"
+          className="text-lg font-semibold text-gray-900 dark:text-white "
         >
           {title}
         </motion.h1>
@@ -47,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </motion.div>
       </div>
       <motion.p 
-        className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3 pt-4 cursor-default"
+        className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3 pt-4 "
       >
         {description}
       </motion.p>
@@ -57,7 +58,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             key={index}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            className="text-xs cursor-default text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-dark-tertiary rounded-md p-[6px] flex gap-1 items-center hover:bg-gray-200 dark:hover:bg-dark-primary transition-colors"
+            className="text-xs  text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-dark-tertiary rounded-md p-[6px] flex gap-1 items-center hover:bg-gray-200 dark:hover:bg-dark-primary transition-colors"
           >
             {tag}
           </motion.span>
