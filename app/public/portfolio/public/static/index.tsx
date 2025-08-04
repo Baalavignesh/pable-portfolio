@@ -9,8 +9,10 @@ import motate from "./experience/motate.jpeg";
 import practitioner from "./badges/practitioner.png"
 import associate from "./badges/solutions-architect.png"
 import terraform from "./badges/terraform.png"
+import ckad from "./badges/ckad.png"
 
-import github from "./home/github.svg"
+import github_dark from "./home/GitHub_dark.svg"
+import github_light from "./home/GitHub_light.svg"
 import gmail from "./home/gmail.svg"
 import linkedin from "./home/linkedin.svg"
 
@@ -31,4 +33,4 @@ import kubernetes from "./skill/kubernetes.svg";
 
 export { aws, express, mysql, nextjs, python, node, tailwind, react, js, ts, openai, docker, kubernetes };
 
-export { profilepic, faaster, presidio, toast, zoho, practitioner, associate, github, gmail, linkedin, motate, terraform };
+export { profilepic, faaster, presidio, toast, zoho, practitioner, associate, github_dark, github_light, gmail, linkedin, motate, terraform, ckad };

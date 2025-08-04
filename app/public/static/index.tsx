@@ -56,7 +56,9 @@ export {zoho, presidio, toast, faaster, motate};
 import practitioner from "./achievements/practitioner.png";
 import solution_architect from "./achievements/solutions-architect.png";
 import terraform_cert from "./achievements/terraform.png";
-export { practitioner, solution_architect, terraform_cert };    
+import ckad from "./achievements/ckad.png";
+
+export { practitioner, solution_architect, terraform_cert, ckad };    
 
 import profile from "./profile.jpg"
 export {profile};

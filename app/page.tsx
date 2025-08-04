@@ -12,40 +12,36 @@ import { motion } from "motion/react";
 import posthog from "posthog-js";
 
 export default function Home() {
-  
   useEffect(() => {
     posthog.capture("page_view", {
       page: "home",
     });
   }, []);
-  
+
   return (
     <>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="text-xl flex flex-col justify-center bg-white dark:bg-dark-primary"
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
           className="container max-w-screen-lg mx-auto px-4 py-8 flex gap-4"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               className="md:col-span-1 flex flex-col gap-4"
             >
               <Profile />
-              <div className="hidden md:block">
-                <Achievements />
-              </div>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
@@ -57,6 +53,18 @@ export default function Home() {
               </div>
               <Skills />
               <Badges />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="md:col-span-3 flex flex-col gap-4"
+            >
+              {/* <div className="block md:hidden">
+                <Achievements />
+              </div> */}
+
+              
               <Projects />
               <Experience />
             </motion.div>

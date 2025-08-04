@@ -1,18 +1,23 @@
 import { is } from "@react-three/fiber/dist/declarations/src/core/utils";
-import { practitioner, solution_architect, terraform_cert } from "../static";
+import { ckad, practitioner, solution_architect, terraform_cert } from "../static";
 import { title } from "process";
 import { comma } from "postcss/lib/list";
 
 let badges: Badge[] = [
   {
-    name: "HashiCorp Certified: Terraform Associate (003)",
-    badge: terraform_cert.src,
-    link: "https://www.credly.com/badges/ff42c6c7-1d83-4609-b678-c695ed78667a/public_url",
+    name: "CKAD - Certified Kubernetes Application Developer",
+    badge: ckad.src,
+    link: "https://www.credly.com/badges/5396b331-4edb-4df4-8707-622d17e417d9/public_url",
   },
   {
     name: "AWS Certified Solutions Architect",
     badge: solution_architect.src,
     link: "https://www.credly.com/badges/60a34dc7-0735-41fb-b92c-930fc9922bae/linked_in_profile",
+  },
+  {
+    name: "HashiCorp Certified: Terraform Associate (003)",
+    badge: terraform_cert.src,
+    link: "https://www.credly.com/badges/ff42c6c7-1d83-4609-b678-c695ed78667a/public_url",
   },
   {
     name: "AWS Certified Cloud Practitioner",

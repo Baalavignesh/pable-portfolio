@@ -30,7 +30,7 @@ const Experience = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="flex gap-4 flex-col p-6 rounded-lg border border-gray-200/50 dark:border-gray-800/50 w-full bg-white dark:bg-dark-secondary shadow-sm dark:shadow-lg dark:shadow-black/10"
+        className="flex gap-4 flex-col p-6 rounded-lg border mt-6 border-gray-200/50 dark:border-gray-800/50 w-full bg-white dark:bg-dark-secondary shadow-sm dark:shadow-lg dark:shadow-black/10"
       >
         {portExperience.map((experience: IExperience, index) => (
           <motion.div 
