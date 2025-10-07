@@ -48,6 +48,21 @@ let allProjects: IProject[] = [
     when: "2024",
   },
   {
+    title: "Enough",
+    key: "Enough",
+    description:
+      "Enough is a productivity-focused Chrome extension that blocks distracting websites by replacing their content with a motivational job application image.",
+    tags: ["JavaScript", "Chrome Extension API"],
+    bg: donatelifebg.src,
+    inspiration:
+      "During an intense job search, I needed a quick way to stop drifting back to social media tabs. Building a site blocker with a personal reminder helped me stay accountable and focus on applications.",
+    technologies:
+      "The extension is built with vanilla JavaScript using Chrome Extensions Manifest V3. It injects a document_start content script to overwrite blocked pages immediately and relies on the chrome.storage API so the popup UI can manage a customizable block list.",
+    what: "Enough ships with a default set of distracting sites and lets users add or remove their own through the popup. Visiting a blocked domain hides the original page instantly and swaps in a motivational image to nudge you back toward productive work.",
+    github: "https://github.com/Baalavignesh/enough",
+    when: "2025",
+  },
+  {
     title: "Elden Ring",
     key: "EldenRing",
     description:
