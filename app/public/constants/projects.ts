@@ -17,6 +17,52 @@ import {
 
 let allProjects: IProject[] = [
   {
+    title: "StudyQuest",
+    key: "StudyQuest",
+    description:
+      "StudyQuest transforms education into an epic gaming adventure by gamifying learning. The platform addresses student challenges like lack of progress visibility, overwhelming study materials, and procrastination through interactive level maps, daily missions, and competitive leaderboards.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase", "OpenAI", "Framer Motion"],
+    bg: donatelifebg.src,
+    inspiration:
+      "Students often struggle with lack of progress visibility, overwhelming study materials, and procrastination. Teachers face the challenge of creating engaging content and tracking student performance. StudyQuest addresses these challenges by gamifying education, making learning fun, measurable, and motivating for students while saving teachers significant time in course creation.",
+    technologies:
+      "StudyQuest leverages Next.js 14 with TypeScript for the frontend, Tailwind CSS and Framer Motion for styling and animations, Firebase Firestore for authentication and database, OpenAI GPT-4 API for AI-powered content generation, and FontAwesome for icons. The platform features custom authentication, real-time data updates, and automated quiz creation.",
+    what: "StudyQuest provides students with interactive level maps tracking learning progress, daily learning missions, achievement badges, learning streaks, XP points, competitive leaderboards, timed quizzes, and swipeable smart cards for bite-sized learning. For teachers, it offers AI-powered course generation, automated content and quiz creation, student performance analytics, custom learning missions, and video integration. The platform has demonstrated a 300% increase in student engagement and 90% time savings for teachers.",
+    github: "https://github.com/Baalavignesh/StudyQuest-VirtuHack",
+    when: "2024",
+    other: "https://devpost.com/software/studyquest"
+  },
+  {
+    title: "MLB Live Pitch Tracker",
+    key: "MLBLivePitches",
+    description:
+      "MLB Live Pitch Tracker is a Chrome browser extension that provides real-time MLB pitch tracking functionality on MLB.com game pages. It features interactive strike zone visualization, current at-bat matchup display, and configurable delayed data queue.",
+    tags: ["JavaScript", "HTML", "Chrome Extension API"],
+    bg: donatelifebg.src,
+    inspiration:
+      "Baseball fans and statistics enthusiasts needed a better way to track pitch-by-pitch data in real-time while watching games on MLB.com. The extension was created to provide detailed pitch tracking with configurable delays, making it easier for fans to analyze pitching performance and strategies during live games.",
+    technologies:
+      "The extension is built using JavaScript and HTML, utilizing Chrome Extension API (Manifest V3) for browser integration. It accesses the publicly available MLB Stats API for real-time pitch data and implements automatic MLB.com game page detection. The extension operates in dual mode with both popup and injected content functionality.",
+    what: "MLB Live Pitch Tracker automatically detects MLB.com game pages and provides real-time pitch-by-pitch tracking with an interactive strike zone visualization. Users can configure delayed data reveals for suspense, view current at-bat matchups, and analyze detailed pitch statistics. The extension seamlessly integrates with MLB.com without requiring any affiliation or endorsement from Major League Baseball.",
+    github: "https://github.com/Baalavignesh/MLB-Live-Pitches",
+    when: "2024",
+  },
+  {
+    title: "Elden Ring",
+    key: "EldenRing",
+    description:
+      "An interactive family tree visualization for Elden Ring characters built with React and HTML5 Canvas. Features high-performance rendering, zoom and pan controls, custom character portraits, and dark theme aesthetic with immersive audio integration.",
+    tags: ["React", "TypeScript", "Vite", "D3.js", "Tailwind CSS", "Framer Motion"],
+    bg: donatelifebg.src,
+    inspiration:
+      "As a fan of Elden Ring's intricate lore and complex character relationships, I wanted to create an interactive visualization that makes it easier for players to understand the family connections between characters. The project aims to help fans explore the game's rich narrative through a visually engaging and performant interface.",
+    technologies:
+      "The project uses React 19 with TypeScript and Vite 6.0 for modern development. HTML5 Canvas 2D API handles high-performance rendering instead of traditional DOM manipulation. D3.js provides interactive zoom and pan controls, while Tailwind CSS 4.1 and Framer Motion create smooth animations and transitions. Howler.js manages immersive audio integration. The architecture features centralized canvas drawing logic with image caching, canvas redraw optimization, and lazy loading for performance.",
+    what: "Elden Ring Family Tree provides an interactive visualization of character relationships using high-performance canvas rendering. Users can zoom and pan through the family tree, view custom character portraits, explore relationships between characters, and experience smooth page transitions with integrated audio. The application supports retina displays and features a dark theme aesthetic matching the game's atmosphere. This fan-made project is optimized for performance with image caching and efficient rendering strategies.",
+    github: "https://github.com/Baalavignesh/Elden-Ring",
+    when: "2024",
+  },
+  {
     title: "Donate Life",
     key: "DonateLife",
     description: "Donate Life is a real-time blood donation platform that connects blood banks with nearby donors during emergencies. The platform uses geospatial search to find and notify potential donors via SMS and email, while also leveraging machine learning to predict future blood demand patterns.",

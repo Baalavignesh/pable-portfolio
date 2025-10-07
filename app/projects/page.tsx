@@ -2,8 +2,6 @@
 
 import React from "react";
 import { allProjects } from "../public/constants/projects";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 import PageTemplate from "@/components/PageTemplate";
 import tagToImage from "../public/constants/project_tags";
@@ -19,41 +17,52 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      whileHover={{ scale: 1.02 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -2, boxShadow: "0 20px 40px rgba(0,0,0,0.1)", transition: { duration: 0 } }}
       onClick={() => router.push(`/projects/${project.key}`)}
-      className="bg-white dark:bg-dark-secondary rounded-lg shadow-sm border border-gray-300 dark:border-gray-800/50 overflow-hidden cursor-pointer group hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-black/30 transition-all"
+      className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black rounded-2xl p-8 border border-gray-200 dark:border-gray-700 cursor-pointer group overflow-hidden min-h-[340px] flex flex-col"
     >
-      <div className="relative h-48 overflow-hidden">
-        <motion.img
-          initial={{ scale: 1.1 }}
-          whileHover={{ scale: 1.15 }}
-          src={project.bg}
-          alt={project.title}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="p-4">
-        <h3 className="text-lg font-medium mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+      {/* Decorative gradient overlay */}
+      <div className="absolute top-0 right-0 w-32 h-32  opacity-50" />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col h-full">
+        {/* Year badge */}
+        <div className="mb-5">
+          <span className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+            {project.when}
+          </span>
+        </div>
+
+        {/* Title */}
+        <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-gray-800 dark:group-hover:text-gray-100 transition-colors leading-tight">
           {project.title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
+
+        {/* Description */}
+        <p className="text-base text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 leading-relaxed flex-grow">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2">
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2.5 mt-auto pt-4 border-t border-gray-200 dark:border-gray-800">
           {project.tags.slice(0, 3).map((tag, index) => (
-            <motion.span
+            <span
               key={index}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * index, duration: 0.3 }}
-              className="text-xs bg-gray-50 dark:bg-dark-tertiary text-gray-600 dark:text-gray-200 px-2 py-1 rounded flex items-center"
+              className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700"
             >
-              <img src={tagToImage[tag]} className="w-4 h-4 object-contain mr-2" alt={tag} />
-              {tag}
-            </motion.span>
+              {tagToImage[tag] && (
+                <img src={tagToImage[tag]} className="w-4 h-4 object-contain" alt={tag} />
+              )}
+              <span>{tag}</span>
+            </span>
           ))}
+          {project.tags.length > 3 && (
+            <span className="flex items-center text-sm font-medium text-gray-500 dark:text-gray-400 px-3 py-1.5">
+              +{project.tags.length - 3}
+            </span>
+          )}
         </div>
       </div>
     </motion.div>
@@ -63,27 +72,20 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
 export default function Page() {
   return (
     <PageTemplate heading="Projects">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="flex flex-col gap-6 w-full"
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {allProjects.map((project: IProject, index: number) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-            >
-              <ProjectCard project={project} key={index} />
-            </motion.div>
+            <ProjectCard project={project} key={index} />
           ))}
         </motion.div>
       </motion.div>
