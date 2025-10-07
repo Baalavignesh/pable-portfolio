@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import PageTemplate from "@/components/PageTemplate";
+import PageTemplate from "../../components/PageTemplate";
 
 export default function Page() {
   return (
