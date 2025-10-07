@@ -1,14 +1,26 @@
-import { motate } from "@/app/public/static";
+import { motate, gmu } from "@/app/public/static";
 import { presidio, toast, zoho, faaster } from "../static";
 
 let portExperience: IExperience[] = [
+  {
+    company: "George Mason University",
+    role: "Graduate Research Assistant",
+    type: "Part-time",
+    location: "Fairfax, Virginia, United States",
+    duration: "Aug 2025 - Present",
+    length: "2 months",
+    description: "Researching game theory applications using Multi-Agent Reinforcement Learning (MARL) with Python and RLlib, implementing Q-learning algorithms to model strategic interactions in competitive business environments. Investigating the Bertrand competition model through experimental simulations to analyze pricing strategies, Nash equilibrium convergence, and market dynamics in various scenarios.",
+    skills: ["Python", "Multi-Agent Reinforcement Learning", "RLlib", "Game Theory"],
+    logo: gmu.src,
+    url: "https://www.gmu.edu/"
+  },
   {
     company: "Motate",
     role: "Software Engineer",
     type: "Internship",
     location: "United States",
-    duration: "May 2025 - Present",
-    length: "3 months",
+    duration: "May 2025 - Aug 2025",
+    length: "4 months",
     description: "Building a serverless multilingual content platform using AWS Lambda/API Gateway with automated scaling. Implemented Terraform/GitHub Actions for AWS environments and optimized DynamoDB schemas with secondary indexes for improved query performance.",
     skills: ["Amazon Web Services (AWS)", "Terraform", "Next.js"],
     logo: motate.src,

@@ -50,8 +50,9 @@ import presidio from "./experience/presidio.png";
 import toast from "./experience/toast.png";
 import faaster from "./experience/faaster.png";
 import motate from "./experience/motate.jpeg";
+import gmu from "./experience/gmu.jpg";
 
-export {zoho, presidio, toast, faaster, motate};
+export {zoho, presidio, toast, faaster, motate, gmu};
 
 import practitioner from "./achievements/practitioner.png";
 import solution_architect from "./achievements/solutions-architect.png";
