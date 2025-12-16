@@ -34,12 +34,13 @@ const Profile = () => {
       >
         <p>George Mason University</p>
         <p>Masters in Computer Science</p>
+        <p className="text-blue-500 dark:text-blue-500 font-medium text-md">3x Hackathon Winner</p>
       </motion.div>
       <motion.a
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.3 }}
-        className="p-2 text-center outline outline-1 mb-2 h-fit text-lg outline-gray-300/50 dark:outline-gray-700/50 rounded-lg w-full cursor-pointer dark:bg-white bg-gray-900 text-white dark:text-gray-900 dark:hhover:bg-gray-50 over:bg-dark-primary transition-all duration-300 mt-4"
+        className="p-2 text-center outline outline-1 mb-2 h-fit text-lg outline-gray-300/50 dark:outline-gray-700/50 rounded-lg w-full cursor-pointer dark:bg-white bg-gray-900 text-white dark:text-gray-900 dark:hhover:bg-gray-50 over:bg-dark-primary transition-all duration-300 mt-0"
         href={resume}
         target="_blank"
         rel="noreferrer"
@@ -50,7 +51,7 @@ const Profile = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.3 }}
-        className="p-2 text-center outline outline-1 h-fit text-lg outline-white/50 dark:outline-gray-800/50 rounded-lg w-full mb-4 cursor-pointer dark:bg-black bg-white dark:text-white text-gray-900  dark:hover:bg-dark-tertiary hover:bg-white  transition-all duration-300 mt-3 border-gray-300/50 dark:border-gray-800/50 border"
+        className="p-2 text-center outline outline-1 h-fit text-lg outline-white/50 dark:outline-gray-800/50 rounded-lg w-full mb-4 cursor-pointer dark:bg-black bg-white dark:text-white text-gray-900  dark:hover:bg-dark-tertiary hover:bg-white  transition-all duration-300 mt-2 border-gray-300/50 dark:border-gray-800/50 border"
         onClick={(e) => {
           window.location.href = "mailto:baalavignesh21@gmail.com";
           e.preventDefault();
