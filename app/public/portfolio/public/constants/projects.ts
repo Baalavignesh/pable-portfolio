@@ -1,23 +1,23 @@
 import { fastapi, tailwind } from "@/app/public/static";
-import { aws, js, mysql, node, openai, python, react, ts } from "../static";
+import { aws, js, mysql, nextjs, node, openai, python, react, ts } from "../static";
 
 let portProjects: PortProjects[] = [
   {
-    title: "HealthBridge AI",
-    key: "HealthBridgeAI",
-    description: "AI platform removes language barriers in healthcare communication.",
-    tags: ["React", "AWS", "OpenAI"],
-    tagImg: [react.src, aws.src, openai.src],
-    url: "projects/HealthBridgeAI",
-    when: "2024",
+    title: "Pager 2077",
+    key: "Pager2077",
+    description: "Retro-futuristic messaging app with 90s pager aesthetics and T9 input.",
+    tags: ["React Native", "TypeScript"],
+    tagImg: [react.src, ts.src],
+    url: "projects/Pager2077",
+    when: "2025",
   },
   {
-    title: "MiResume",
-    key: "MiResume",
-    description: "Generates personalized resumes using LaTeX and OpenAI.",
-    tags: ["React", "TypeScript"],
-    tagImg: [react.src, ts.src],
-    url: "projects/MiResume",
+    title: "StudyQuest",
+    key: "StudyQuest",
+    description: "Gamified learning platform with AI-powered course generation.",
+    tags: ["Next.js", "TypeScript", "OpenAI"],
+    tagImg: [nextjs.src, ts.src, openai.src],
+    url: "projects/StudyQuest",
     when: "2024",
   },
   {
@@ -30,6 +30,24 @@ let portProjects: PortProjects[] = [
     when: "2024",
   },
   {
+    title: "MiResume",
+    key: "MiResume",
+    description: "Generates personalized resumes using LaTeX and OpenAI.",
+    tags: ["React", "TypeScript"],
+    tagImg: [react.src, ts.src],
+    url: "projects/MiResume",
+    when: "2024",
+  },
+  {
+    title: "HealthBridge AI",
+    key: "HealthBridgeAI",
+    description: "AI platform removes language barriers in healthcare communication.",
+    tags: ["React", "AWS", "OpenAI"],
+    tagImg: [react.src, aws.src, openai.src],
+    url: "projects/HealthBridgeAI",
+    when: "2024",
+  },
+  {
     title: "Story3",
     key: "Story3",
     description: "AI-powered storytelling with customization and performance.",
@@ -37,24 +55,6 @@ let portProjects: PortProjects[] = [
     tagImg: [react.src, openai.src],
     url: "projects/Story3",
     when: "2024",
-  },
-  {
-    title: "HealthHub",
-    key: "HealthHub",
-    description: "Healthcare platform for appointments and health alerts.",
-    tags: ["React", "AWS"],
-    tagImg: [react.src, aws.src],
-    url: "projects/HealthHub",
-    when: "2023",
-  },
-  {
-    title: "SecureFileStore",
-    key: "SecureFileStore",
-    description: "Secure file storage with encryption for user data.",
-    tags: ["Python", "AWS", "MySQL"],
-    tagImg: [python.src, aws.src, mysql.src],
-    url: "projects/SecureFileStore",
-    when: "2022",
   },
 ];
 

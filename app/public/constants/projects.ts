@@ -61,7 +61,7 @@ let allProjects: IProject[] = [
     what: "StudyQuest provides students with interactive level maps tracking learning progress, daily learning missions, achievement badges, learning streaks, XP points, competitive leaderboards, timed quizzes, and swipeable smart cards for bite-sized learning. For teachers, it offers AI-powered course generation, automated content and quiz creation, student performance analytics, custom learning missions, and video integration. The platform has demonstrated a 300% increase in student engagement and 90% time savings for teachers.",
     github: "https://github.com/Baalavignesh/StudyQuest-VirtuHack",
     when: "2024",
-    other: "https://devpost.com/software/studyquest"
+    other: "https://devpost.com/software/studyquest-0cpshl"
   },
   {
     title: "MLB Live Pitch Tracker",
