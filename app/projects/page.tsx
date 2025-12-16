@@ -23,7 +23,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -2, boxShadow: "0 20px 40px rgba(0,0,0,0.1)", transition: { duration: 0 } }}
       onClick={() => router.push(`/projects/${project.key}`)}
-      className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black rounded-2xl p-8 border border-gray-200 dark:border-gray-700 cursor-pointer group overflow-hidden min-h-[340px] flex flex-col"
+      className="relative bg-gradient-to-br from-white to-gray-50 dark:from-dark-secondary dark:to-black rounded-2xl p-8 border border-gray-200 dark:border-gray-700 cursor-pointer group overflow-hidden min-h-[340px] flex flex-col"
     >
       {/* Decorative gradient overlay */}
       <div className="absolute top-0 right-0 w-32 h-32  opacity-50" />

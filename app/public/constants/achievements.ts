@@ -66,11 +66,20 @@ let certificates: Certificate[] = [
 
 let hackathons: Hackathon[] = [
   {
+    title: "Reddit and Kiro: Community Games Challenge",
+    issuedBy: "Devpost",
+    company: "Reddit & Kiro",
+    award: "Honorable Mention - Kiro Developer Experience",
+    project: "TheDiggerMan",
+    link: "https://devpost.com/software/thediggerman",
+  },
+  {
     title: "Story3",
     issuedBy: "HackerEarth",
     company: "Story3",
     award: "Best Prototype Award",
     project: "NewEnd - GenMode",
+    link: "https://story3.hackerearth.com/",
   },
   {
     title: "DataPalooza",
@@ -78,6 +87,7 @@ let hackathons: Hackathon[] = [
     company: "DataPalooza",
     award: "Honorable Mentions",
     project: "HealthHub",
+    link: "https://devpost.com/software/healthhub-0czr47",
   },
 ];
 

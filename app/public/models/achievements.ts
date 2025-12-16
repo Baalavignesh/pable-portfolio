@@ -16,4 +16,5 @@ interface Hackathon {
     company: string;
     award: string;
     project: string;
+    link?: string;
 }

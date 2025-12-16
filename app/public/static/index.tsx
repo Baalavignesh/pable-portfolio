@@ -104,6 +104,7 @@ import jwt from "../../public/static/skills/jwt.svg";
 import socketio from "../../public/static/skills/socketio.svg";
 import swift from "../../public/static/skills/swift.svg";
 import terraform from "../../public/static/skills/terraform.svg";
+import devpost from "../../public/static/skills/devpost.png";
 
 
-export { js, ts, python, dart, c, cpp, reactjs, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio, swift, terraform };
+export { js, ts, python, dart, c, cpp, reactjs, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio, swift, terraform, devpost };

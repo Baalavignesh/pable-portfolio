@@ -17,6 +17,37 @@ import {
 
 let allProjects: IProject[] = [
   {
+    title: "Pager 2077",
+    key: "Pager2077",
+    description:
+      "A retro-futuristic messaging app with 90s pager aesthetics. Users get unique 6-digit codes as identity, add friends using those codes, and exchange messages through an authentic LCD display interface with T9-style text input.",
+    tags: ["React Native", "TypeScript", "Expo", "Swift", "Bun", "SQLite", "Redis"],
+    bg: donatelifebg.src,
+    inspiration:
+      "We wanted to capture the nostalgic charm of 90s pagers. Those chunky, monochrome devices felt like magic before smartphones took over. There's something beautifully simple about the constraints of that era: limited screens, T9 input, and the anticipation of waiting for a message. We asked ourselves: what if we brought that experience back, but with modern connectivity and a cyberpunk twist?",
+    technologies:
+      "Frontend built with React Native (Expo) and NativeBase, featuring custom components that replicate LCD scanlines, metallic button gradients, and the iconic green-on-black display. Backend uses Bun runtime with SQLite for data persistence and Redis for notification queuing. Native iOS Swift extensions power Live Activities that display messages in the Dynamic Island. Every component follows strict retro guidelines — sharp corners, thick borders, monochrome palette, and pixelated typography.",
+    what: "Pager 2077 features T9-style text input with multi-tap character entry, classic phone numpad navigation (2/4/6/8 for directional controls), unique 6-digit user codes for adding friends, real-time battery indicator with charging animation, built-in games (Snake and Tetris) with social leaderboards, iOS Live Activities showing incoming messages on the lock screen, push notifications via Apple Push Notification Service, retro 90s pager-style UI (monochrome LCD, pixelated fonts), and online/offline status indicators. The visual authenticity makes people genuinely think they're looking at a real pager.",
+    github: "https://github.com/Baalavignesh/Pager2077",
+    when: "2025",
+  },
+  {
+    title: "TheDiggerMan",
+    key: "TheDiggerMan",
+    description:
+      "An addictive incremental mining game built for Reddit with global leaderboards for competitive community play. Players click to mine through 10 unique biomes, discovering 30+ different ore types with varying rarity and value.",
+    tags: ["React", "TypeScript", "Redis", "Devvit", "Kiro"],
+    bg: donatelifebg.src,
+    inspiration:
+      "Games like Egg.inc, MakeitRain and Cookie clicker were inspiration. These have extreme difficult progression and a whole bunch of achievements making users stay in the app for long time. User screen retention was my goal. I wanted to bring the addictive nature of incremental games to Reddit's platform, where the social aspect of leaderboards and community competition could amplify the engagement.",
+    technologies:
+      "Built with Kiro IDE and Reddit's Devvit platform to capture user clicks and create an engaging mining experience. Uses React 19 and TypeScript for the frontend with modern hooks and concurrent features. Redis handles persistent storage, leaderboards, and real-time data synchronization. Express.js serverless backend on Devvit platform with RESTful API endpoints. Performance optimizations including particle limits and mobile detection ensure smooth 60 FPS gameplay.",
+    what: "TheDiggerMan features a comprehensive automation system with 8 tiers of auto-diggers that mine passively, a global leaderboard system tracking money, depth, and achievements, and 25+ achievements that create multiple progression paths. Community play features include global goals where all players work together toward shared challenges, and a live activity feed showing real-time player achievements. The game has gained over 200+ active users with exceptional retention, with many players reaching depths beyond 10,000+ feet.",
+    github: "https://github.com/Baalavignesh/TheDiggerMan",
+    when: "2025",
+    other: "https://devpost.com/software/thediggerman"
+  },
+  {
     title: "StudyQuest",
     key: "StudyQuest",
     description:

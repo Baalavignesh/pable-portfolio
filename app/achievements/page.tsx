@@ -60,7 +60,12 @@ export default function Page() {
           className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
         >
           <div className="border-b border-gray-200/50 dark:border-gray-800/50 mb-4">
-            <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">Hackathon Achievements</h2>
+            <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">
+              Hackathon Achievements
+              <span className="ml-2 px-2 py-0.5 text-xs font-semibold bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full">
+                3x Winner
+              </span>
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 text-xs lg:text-sm mb-3">
               Notable hackathon wins and participations
             </p>
@@ -73,12 +78,16 @@ export default function Page() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 + index * 0.1, duration: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 p-4 rounded-lg border border-gray-200/50 dark:border-gray-800/50 hover:bg-gray-50/50 dark:hover:bg-dark-tertiary transition-all"
+                className={`flex flex-col sm:flex-row gap-4 p-4 rounded-lg border border-gray-200/50 dark:border-gray-800/50 hover:bg-gray-50/50 dark:hover:bg-dark-tertiary transition-all ${hackathon.link ? 'cursor-pointer hover:border-amber-500/50' : ''}`}
+                onClick={() => hackathon.link && window.open(hackathon.link, "_blank")}
               >
                 <div className="sm:w-1/3">
                   <h3 className="font-medium text-sm lg:text-base text-gray-900 dark:text-white">
                     {hackathon.title}
                   </h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                    {hackathon.project}
+                  </p>
                 </div>
                 <div className="sm:w-2/3">
                   <h4 className="font-semibold text-sm lg:text-base text-gray-800 dark:text-gray-200">
