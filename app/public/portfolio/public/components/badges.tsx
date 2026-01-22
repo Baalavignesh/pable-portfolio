@@ -1,13 +1,6 @@
 import Heading from "./heading";
-import { badges } from "../constants/achievements";
+import { badges } from "@/app/public/constants/achievements";
 import { motion } from "motion/react";
-
-interface IAchievements {
-    title: string;
-    image?: string;
-    award?: string;
-    link: string;
-}
 
 const Badges: React.FC = () => {
   return (
@@ -30,8 +23,8 @@ const Badges: React.FC = () => {
                 onClick={() => window.open(badge.link, "_blank")}
               >
                 <img
-                  src={badge.image}
-                  alt={badge.title}
+                  src={badge.badge}
+                  alt={badge.name}
                   className="w-40 h-auto object-contain dark:opacity-90 dark:hover:opacity-100 transition-opacity"
                 />
               </motion.div>

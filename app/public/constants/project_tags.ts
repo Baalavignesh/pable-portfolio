@@ -1,6 +1,6 @@
 import { js, ts, python, dart, c, cpp, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, reactjs, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio } from "../static";
 
-const tagToImage:any = {
+const tagToImage: Record<string, string> = {
     "JavaScript": js.src,
     "TypeScript": ts.src,
     "Python": python.src,

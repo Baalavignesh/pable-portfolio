@@ -69,11 +69,7 @@ const CustomNavbar: React.FC = () => {
   const { isDarkMode, toggleDarkMode } = useTheme();
 
   const handleNavigation = (path: string) => {
-    try {
-      router.push(path);
-    } catch (error) {
-      console.error('Navigation error:', error);
-    }
+    router.push(path);
   };
 
   return (

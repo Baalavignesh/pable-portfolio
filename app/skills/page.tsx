@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import myskills from "../public/constants/skills";
 import PageTemplate from "@/components/PageTemplate";
 import { motion } from "motion/react";

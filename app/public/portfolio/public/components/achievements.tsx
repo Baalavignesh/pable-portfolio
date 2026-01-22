@@ -1,17 +1,10 @@
 import Heading from "./heading";
-import { achievements, badges } from "../constants/achievements";
+import { hackathons, badges } from "@/app/public/constants/achievements";
 import { motion } from "motion/react";
-
-interface IAchievements {
-  title: string;
-  image?: string;
-  award?: string;
-  link: string;
-}
 
 const Badges: React.FC = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -19,13 +12,13 @@ const Badges: React.FC = () => {
     >
       <Heading heading="2x Hackathon Winner"></Heading>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         className="flex flex-col gap-2 pt-2"
       >
-        {achievements.map((achievement: IAchievements, index) => (
+        {hackathons.slice(0, 2).map((achievement, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}

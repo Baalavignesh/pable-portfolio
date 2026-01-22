@@ -2,6 +2,7 @@
 
 import tagToImage from "@/app/public/constants/project_tags";
 import { allProjects } from "@/app/public/constants/projects";
+import { IProject } from "@/app/public/models/projects";
 import { githubdark, githublight, devpost } from "@/app/public/static";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
@@ -14,17 +15,21 @@ interface IndividualProjectProps {
 }
 
 const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
-  let [project, setProject] = useState<IProject>();
-  let [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [project, setProject] = useState<IProject | undefined>();
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    let index = allProjects.findIndex((proj) => proj.key === params.project);
-    setProject(allProjects[index]);
+    const foundProject = allProjects.find((proj) => proj.key === params.project);
+    setProject(foundProject);
     setIsLoaded(true);
-  }, []);
+  }, [params.project]);
 
-  if (!isLoaded || !project) {
+  if (!isLoaded) {
     return <div className="text-gray-900 dark:text-white">Loading...</div>;
+  }
+
+  if (!project) {
+    return <div className="text-gray-900 dark:text-white">Project not found</div>;
   }
 
   return (

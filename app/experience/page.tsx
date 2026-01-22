@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
 import experience from "../public/constants/experience";
+import { IExperience } from "@/app/public/models/experience";
 import PageTemplate from "@/components/PageTemplate";
 import { motion } from "motion/react";
 

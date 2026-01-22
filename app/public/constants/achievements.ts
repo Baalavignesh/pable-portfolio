@@ -1,9 +1,7 @@
-import { is } from "@react-three/fiber/dist/declarations/src/core/utils";
 import { ckad, practitioner, solution_architect, terraform_cert } from "../static";
-import { title } from "process";
-import { comma } from "postcss/lib/list";
+import { Badge, Certificate, Hackathon } from "../models/achievements";
 
-let badges: Badge[] = [
+const badges: Badge[] = [
   {
     name: "CKAD - Certified Kubernetes Application Developer",
     badge: ckad.src,
@@ -26,7 +24,7 @@ let badges: Badge[] = [
   },
 ];
 
-let certificates: Certificate[] = [
+const certificates: Certificate[] = [
   {
     title: "Kubernetes for the Absolute Beginners - Hands-on Tutorial",
     issuedBy: "KodeKloud",
@@ -64,7 +62,7 @@ let certificates: Certificate[] = [
   },
 ];
 
-let hackathons: Hackathon[] = [
+const hackathons: Hackathon[] = [
   {
     title: "Reddit and Kiro: Community Games Challenge",
     issuedBy: "Devpost",

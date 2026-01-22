@@ -1,4 +1,4 @@
-import { portlang } from "../constants/skills";
+import { portlang } from "@/app/public/constants/skills";
 import Heading from "./heading";
 import { motion } from "motion/react";
 

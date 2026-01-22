@@ -121,3 +121,17 @@ let myskills: ISkills = {
 };
 
 export default myskills;
+
+// Simplified skills array for home page display
+export const portlang = [
+  { name: "React", color: "bg-blue-500" },
+  { name: "TypeScript", color: "bg-blue-600" },
+  { name: "Python", color: "bg-yellow-500" },
+  { name: "AWS", color: "bg-orange-500" },
+  { name: "Node.js", color: "bg-green-600" },
+  { name: "Next.js", color: "bg-black dark:bg-white" },
+  { name: "Docker", color: "bg-blue-400" },
+  { name: "Terraform", color: "bg-purple-600" },
+  { name: "MongoDB", color: "bg-green-500" },
+  { name: "PostgreSQL", color: "bg-blue-700" },
+];

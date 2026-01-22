@@ -1,21 +1,9 @@
-import portExperience from "../constants/experience";
+import portExperience from "@/app/public/constants/experience";
+import { IExperience } from "@/app/public/models/experience";
 import Heading from "./heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react";
-
-interface IExperience {
-  company: string;
-  role: string;
-  type: string;
-  location: string;
-  duration: string;
-  length: string;
-  description?: string;
-  skills: string[];
-  logo: string;
-  url: string;
-}
 
 const Experience = () => {
   return (

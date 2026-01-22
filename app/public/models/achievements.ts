@@ -1,16 +1,16 @@
-interface Badge {
+export interface Badge {
     name: string;
     badge: string;
     link: string;
 }
 
-interface Certificate {
+export interface Certificate {
     title: string;
     issuedBy: string;
     instructor: string;
 }
 
-interface Hackathon {
+export interface Hackathon {
     title: string;
     issuedBy: string;
     company: string;

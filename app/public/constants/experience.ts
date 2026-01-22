@@ -1,4 +1,5 @@
 import { faaster, presidio, toast, zoho, motate, gmu } from "../static";
+import { IExperience } from "../models/experience";
 
 let experience: IExperience[] = [
   {

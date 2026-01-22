@@ -1,49 +1,10 @@
 import linkedin from "./home/linkedin.png";
 import github from "./home/github.png";
 import githubicon from "./home/githubicon.png";
-import youtube from "./home/youtube.png";
-import face from "./home/face.svg";
 import githublight from "./home/githublight.svg";
 import githubdark from "./home/githubdark.svg";
 
-export {linkedin, github, githubicon, youtube, face, githublight, githubdark};
-
-
-import convchey from "./projects/logo/convchemy_logo.png";
-import miresume from "./projects/logo/miresume_logo.png";
-import skillagent from "./projects/logo/skillagent_logo.png";
-
-import miresumebg from "./projects/miresume_bg.png"
-import convchemybg from "./projects/convchemy_bg.png"
-import story3bg from "./projects/story3_bg.png"
-import vitruhealbg from "./projects/virtuheal_bg.png"
-import healthhub from "./projects/healthhub_bg.png"
-import skillagentbg from "./projects/skillagent_bg.png"
-import securefilestorebg from "./projects/securefilestore_bg.png"
-import seeyanonymouschatbg from "./projects/seeyaanonymouschat_bg.png"
-import social2 from "./projects/social2_bg.png"
-import shareitpythonbg from "./projects/shareitpython_bg.png"
-import justpaintbg from "./projects/justpaint_bg.png"
-import myclipbookbg from    "./projects/myclipbook_bg.png";
-import healthbridgebg from "./projects/healthbridge_bg.png"
-import donatelifebg from "./projects/donatelife_bg.png"
-
-export {convchey, miresume, skillagent};
-export {miresumebg, convchemybg, story3bg, vitruhealbg, healthhub, skillagentbg, securefilestorebg, seeyanonymouschatbg, social2, shareitpythonbg, justpaintbg, myclipbookbg, healthbridgebg, donatelifebg};
-
-
-import achievements from "./svg/achievements.svg";
-import projects from "./svg/projects.svg";
-import workexperience from "./svg/workexperience.svg";
-import workexperience2 from "./svg/workexperience2.svg";
-import skills from "./svg/skills.svg";
-import hobbies from "./svg/hobbies.svg";
-
-import what from "./svg/what.svg";
-import tech from "./svg/tech.svg";
-import inspiration from "./svg/inspiration.svg";
-
-export {achievements, projects, workexperience, workexperience2, skills, hobbies, what, tech, inspiration};
+export {linkedin, github, githubicon, githublight, githubdark};
 
 import zoho from "./experience/zoho.png";
 import presidio from "./experience/presidio.png";
