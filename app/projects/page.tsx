@@ -18,51 +18,55 @@ type FilterCategory = "Featured" | "All" | "Web" | "Python" | "AWS" | "App" | "E
 const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
   const router = useRouter();
 
+  const isBuyTime = project.key === "BuyTime";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -2, boxShadow: "0 20px 40px rgba(0,0,0,0.1)", transition: { duration: 0 } }}
+      whileHover={{ y: -2, transition: { duration: 0.15 } }}
       onClick={() => router.push(`/projects/${project.key}`)}
-      className="relative bg-gradient-to-br from-white to-gray-50 dark:from-dark-secondary dark:to-black rounded-2xl p-8 border border-gray-200 dark:border-gray-700 cursor-pointer group overflow-hidden min-h-[340px] flex flex-col"
+      className={`relative bg-white dark:bg-neutral-950 rounded-xl p-6 border cursor-pointer group min-h-[300px] flex flex-col transition-colors ${
+        isBuyTime
+          ? "border-amber-400 dark:border-amber-500 hover:border-amber-500 dark:hover:border-amber-400"
+          : "border-gray-200 dark:border-neutral-800 hover:border-gray-300 dark:hover:border-neutral-700"
+      }`}
     >
-      {/* Decorative gradient overlay */}
-      <div className="absolute top-0 right-0 w-32 h-32  opacity-50" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col h-full">
+      <div className="flex flex-col h-full">
         {/* Year badge */}
-        <div className="mb-5">
-          <span className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+        <div className="mb-3">
+          <span className="text-xs font-medium text-gray-500 dark:text-neutral-500">
             {project.when}
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-gray-800 dark:group-hover:text-gray-100 transition-colors leading-tight">
+        <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white leading-tight">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p className="text-base text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 leading-relaxed flex-grow">
+        <p className="text-sm text-gray-600 dark:text-neutral-400 mb-4 line-clamp-3 leading-relaxed flex-grow">
           {project.description}
         </p>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-2.5 mt-auto pt-4 border-t border-gray-200 dark:border-gray-800">
+        <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 dark:border-neutral-800">
           {project.tags.slice(0, 3).map((tag, index) => (
             <span
               key={index}
-              className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700"
+              className="flex items-center gap-1.5 text-xs font-medium text-gray-600 dark:text-neutral-400 bg-gray-50 dark:bg-neutral-900 px-2.5 py-1 rounded-md border border-gray-100 dark:border-neutral-800"
             >
               {tagToImage[tag] && (
-                <img src={tagToImage[tag]} className="w-4 h-4 object-contain" alt={tag} />
+                <img src={tagToImage[tag]} className="w-3.5 h-3.5 object-contain" alt={tag} />
               )}
               <span>{tag}</span>
             </span>
           ))}
           {project.tags.length > 3 && (
-            <span className="flex items-center text-sm font-medium text-gray-500 dark:text-gray-400 px-3 py-1.5">
+            <span className="flex items-center text-xs font-medium text-gray-400 dark:text-neutral-500 px-2.5 py-1">
               +{project.tags.length - 3}
             </span>
           )}
@@ -147,12 +151,26 @@ export default function Page() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveFilter(category)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
                 activeFilter === category
                   ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-md"
                   : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
             >
+              {category === "Featured" && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-4 h-4 text-amber-500"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              )}
               {category}
             </motion.button>
           ))}

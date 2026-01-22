@@ -1,4 +1,4 @@
-import { js, ts, python, dart, c, cpp, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, reactjs, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio } from "../static";
+import { js, ts, python, dart, c, cpp, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, reactjs, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio, swift } from "../static";
 
 const tagToImage: Record<string, string> = {
     "JavaScript": js.src,
@@ -7,6 +7,7 @@ const tagToImage: Record<string, string> = {
     "Dart": dart.src,
     "C": c.src,
     "C++": cpp.src,
+    "Swift": swift.src,
     "React": reactjs.src,
     "Next.js": nextjs.src,
     "Angular": angular.src,

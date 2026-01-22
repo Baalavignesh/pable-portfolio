@@ -7,6 +7,7 @@ import { githubdark, githublight, devpost } from "@/app/public/static";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Meteors } from "@/app/components/ui/meteors";
+import MediaCarousel from "@/components/MediaCarousel";
 
 interface IndividualProjectProps {
   params: {
@@ -101,7 +102,7 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                   {tagToImage[tag] && (
                     <img
                       src={tagToImage[tag]}
-                      className="w-4 h-4 object-contain dark:brightness-0 dark:invert"
+                      className="w-4 h-4 object-contain"
                       alt={tag}
                     />
                   )}
@@ -135,12 +136,21 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                 <span className="leading-none">GitHub</span>
               </motion.a>
             </div>
+
+            {/* Media Carousel */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: 0.7 }}
+            >
+              <MediaCarousel projectKey={project.key} />
+            </motion.div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.7 }}
+            transition={{ duration: 0.2, delay: 0.8 }}
             className="flex flex-col gap-6 w-full py-6 pt-0"
           >
                       <div className="border-t border-gray-200 dark:border-gray-800"></div>
@@ -158,7 +168,7 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.8 }}
+            transition={{ duration: 0.2, delay: 0.9 }}
             className="flex flex-col gap-6 w-full py-6 pt-0"
           >
             {/* Divider */}
