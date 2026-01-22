@@ -61,7 +61,7 @@ export default function Page() {
           <div className="border-b border-gray-200/50 dark:border-gray-800/50 mb-4">
             <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">
               Hackathon Achievements
-              <span className="ml-2 px-2 py-0.5 text-xs font-semibold bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full">
+              <span className="ml-2 px-2 py-0.5 text-xs font-semibold bg-green-600 text-white rounded-full">
                 3x Winner
               </span>
             </h2>

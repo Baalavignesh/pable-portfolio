@@ -28,7 +28,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
       onClick={() => router.push(`/projects/${project.key}`)}
       className={`relative bg-white dark:bg-neutral-950 rounded-xl p-6 border cursor-pointer group min-h-[300px] flex flex-col transition-colors ${
         isBuyTime
-          ? "border-amber-400 dark:border-amber-500 hover:border-amber-500 dark:hover:border-amber-400"
+          ? "border-emerald-500 dark:border-emerald-400"  
           : "border-gray-200 dark:border-neutral-800 hover:border-gray-300 dark:hover:border-neutral-700"
       }`}
     >
@@ -162,7 +162,7 @@ export default function Page() {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-4 h-4 text-amber-500"
+                  className="w-4 h-4 text-white dark:text-black"
                 >
                   <path
                     fillRule="evenodd"

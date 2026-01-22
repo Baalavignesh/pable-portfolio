@@ -153,7 +153,7 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
             transition={{ duration: 0.2, delay: 0.8 }}
             className="flex flex-col gap-6 w-full py-6 pt-0"
           >
-                      <div className="border-t border-gray-200 dark:border-gray-800"></div>
+                      <div className="border-t border-gray-200 dark:border-gray-800 mt-4"></div>
 
             <div>
               <h3 className="text-2xl md:text-4xl font-bold py-4 text-gray-900 dark:text-white leading-tight max-w-4xl">
