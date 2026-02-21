@@ -1,10 +1,17 @@
 import linkedin from "./home/linkedin.png";
 import github from "./home/github.png";
 import githubicon from "./home/githubicon.png";
-import githublight from "./home/githublight.svg";
-import githubdark from "./home/githubdark.svg";
 
-export {linkedin, github, githubicon, githublight, githubdark};
+export {linkedin, github, githubicon};
+
+import youtubedark from "./project/YouTube_dark.svg";
+import youtubelight from "./project/YouTube_light.svg";
+import devpostdark from "./project/devpost_dark.svg";
+import devpostlight from "./project/devpost_light.svg";
+import projectgithubdark from "./project/github_dark.svg";
+import projectgithublight from "./project/github_light.svg";
+
+export { youtubedark, youtubelight, devpostdark, devpostlight, projectgithubdark, projectgithublight };
 
 import zoho from "./experience/zoho.png";
 import presidio from "./experience/presidio.png";
@@ -65,7 +72,6 @@ import jwt from "../../public/static/skills/jwt.svg";
 import socketio from "../../public/static/skills/socketio.svg";
 import swift from "../../public/static/skills/swift.svg";
 import terraform from "../../public/static/skills/terraform.svg";
-import devpost from "../../public/static/skills/devpost.png";
 
 
-export { js, ts, python, dart, c, cpp, reactjs, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio, swift, terraform, devpost };
+export { js, ts, python, dart, c, cpp, reactjs, nextjs, angular, express, net, fastapi, aws, azure, docker, firebase, git, node, mongo, mysql, postgresql, postman, redux, tailwind, openai, databricks, flutter, vite, convex, cosmo, s3, jwt, socketio, swift, terraform };

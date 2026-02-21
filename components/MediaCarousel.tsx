@@ -7,26 +7,18 @@ interface MediaCarouselProps {
   projectKey: string;
 }
 
-// YouTube video mapping (project key -> video ID)
-const youtubeVideos: Record<string, string> = {
-  SkillAgent: "Z1d8rlRH4zw",
-  HealthHub: "Lmo4kDVMPK8",
-  Pager2077: "f03pyZ7Q3pA",
-  TheDiggerMan: "lqVn8JcZ6rs",
-  StudyQuest: "h1Yd4YYL3EQ",
-  DonateLife: "RQsK3dMSqi4",
-};
-
 // LinkedIn post mapping (project key -> array of activity URNs)
 const linkedinPosts: Record<string, string[]> = {
   BuyTime: [
     "urn:li:activity:7416611638776111104",
     "urn:li:activity:7417608651588145154",
+    "urn:li:activity:7420574340066197506",
   ],
 };
 
 // Project key to folder name mapping
 const folderMapping: Record<string, string> = {
+  Aegis: "aegis",
   SkillAgent: "skillagent",
   HealthBridgeAI: "healthbridge",
   Pager2077: "pager2077",
@@ -37,6 +29,13 @@ const folderMapping: Record<string, string> = {
 
 // Project images configuration (folder name -> array of image filenames)
 const projectImages: Record<string, string[]> = {
+  aegis: [
+    "aegis1.png",
+    "aegis2.png",
+    "aegis3.png",
+    "aegis4.png",
+    "aegis5.png",
+  ],
   skillagent: [
     "skillagent1.png",
     "skillagent2.png",
@@ -94,7 +93,6 @@ const projectImages: Record<string, string[]> = {
 };
 
 type MediaItem =
-  | { type: "youtube"; videoId: string }
   | { type: "linkedin"; activityUrn: string }
   | { type: "image"; src: string };
 
@@ -105,12 +103,6 @@ const MediaCarousel: React.FC<MediaCarouselProps> = ({ projectKey }) => {
   // Build media items array
   const getMediaItems = useCallback((): MediaItem[] => {
     const items: MediaItem[] = [];
-
-    // Add YouTube video first if available
-    const videoId = youtubeVideos[projectKey];
-    if (videoId) {
-      items.push({ type: "youtube", videoId });
-    }
 
     // Add LinkedIn posts if available
     const posts = linkedinPosts[projectKey];
@@ -136,13 +128,13 @@ const MediaCarousel: React.FC<MediaCarouselProps> = ({ projectKey }) => {
 
   const mediaItems = getMediaItems();
 
-  // Auto-advance carousel every 4 seconds (pause when on YouTube/LinkedIn or when hovering)
+  // Auto-advance carousel every 4 seconds (pause when on LinkedIn or when hovering)
   useEffect(() => {
     if (mediaItems.length <= 1 || isPaused) return;
 
-    // Pause auto-advance when on YouTube video or LinkedIn post
+    // Pause auto-advance when on LinkedIn post
     const currentItem = mediaItems[currentIndex];
-    if (currentItem?.type === "youtube" || currentItem?.type === "linkedin") return;
+    if (currentItem?.type === "linkedin") return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % mediaItems.length);
@@ -178,24 +170,7 @@ const MediaCarousel: React.FC<MediaCarouselProps> = ({ projectKey }) => {
         {/* Media Display */}
         <div className={`relative ${isLinkedIn ? "w-[22rem] h-[22rem] sm:w-[42rem] sm:h-[42rem]" : "aspect-video"}`}>
           <AnimatePresence mode="wait">
-            {currentItem.type === "youtube" ? (
-              <motion.div
-                key={`youtube-${currentItem.videoId}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute inset-0"
-              >
-                <iframe
-                  src={`https://www.youtube.com/embed/${currentItem.videoId}?rel=0`}
-                  title="Project Demo Video"
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </motion.div>
-            ) : currentItem.type === "linkedin" ? (
+            {currentItem.type === "linkedin" ? (
               <motion.div
                 key={`linkedin-${currentItem.activityUrn}`}
                 initial={{ opacity: 0 }}
@@ -281,7 +256,7 @@ const MediaCarousel: React.FC<MediaCarouselProps> = ({ projectKey }) => {
                   ? "bg-gray-900 dark:bg-white w-4"
                   : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
               }`}
-              aria-label={`Go to ${item.type === "youtube" ? "video" : item.type === "linkedin" ? "LinkedIn post" : `image ${index}`}`}
+              aria-label={`Go to ${item.type === "linkedin" ? "LinkedIn post" : `image ${index}`}`}
             />
           ))}
         </div>

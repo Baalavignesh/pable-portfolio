@@ -1,6 +1,6 @@
 import { github_dark, github_light, gmail, linkedin, profilepic } from "../static";
 import Heading from "./heading";
-import resume from "../../../myresume.pdf";
+import resume from "../../../Resume  - Baalavignesh Arunachalam.pdf";
 import { motion } from "motion/react";
 
 const Profile = () => {

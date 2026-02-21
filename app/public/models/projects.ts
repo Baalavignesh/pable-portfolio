@@ -9,5 +9,6 @@ export interface IProject {
     when: string;
     github: string;
     other?: string;
+    youtube?: string;
     featured?: boolean;
   }

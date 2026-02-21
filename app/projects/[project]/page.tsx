@@ -3,7 +3,7 @@
 import tagToImage from "@/app/public/constants/project_tags";
 import { allProjects } from "@/app/public/constants/projects";
 import { IProject } from "@/app/public/models/projects";
-import { githubdark, githublight, devpost } from "@/app/public/static";
+import { devpostdark, devpostlight, youtubedark, youtubelight, projectgithubdark, projectgithublight } from "@/app/public/static";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Meteors } from "@/app/components/ui/meteors";
@@ -111,16 +111,29 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
               ))}
             </motion.div>
 
-            <div className="flex gap-3 mb-8 items-center">
+            <div className="flex gap-3 items-center">
+              {project.youtube && (
+                <motion.a
+                  href={project.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center justify-center px-6 py-2.5 bg-gray-900/5 dark:bg-white/10 rounded-lg transition-all duration-200 border-1 border-gray-900 dark:border-white"
+                >
+                  <img src={youtubelight.src} alt="YouTube" className="h-5 object-contain flex-shrink-0 dark:hidden" />
+                  <img src={youtubedark.src} alt="YouTube" className="h-5 object-contain flex-shrink-0 hidden dark:block" />
+                </motion.a>
+              )}
               {project.other && (
                 <motion.a
                   href={project.other}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-2.5 bg-transparent hover:bg-gray-900/5 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-lg text-lg font-medium transition-all duration-200 border-2 border-gray-900 dark:border-white"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-900/5 dark:bg-white/10 text-gray-900 dark:text-white rounded-lg text-lg font-medium transition-all duration-200 border-1 border-gray-900 dark:border-white"
                 >
-                  <img src={devpost.src} alt="DevPost" className="w-6 h-6 object-contain flex-shrink-0" />
+                  <img src={devpostlight.src} alt="DevPost" className="w-6 h-6 object-contain flex-shrink-0 dark:hidden" />
+                  <img src={devpostdark.src} alt="DevPost" className="w-6 h-6 object-contain flex-shrink-0 hidden dark:block" />
                   <span className="leading-none">DevPost</span>
                 </motion.a>
               )}
@@ -129,12 +142,16 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 px-8 py-2.5 bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 rounded-lg text-lg font-medium transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-900/5 dark:bg-white/10 text-gray-900 dark:text-white rounded-lg text-lg font-medium transition-all duration-200 border-1 border-gray-900 dark:border-white"
               >
-                <img src={githubdark.src} alt="GitHub" className="w-6 h-6 object-contain flex-shrink-0 dark:hidden" />
-                <img src={githublight.src} alt="GitHub" className="w-6 h-6 object-contain flex-shrink-0 hidden dark:block" />
+                <img src={projectgithublight.src} alt="GitHub" className="w-6 h-6 object-contain flex-shrink-0 dark:hidden" />
+                <img src={projectgithubdark.src} alt="GitHub" className="w-6 h-6 object-contain flex-shrink-0 hidden dark:block" />
                 <span className="leading-none">GitHub</span>
               </motion.a>
+            </div>
+
+            <div className="py-1">
+              <hr className="border-gray-200 dark:border-gray-800" />
             </div>
 
             {/* Media Carousel */}
