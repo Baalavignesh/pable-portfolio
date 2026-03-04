@@ -10,9 +10,10 @@ interface MediaCarouselProps {
 // LinkedIn post mapping (project key -> array of activity URNs)
 const linkedinPosts: Record<string, string[]> = {
   ByTime: [
-    "urn:li:activity:7416611638776111104",
-    "urn:li:activity:7417608651588145154",
+    "urn:li:activity:7434357534058008576",
     "urn:li:activity:7420574340066197506",
+    "urn:li:activity:7417608651588145154",
+    "urn:li:activity:7416611638776111104",
   ],
 };
 
