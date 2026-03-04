@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-/* helvetica */
-@import url('https://fonts.googleapis.com/css2?family=Helvetica:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -19,8 +17,7 @@
 body {
   color: var(--foreground);
   background-color: var(--background);
-  /* font-family: sfpro, sans-serif; */
-  font-family: "Helvetica", sans-serif;
+  font-family: "Atkinson Hyperlegible Next", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }

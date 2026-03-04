@@ -7,4 +7,5 @@ interface ISkillInfo {
     image: string;
     heading: string;
     subheading: string;
+    oneliner?: string;
 }

@@ -8,31 +8,37 @@ let myskills: ISkills = {
       image: reactjs.src,
       heading: "React",
       subheading: "Javascript Library",
+      oneliner: "Been using since 2019, still love the simplicity and flexibility",
     },
     {
       image: python.src,
       heading: "Python",
       subheading: "Programming Language",
+      oneliner: "All the scripting, lambdas and automiations.",
     },
     {
       image: node.src,
       heading: "Node.js",
       subheading: "JavaScript Runtime",
+      oneliner: "Backed? Say no more. Node.js with Express and TypeScript (trying out Bun right now)",
     },
     {
       image: ts.src,
       heading: "TypeScript",
       subheading: "JavaScript Superset",
+      oneliner: "Type safety, Type safety, Type safety, Type safety....",
     },
     {
       image: swift.src,
       heading: "Swift",
       subheading: "Programming Language",
+      oneliner: "Learning and building my first iOS app ByTime",
     },
     {
       image: postgresql.src,
       heading: "PostgreSQL",
       subheading: "Database",
+      oneliner: "Using PostgresSQL for the ByTime's backend",
     },
   ],
   other: [
