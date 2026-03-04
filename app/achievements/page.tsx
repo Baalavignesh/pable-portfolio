@@ -2,7 +2,6 @@
 
 import {
   badges,
-  certificates,
   hackathons,
 } from "../public/constants/achievements";
 import PageTemplate from "@/components/PageTemplate";
@@ -101,41 +100,6 @@ export default function Page() {
           </div>
         </motion.section>
 
-        {/* Certificates Section */}
-        <motion.section 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
-        >
-          <div className="border-b border-gray-200/50 dark:border-gray-800/50 mb-4">
-            <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">Certificates</h2>
-            <p className="text-gray-600 dark:text-gray-400 text-xs lg:text-sm mb-3">
-              Educational and professional certifications
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {certificates.map((certificate, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 + index * 0.1, duration: 0.3 }}
-                className="px-3 py-2 rounded-md border border-gray-200/50 dark:border-gray-800/50 hover:bg-gray-50/50 dark:hover:bg-dark-tertiary transition-all"
-              >
-                <h3 className="font-medium text-sm lg:text-base text-gray-900 dark:text-white">
-                  {certificate.title}
-                </h3>
-                <div className="flex items-center mt-1 gap-2">
-                  <p className="text-xs text-gray-600 dark:text-gray-400">
-                    {certificate.issuedBy} | {certificate.instructor}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
       </motion.div>
     </PageTemplate>
   );

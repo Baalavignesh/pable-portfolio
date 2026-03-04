@@ -13,7 +13,7 @@ interface IProjectCardProps {
   key: number;
 }
 
-type FilterCategory = "Featured" | "All" | "Web" | "Python" | "AWS" | "App" | "Extension";
+type FilterCategory = "Featured" | "All";
 
 const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
   const router = useRouter();
@@ -79,53 +79,11 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
 export default function Page() {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("Featured");
 
-  const filterCategories: FilterCategory[] = ["Featured", "All", "Web", "Python", "AWS", "App", "Extension"];
+  const filterCategories: FilterCategory[] = ["Featured", "All"];
 
-  // Filter logic based on tags - projects can appear in multiple categories
   const filterProjects = (category: FilterCategory) => {
     if (category === "Featured") return allProjects.filter((project) => project.featured === true);
-    if (category === "All") return allProjects;
-
-    return allProjects.filter((project) => {
-      const projectTags = project.tags.join(" ").toLowerCase();
-
-      switch (category) {
-        case "Web":
-          // Any project with React, Next.js, Node.js, JavaScript, TypeScript, HTML, Vite, Express
-          return project.tags.some((tag: string) =>
-            ["React", "Next.js", "Node.js", "JavaScript", "TypeScript", "HTML", "Vite", "Express.js"].includes(tag)
-          );
-
-        case "Python":
-          // Any project with Python or FastAPI
-          return project.tags.some((tag: string) =>
-            ["Python", "FastAPI"].includes(tag)
-          );
-
-        case "AWS":
-          // Any project with AWS or AWS services (S3, DynamoDB, Lambda, EC2, etc.)
-          return project.tags.some((tag: string) => tag === "AWS") ||
-                 projectTags.includes("s3") ||
-                 projectTags.includes("dynamodb") ||
-                 projectTags.includes("lambda") ||
-                 projectTags.includes("ec2");
-
-        case "App":
-          // Only Flutter or Swift tagged projects qualify as apps
-          return project.tags.some((tag: string) =>
-            ["Flutter", "Swift"].includes(tag)
-          );
-
-        case "Extension":
-          // Chrome Extension projects
-          return project.tags.some((tag: string) =>
-            tag === "Chrome Extension API" || tag.toLowerCase().includes("extension")
-          );
-
-        default:
-          return true;
-      }
-    });
+    return allProjects;
   };
 
   const filteredProjects = filterProjects(activeFilter);

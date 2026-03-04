@@ -24,43 +24,6 @@ const badges: Badge[] = [
   },
 ];
 
-const certificates: Certificate[] = [
-  {
-    title: "Kubernetes for the Absolute Beginners - Hands-on Tutorial",
-    issuedBy: "KodeKloud",
-    instructor: "Mumshad Mannambeth",
-  },
-  {
-    title: "Docker Training Course for the Absolute Beginner",
-    issuedBy: "KodeKloud",
-    instructor: "Mumshad Mannambeth",
-  },
-  {
-    title: "The Complete 2024 Web Development Bootcamp",
-    issuedBy: "Udemy",
-    instructor: "Dr. Angela Yu",
-  },
-  {
-    title: "AWS Certified Solutions Architect – Associate",
-    issuedBy: "Amazon Web Services",
-    instructor: "Amazon Web Services",
-  },
-  {
-    title: "AWS Certified Cloud Practitioner",
-    issuedBy: "Amazon Web Services",
-    instructor: "Amazon Web Services",
-  },
-  {
-    title: "Microsoft Excel - From Beginner to Expert in 6 Hours",
-    issuedBy: "Udemy",
-    instructor: "Todd McLeod",
-  },
-  {
-    title: "Blockchain Basics",
-    issuedBy: "Coursera",
-    instructor: "University at Buffalo",
-  },
-];
 
 const hackathons: Hackathon[] = [
   {
@@ -89,4 +52,4 @@ const hackathons: Hackathon[] = [
   },
 ];
 
-export { badges, certificates, hackathons };
+export { badges, hackathons };

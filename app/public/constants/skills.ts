@@ -10,11 +10,6 @@ let myskills: ISkills = {
       subheading: "Javascript Library",
     },
     {
-      image: aws.src,
-      heading: "AWS",
-      subheading: "Cloud Services",
-    },
-    {
       image: python.src,
       heading: "Python",
       subheading: "Programming Language",
@@ -24,17 +19,10 @@ let myskills: ISkills = {
       heading: "Node.js",
       subheading: "JavaScript Runtime",
     },
-
     {
       image: ts.src,
       heading: "TypeScript",
       subheading: "JavaScript Superset",
-    },
-
-    {
-      image: terraform.src,
-      heading: "Terraform",
-      subheading: "Infrastructure as Code",
     },
     {
       image: swift.src,
@@ -42,33 +30,37 @@ let myskills: ISkills = {
       subheading: "Programming Language",
     },
     {
+      image: postgresql.src,
+      heading: "PostgreSQL",
+      subheading: "Database",
+    },
+  ],
+  other: [
+    {
+      image: terraform.src,
+      heading: "Terraform",
+      subheading: "Infrastructure as Code",
+    },
+    {
       image: docker.src,
       heading: "Docker",
-      subheading: "Containerization Platform"
+      subheading: "Containerization Platform",
     },
     {
       image: kubernetes.src,
       heading: "Kubernetes",
-      subheading: "Container Orchestration"
+      subheading: "Container Orchestration",
     },
     {
-      image: git.src,
-      heading: "Git",
-      subheading: "Version Control",
-    },
-    {
-      image: nextjs.src,
-      heading: "NextJs",
-      subheading: "React Framework",
+      image: aws.src,
+      heading: "AWS",
+      subheading: "Cloud Services",
     },
     {
       image: mysql.src,
       heading: "MySQL",
       subheading: "Database",
     },
-
-  ],
-  other: [
     {
       image: firebase.src,
       heading: "Firebase",
@@ -89,7 +81,6 @@ let myskills: ISkills = {
       heading: "MongoDB",
       subheading: "Database",
     },
-
     {
       image: redux.src,
       heading: "Redux",
@@ -110,13 +101,6 @@ let myskills: ISkills = {
       heading: ".NET",
       subheading: "Framework",
     },
-    
-    {
-      image: postgresql.src,
-      heading: "PostgreSQL",
-      subheading: "Database",
-    },
-
   ],
 };
 
@@ -128,17 +112,16 @@ export default myskills;
 export const portlang = [
   // Languages
   { name: "TypeScript", color: "bg-indigo-600" },
+  { name: "React", color: "bg-indigo-600" },
   { name: "Python", color: "bg-indigo-600" },
-  { name: "Swift", color: "bg-indigo-600" },
   { name: "Node.js", color: "bg-indigo-600" },
-  { name: "MySQL", color: "bg-indigo-500" },
+  { name: "Swift", color: "bg-indigo-600" },
+  { name: "MySQL", color: "bg-indigo-600" },
 
   // Skills
-  { name: "React", color: "bg-emerald-500" },
-  { name: "Next.js", color: "bg-emerald-500" },
   { name: "AWS", color: "bg-emerald-500" },
   { name: "Docker", color: "bg-emerald-500" },
   { name: "Terraform", color: "bg-emerald-500" },
-  { name: "MongoDB", color: "bg-emerald-500" },
+  // { name: "MongoDB", color: "bg-emerald-500" },
   
 ];
