@@ -39,18 +39,6 @@ let experience: IExperience[] = [
     url: "https://www.linkedin.com/company/presidio-/posts/?feedView=all"
   },
   {
-    company: "Presidio",
-    role: "Software Engineer Intern",
-    type: "Internship",
-    location: "Chennai, Tamil Nadu, India",
-    duration: "Mar 2023 - Aug 2023",
-    length: "6 months",
-    description: "Completed foundational training in C#, Azure, GIT, and mobile app development, gaining a solid understanding of these technologies. Utilized this knowledge to develop and implement several internal applications for the organization, improving operational efficiency and streamlining internal processes.",
-    skills: ["Amazon Web Services (AWS)", "React.js"],
-    logo: presidio.src,
-    url: "https://www.linkedin.com/company/presidio-/posts/?feedView=all"
-  },
-  {
     company: "Toast",
     role: "Software Engineer Intern",
     type: "Internship",
