@@ -22,7 +22,7 @@ export default function Page() {
             className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
           >
             <h2 className="text-lg lg:text-xl font-bold mb-1 text-gray-900 dark:text-white">Daily Stack</h2>
-    <p className="text-sm lg:text-base font-bold mb-3 text-gray-100 dark:text-gray-500">The bread and butter that I eat everyday</p>
+    <p className="text-sm lg:text-base mb-3 text-gray-500 dark:text-gray-500">The bread and butter that I eat everyday</p>
             <div className="flex flex-col">
               {myskills.daily.map((skill, index) => (
                 <motion.div
@@ -55,8 +55,8 @@ export default function Page() {
             transition={{ delay: 0.3, duration: 0.3 }}
             className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
           >
-            <h2 className="text-md font-normal mb-3 text-gray-900 dark:text-gray-200">Other Technologies</h2>
-              <p className="text-sm lg:text-base mb-3 text-gray-500 dark:text-gray-500">Tech Stack that I have worked with during my past projects, work and internship</p>
+            <h2 className="text-lg lg:text-xl font-bold mb-1 text-gray-900 dark:text-white">Other Technologies</h2>
+              <p className="text-sm lg:text-base mb-7 text-gray-500 dark:text-gray-500">Tech Stack that I have worked with during my past projects, work and internship</p>
             <div className="flex flex-wrap gap-2">
               {myskills.other.map((skill, index) => (
                 <motion.span

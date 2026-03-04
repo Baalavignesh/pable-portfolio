@@ -2,14 +2,14 @@ import { IProject } from "../models/projects";
 
 let allProjects: IProject[] = [
   {
-    title: "BuyTime",
-    key: "BuyTime",
-    description: "BuyTime is an iOS productivity app that revolutionizes screen time management through an innovative 'earned time' system. Users complete tasks to unlock screen time, turning productivity into a rewarding habit rather than a restriction.",
+    title: "ByTime",
+    key: "ByTime",
+    description: "ByTime is an iOS productivity app that revolutionizes screen time management through an innovative 'earned time' system. Users complete tasks to unlock screen time, turning productivity into a rewarding habit rather than a restriction.",
     tags: ["Swift", "Screen Time API", "FamilyControls"],
-    inspiration: "Traditional screen time apps rely on restrictions and guilt, which often backfire. BuyTime was inspired by the idea of flipping the script—making screen time something you earn through accomplishment, creating a positive feedback loop between productivity and leisure.",
+    inspiration: "Traditional screen time apps rely on restrictions and guilt, which often backfire. ByTime was inspired by the idea of flipping the script—making screen time something you earn through accomplishment, creating a positive feedback loop between productivity and leisure.",
     technologies: "Built natively for iOS using Swift and SwiftUI. Integrates Apple's Screen Time API and FamilyControls framework for app blocking, DeviceActivityEvent tracking for monitoring usage, and Live Activities for real-time progress display on the lock screen and Dynamic Island.",
-    what: "BuyTime lets users set daily tasks and goals. As tasks are completed, users earn screen time for their favorite apps. The app tracks progress in real-time through Live Activities, manages app restrictions seamlessly through FamilyControls, and uses a custom aggregation algorithm to calculate earned time based on task completion.",
-    github: "https://github.com/Baalavignesh/BuyTime",
+    what: "ByTime lets users set daily tasks and goals. As tasks are completed, users earn screen time for their favorite apps. The app tracks progress in real-time through Live Activities, manages app restrictions seamlessly through FamilyControls, and uses a custom aggregation algorithm to calculate earned time based on task completion.",
+    github: "https://github.com/Baalavignesh/ByTime",
     when: "2026",
     featured: true,
   },

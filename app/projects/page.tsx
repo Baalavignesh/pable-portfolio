@@ -18,7 +18,7 @@ type FilterCategory = "Featured" | "All";
 const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
   const router = useRouter();
 
-  const isBuyTime = project.key === "BuyTime";
+  const isByTime = project.key === "ByTime";
 
   return (
     <motion.div
@@ -27,7 +27,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
       whileHover={{ y: -2, transition: { duration: 0.15 } }}
       onClick={() => router.push(`/projects/${project.key}`)}
       className={`relative bg-white dark:bg-neutral-950 rounded-xl p-6 border cursor-pointer group min-h-[300px] flex flex-col transition-colors ${
-        isBuyTime
+        isByTime
           ? "border-emerald-500 dark:border-emerald-400"  
           : "border-gray-200 dark:border-neutral-800 hover:border-gray-300 dark:hover:border-neutral-700"
       }`}

@@ -13,7 +13,7 @@ const AboutMe = () => {
       <p className="text-lg pt-2 text-gray-500 dark:text-gray-400">
         Full-stack developer with professional experience in cloud computing,
         web, and app development. Proficient in designing scalable solutions
-        and collaborating effectively within teams. Currently shipping BuyTime in Swift—a productivity tool that syncs screen-time limits across devices. 
+        and collaborating effectively within teams. Currently shipping ByTime in Swift—a productivity tool that syncs screen-time limits across devices. 
       </p>
     </motion.div>
   );
