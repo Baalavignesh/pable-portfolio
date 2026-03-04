@@ -76,19 +76,19 @@ let experience: IExperience[] = [
     logo: faaster.src,
     url: "https://www.linkedin.com/company/vyazhan-technologies/about/"
   },
-  {
-    company: "Zoho Corporation",
-    role: "Web Development Intern",
-    type: "Internship",
-    location: "Chennai, Tamil Nadu, India",
-    duration: "May 2019 - May 2019",
-    length: "1 month",
-    description:
-      "Built an end-to-end Node.js app to send push notifications to users. Developed a web plugin to generate customized thumbnails of images",
-    skills: ["Node.js"],
-    logo: zoho.src,
-    url: "https://www.linkedin.com/company/zoho/posts/?feedView=all"
-  },
+  // {
+  //   company: "Zoho Corporation",
+  //   role: "Web Development Intern",
+  //   type: "Internship",
+  //   location: "Chennai, Tamil Nadu, India",
+  //   duration: "May 2019 - May 2019",
+  //   length: "1 month",
+  //   description:
+  //     "Built an end-to-end Node.js app to send push notifications to users. Developed a web plugin to generate customized thumbnails of images",
+  //   skills: ["Node.js"],
+  //   logo: zoho.src,
+  //   url: "https://www.linkedin.com/company/zoho/posts/?feedView=all"
+  // },
 ];
 
 export default experience;
