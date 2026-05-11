@@ -8,7 +8,6 @@ import {
 import Heading from "./heading";
 import resume from "../../../Resume  - Baalavignesh Arunachalam.pdf";
 import { motion } from "motion/react";
-import { BorderBeam } from "@/app/components/ui/border-beam";
 import { MetalFx } from "metal-fx";
 
 const Profile = () => {
@@ -62,7 +61,7 @@ const Profile = () => {
         variant="button"
         theme="dark"
         strength={0.7}
-        className="w-full rounded-lg mt-2"
+        className="w-full rounded-lg mt-2 mb-2"
       >
         <motion.a
           initial={{ opacity: 0 }}

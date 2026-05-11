@@ -1,30 +1,29 @@
 "use client";
 
-import {
-  badges,
-  hackathons,
-} from "../public/constants/achievements";
+import { badges, hackathons } from "../public/constants/achievements";
 import PageTemplate from "@/components/PageTemplate";
 import { motion } from "motion/react";
 
 export default function Page() {
   return (
     <PageTemplate heading="Achievements">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="flex flex-col gap-6 w-full"
       >
         {/* Badges Section */}
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
           className="bg-white dark:bg-dark-secondary rounded-lg p-4 border border-gray-300 dark:border-gray-800/50 shadow-sm dark:shadow-lg dark:shadow-black/10"
         >
           <div className="border-b border-gray-200/50 dark:border-gray-800/50 mb-4">
-            <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">Professional Badges</h2>
+            <h2 className="text-lg lg:text-xl font-medium mb-1 text-gray-900 dark:text-white">
+              Professional Badges
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 text-xs lg:text-sm mb-3">
               Certifications and professional achievements
             </p>
@@ -32,7 +31,7 @@ export default function Page() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {badges.map((badge, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -51,7 +50,7 @@ export default function Page() {
         </motion.section>
 
         {/* Hackathons Section */}
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
@@ -71,13 +70,15 @@ export default function Page() {
 
           <div className="grid grid-cols-1 gap-4">
             {hackathons.map((hackathon, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 + index * 0.1, duration: 0.3 }}
-                className={`flex flex-col sm:flex-row gap-4 p-4 rounded-lg border border-gray-200/50 dark:border-gray-800/50 hover:bg-gray-50/50 dark:hover:bg-dark-tertiary transition-all ${hackathon.link ? 'cursor-pointer hover:border-amber-500/50' : ''}`}
-                onClick={() => hackathon.link && window.open(hackathon.link, "_blank")}
+                className={`flex flex-col sm:flex-row gap-4 p-4 rounded-lg border border-gray-200/50 dark:border-gray-800/50 hover:bg-gray-50/50 dark:hover:bg-dark-tertiary transition-all ${hackathon.link ? "cursor-pointer hover:border-amber-500/50" : ""}`}
+                onClick={() =>
+                  hackathon.link && window.open(hackathon.link, "_blank")
+                }
               >
                 <div className="sm:w-1/3">
                   <h3 className="font-medium text-sm lg:text-base text-gray-900 dark:text-white">
@@ -99,7 +100,6 @@ export default function Page() {
             ))}
           </div>
         </motion.section>
-
       </motion.div>
     </PageTemplate>
   );

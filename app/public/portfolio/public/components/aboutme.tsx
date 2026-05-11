@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const AboutMe = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -11,9 +11,10 @@ const AboutMe = () => {
     >
       <Heading heading="About Me"></Heading>
       <p className="text-lg pt-2 text-gray-500 dark:text-gray-400">
-        Full-stack developer with professional experience in cloud computing,
-        web, and app development. Proficient in designing scalable solutions
-        and collaborating effectively within teams. Currently shipping ByTime in Swift—a productivity tool that syncs screen-time limits across devices. 
+        Full-stack developer with 2+ years professional experience in cloud
+        computing, web, and app development. Proficient in designing scalable
+        solutions and collaborating effectively. Currently shipping ByTime in
+        Swift, a productivity tool that syncs screen-time limits across devices.
       </p>
     </motion.div>
   );

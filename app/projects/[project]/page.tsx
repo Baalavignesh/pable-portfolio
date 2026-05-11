@@ -17,7 +17,6 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Meteors } from "@/app/components/ui/meteors";
 import MediaCarousel from "@/components/MediaCarousel";
-import { BorderBeam } from "@/app/components/ui/border-beam";
 import { MetalFx } from "metal-fx";
 
 interface IndividualProjectProps {
@@ -200,7 +199,7 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                   <img
                     src={appstoreimg.src}
                     alt="Download on the App Store"
-                    className="h-10 object-contain"
+                    className="h-12 object-contain"
                   />
                 </motion.a>
               )}
@@ -209,14 +208,14 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                   preset="silver"
                   variant="button"
                   theme="dark"
-                  strength={0.7}
-                  className="rounded-lg mt-2  hover:scale-[102%] transition-all duration-300 ease-in"
+                  strength={1}
+                  className="rounded-lg mt-2  hover:scale-[] transition-all duration-300 ease-in"
                 >
                   <motion.a
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 0.3 }}
-                    className="relative overflow-hidden p-2 text-center block text-white"
+                    className="relative overflow-hidden p-3 text-center block text-white font-bold px-6"
                     href={project.website}
                     target="_blank"
                     rel="noreferrer"
