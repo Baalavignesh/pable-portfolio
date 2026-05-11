@@ -1,11 +1,19 @@
-import { github_dark, github_light, gmail, linkedin, profilepic } from "../static";
+import {
+  github_dark,
+  github_light,
+  gmail,
+  linkedin,
+  profilepic,
+} from "../static";
 import Heading from "./heading";
 import resume from "../../../Resume  - Baalavignesh Arunachalam.pdf";
 import { motion } from "motion/react";
+import { BorderBeam } from "@/app/components/ui/border-beam";
+import { MetalFx } from "metal-fx";
 
 const Profile = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -18,7 +26,7 @@ const Profile = () => {
         src={profilepic.src}
         className="w-56 h-56 mt-4 rounded-full object-cover border-gray-200/50 dark:border-gray-700/50 border-2 self-center"
       />
-      <motion.p 
+      <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.3 }}
@@ -26,7 +34,7 @@ const Profile = () => {
       >
         Baalavignesh A
       </motion.p>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.3 }}
@@ -34,58 +42,83 @@ const Profile = () => {
       >
         <p>George Mason University</p>
         <p>Masters in Computer Science</p>
-        <p className="text-blue-500 dark:text-blue-500 font-medium text-md">3x Hackathon Winner</p>
+        <p className="text-blue-500 dark:text-blue-500 font-medium text-md">
+          3x Hackathon Winner
+        </p>
       </motion.div>
       <motion.a
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.3 }}
-        className="p-2 text-center outline outline-1 mb-2 h-fit text-lg outline-gray-300/50 dark:outline-gray-700/50 rounded-lg w-full cursor-pointer dark:bg-white bg-gray-900 text-white dark:text-gray-900 dark:hhover:bg-gray-50 over:bg-dark-primary transition-all duration-300 mt-0"
+        className="relative overflow-hidden p-2 text-center outline outline-1 mb-2 h-fit text-lg outline-gray-300 dark:outline-gray-700/50 rounded-lg w-full cursor-pointer dark:bg-white bg-gray-100 text-black dark:text-gray-900 dark:hhover:bg-gray-50 over:bg-dark-primary transition-all duration-300 mt-0"
         href={resume}
         target="_blank"
         rel="noreferrer"
       >
         Resume
       </motion.a>
-      <motion.a
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.3 }}
-        className="p-2 text-center outline outline-1 h-fit text-lg outline-white/50 dark:outline-gray-800/50 rounded-lg w-full mb-4 cursor-pointer dark:bg-black bg-white dark:text-white text-gray-900  dark:hover:bg-dark-tertiary hover:bg-white  transition-all duration-300 mt-2 border-gray-300/50 dark:border-gray-800/50 border"
-        onClick={(e) => {
-          window.location.href = "mailto:baalavignesh21@gmail.com";
-          e.preventDefault();
-        }}
+      <MetalFx
+        preset="silver"
+        variant="button"
+        theme="dark"
+        strength={0.7}
+        className="w-full rounded-lg mt-2"
       >
-        Contact Me
-      </motion.a>
+        <motion.a
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.3 }}
+          className="relative overflow-hidden p-2 w-full text-center block text-white"
+          href="https://bytimeapp.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          ByTime: Time Hub
+        </motion.a>
+      </MetalFx>
 
-      <motion.hr 
+      <motion.hr
         initial={{ opacity: 0, scaleX: 0 }}
         animate={{ opacity: 1, scaleX: 1 }}
         transition={{ delay: 0.6, duration: 0.3 }}
-        className=" w-full border-gray-200/50 dark:border-gray-800/50" 
+        className=" w-full border-gray-200/50 dark:border-gray-800/50 mt-4"
       />
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.3 }}
         className="text-base flex flex-row gap-6 justify-center w-full mt-4"
       >
         {[
-          { icon: github_light, text: "Baalavignesh A", url: "https://github.com/Baalavignesh" },
-          { icon: linkedin, text: "Baalavignesh Arunachalam", url: "https://www.linkedin.com/in/baalavignesh21/" },
-          { icon: gmail, text: "baalavignesh21@gmail.com", url: "mailto:baalavignesh21@gmail.com" }
+          {
+            icon: github_light,
+            text: "Baalavignesh A",
+            url: "https://github.com/Baalavignesh",
+          },
+          {
+            icon: linkedin,
+            text: "Baalavignesh Arunachalam",
+            url: "https://www.linkedin.com/in/baalavignesh21/",
+          },
+          {
+            icon: gmail,
+            text: "baalavignesh21@gmail.com",
+            url: "mailto:baalavignesh21@gmail.com",
+          },
         ].map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 + (index * 0.1), duration: 0.3 }}
+            transition={{ delay: 0.5 + index * 0.1, duration: 0.3 }}
             className="flex gap-2 items-center cursor-pointer   dark:hover:text-white "
             onClick={() => item.url !== "#" && window.open(item.url)}
           >
-            <img src={item.icon.src } className={`w-12 h-12 ${item.icon === linkedin ? "bg-white rounded-md" : ""}  ${item.text === "Baalavignesh A" ? "dark:invert" : ""}`} alt="" />
+            <img
+              src={item.icon.src}
+              className={`w-12 h-12 ${item.icon === linkedin ? "bg-white rounded-md" : ""}  ${item.text === "Baalavignesh A" ? "dark:invert" : ""}`}
+              alt=""
+            />
             {/* <span>{item.text}</span> */}
           </motion.div>
         ))}

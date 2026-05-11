@@ -3,11 +3,22 @@
 import tagToImage from "@/app/public/constants/project_tags";
 import { allProjects } from "@/app/public/constants/projects";
 import { IProject } from "@/app/public/models/projects";
-import { devpostdark, devpostlight, youtubedark, youtubelight, projectgithubdark, projectgithublight } from "@/app/public/static";
+import {
+  devpostdark,
+  devpostlight,
+  youtubedark,
+  youtubelight,
+  projectgithubdark,
+  projectgithublight,
+  appstoreimg,
+  bytimeicon,
+} from "@/app/public/static";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Meteors } from "@/app/components/ui/meteors";
 import MediaCarousel from "@/components/MediaCarousel";
+import { BorderBeam } from "@/app/components/ui/border-beam";
+import { MetalFx } from "metal-fx";
 
 interface IndividualProjectProps {
   params: {
@@ -20,7 +31,9 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    const foundProject = allProjects.find((proj) => proj.key === params.project);
+    const foundProject = allProjects.find(
+      (proj) => proj.key === params.project,
+    );
     setProject(foundProject);
     setIsLoaded(true);
   }, [params.project]);
@@ -30,7 +43,9 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
   }
 
   if (!project) {
-    return <div className="text-gray-900 dark:text-white">Project not found</div>;
+    return (
+      <div className="text-gray-900 dark:text-white">Project not found</div>
+    );
   }
 
   return (
@@ -120,8 +135,16 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center justify-center px-6 py-2.5 bg-gray-900/5 dark:bg-white/10 rounded-lg transition-all duration-200 border-1 border-gray-900 dark:border-white"
                 >
-                  <img src={youtubelight.src} alt="YouTube" className="h-5 object-contain flex-shrink-0 dark:hidden" />
-                  <img src={youtubedark.src} alt="YouTube" className="h-5 object-contain flex-shrink-0 hidden dark:block" />
+                  <img
+                    src={youtubelight.src}
+                    alt="YouTube"
+                    className="h-5 object-contain flex-shrink-0 dark:hidden"
+                  />
+                  <img
+                    src={youtubedark.src}
+                    alt="YouTube"
+                    className="h-5 object-contain flex-shrink-0 hidden dark:block"
+                  />
                 </motion.a>
               )}
               {project.other && (
@@ -132,22 +155,76 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-900/5 dark:bg-white/10 text-gray-900 dark:text-white rounded-lg text-lg font-medium transition-all duration-200 border-1 border-gray-900 dark:border-white"
                 >
-                  <img src={devpostlight.src} alt="DevPost" className="w-6 h-6 object-contain flex-shrink-0 dark:hidden" />
-                  <img src={devpostdark.src} alt="DevPost" className="w-6 h-6 object-contain flex-shrink-0 hidden dark:block" />
+                  <img
+                    src={devpostlight.src}
+                    alt="DevPost"
+                    className="w-6 h-6 object-contain flex-shrink-0 dark:hidden"
+                  />
+                  <img
+                    src={devpostdark.src}
+                    alt="DevPost"
+                    className="w-6 h-6 object-contain flex-shrink-0 hidden dark:block"
+                  />
                   <span className="leading-none">DevPost</span>
                 </motion.a>
               )}
-              <motion.a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-900/5 dark:bg-white/10 text-gray-900 dark:text-white rounded-lg text-lg font-medium transition-all duration-200 border-1 border-gray-900 dark:border-white"
-              >
-                <img src={projectgithublight.src} alt="GitHub" className="w-6 h-6 object-contain flex-shrink-0 dark:hidden" />
-                <img src={projectgithubdark.src} alt="GitHub" className="w-6 h-6 object-contain flex-shrink-0 hidden dark:block" />
-                <span className="leading-none">GitHub</span>
-              </motion.a>
+              {project.github && (
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-900/5 dark:bg-white/10 text-gray-900 dark:text-white rounded-lg text-lg font-medium transition-all duration-200 border-1 border-gray-900 dark:border-white"
+                >
+                  <img
+                    src={projectgithublight.src}
+                    alt="GitHub"
+                    className="w-6 h-6 object-contain flex-shrink-0 dark:hidden"
+                  />
+                  <img
+                    src={projectgithubdark.src}
+                    alt="GitHub"
+                    className="w-6 h-6 object-contain flex-shrink-0 hidden dark:block"
+                  />
+                  <span className="leading-none">GitHub</span>
+                </motion.a>
+              )}
+              {project.appstore && (
+                <motion.a
+                  href={project.appstore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center justify-center mt-2 mr-2"
+                >
+                  <img
+                    src={appstoreimg.src}
+                    alt="Download on the App Store"
+                    className="h-10 object-contain"
+                  />
+                </motion.a>
+              )}
+              {project.website && (
+                <MetalFx
+                  preset="silver"
+                  variant="button"
+                  theme="dark"
+                  strength={0.7}
+                  className="rounded-lg mt-2  hover:scale-[102%] transition-all duration-300 ease-in"
+                >
+                  <motion.a
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
+                    className="relative overflow-hidden p-2 text-center block text-white"
+                    href={project.website}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    ByTime: Time Hub
+                  </motion.a>
+                </MetalFx>
+              )}
             </div>
 
             <div className="py-1">
@@ -170,7 +247,7 @@ const IndividualProject: React.FC<IndividualProjectProps> = ({ params }) => {
             transition={{ duration: 0.2, delay: 0.8 }}
             className="flex flex-col gap-6 w-full py-6 pt-0"
           >
-                      <div className="border-t border-gray-200 dark:border-gray-800 mt-4"></div>
+            <div className="border-t border-gray-200 dark:border-gray-800 mt-4"></div>
 
             <div>
               <h3 className="text-2xl md:text-4xl font-bold py-4 text-gray-900 dark:text-white leading-tight max-w-4xl">

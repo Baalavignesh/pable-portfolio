@@ -7,7 +7,9 @@ export interface IProject {
     what: string;
     technologies:  string;
     when: string;
-    github: string;
+    github?: string;
+    website?: string;
+    appstore?: string;
     other?: string;
     youtube?: string;
     featured?: boolean;

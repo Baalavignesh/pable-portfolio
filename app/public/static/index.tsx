@@ -11,7 +11,10 @@ import devpostlight from "./project/devpost_light.svg";
 import projectgithubdark from "./project/github_dark.svg";
 import projectgithublight from "./project/github_light.svg";
 
-export { youtubedark, youtubelight, devpostdark, devpostlight, projectgithubdark, projectgithublight };
+import appstoreimg from "./project/AppStore.png";
+import bytimeicon from "./project/mainscreen.png";
+
+export { youtubedark, youtubelight, devpostdark, devpostlight, projectgithubdark, projectgithublight, appstoreimg, bytimeicon };
 
 import zoho from "./experience/zoho.png";
 import presidio from "./experience/presidio.png";
