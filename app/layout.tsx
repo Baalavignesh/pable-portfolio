@@ -9,8 +9,33 @@ config.autoAddCss = false;
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Baalavignesh A  | Portfolio",
-  description: "brrr",
+  title: "Baalavignesh A | Software Engineer",
+  description:
+    "Portfolio of Baalavignesh A — Software Engineer specializing in full-stack development, mobile apps, and AI-powered products.",
+  metadataBase: new URL("https://baalavignesh.com"),
+  openGraph: {
+    title: "Baalavignesh A | Software Engineer",
+    description:
+      "Portfolio of Baalavignesh A — Software Engineer specializing in full-stack development, mobile apps, and AI-powered products.",
+    url: "https://baalavignesh.com",
+    siteName: "Baalavignesh A",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Baalavignesh A | Software Engineer",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Baalavignesh A | Software Engineer",
+    description:
+      "Portfolio of Baalavignesh A — Software Engineer specializing in full-stack development, mobile apps, and AI-powered products.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function RootLayout({

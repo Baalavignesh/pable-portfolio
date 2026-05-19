@@ -113,7 +113,7 @@ let myskills: ISkills = {
 export default myskills;
 
 // Simplified skills array for home page display
-// Convention: Languages first, then skills. 
+// Convention: Languages first, then skills.
 // All languages -> bg-indigo-600; all skills -> bg-emerald-500
 export const portlang = [
   // Languages
@@ -129,5 +129,5 @@ export const portlang = [
   { name: "Docker", color: "bg-emerald-500" },
   { name: "Terraform", color: "bg-emerald-500" },
   // { name: "MongoDB", color: "bg-emerald-500" },
-  
+
 ];
