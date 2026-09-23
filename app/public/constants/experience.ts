@@ -10,6 +10,13 @@ let experience: IExperience[] = [
     duration: "Aug 2025 - Present",
     length: "2 months",
     description: "Researching game theory applications using Multi-Agent Reinforcement Learning (MARL) with Python and RLlib, implementing Q-learning algorithms to model strategic interactions in competitive business environments. Investigating the Bertrand competition model through experimental simulations to analyze pricing strategies, Nash equilibrium convergence, and market dynamics in various scenarios.",
+    bullets: [
+      "Built a Q-learning simulation framework modeling Bertrand price competition between two firms across parallel markets, implementing the full economic model (demand functions, profit functions, Nash equilibrium benchmarks) and a custom convergence-detection algorithm",
+      "Designed and ran an 'algorithmic collusion' experiment showing Q-learning agents tacitly converge to supra-competitive prices above the Bertrand-Nash equilibrium, including a post-convergence undercut experiment to test deviation incentives",
+      "Developed a multi-agent LLM simulation on Google DeepMind's Concordia framework, modeling a two-stage cyber-conflict wargame (9 subgames + a 3x3 meta-game) to test whether LLM-backed agents' strategic decisions align with formal game-theoretic equilibria",
+      "Implemented five distinct agent decision-making personas (rational expected-utility, bounded-rational/satisficing, prospect-theory, hawkish, retaliatory) and built cross-play infrastructure to run asymmetric matchups between mismatched agent types",
+      "Built supporting research tooling including a parallelized batch simulator (multiprocessing), a results dashboard (React), and configurable LLM backends (Ollama, Gemini) for running experiments locally and in the cloud",
+    ],
     skills: ["Python", "Multi-Agent Reinforcement Learning", "RLlib", "Game Theory"],
     logo: gmu.src,
     url: "https://www.gmu.edu/"
@@ -22,6 +29,13 @@ let experience: IExperience[] = [
     duration: "May 2025 - Aug 2025",
     length: "4 months",
     description: "Building a serverless multilingual content platform using AWS Lambda/API Gateway with automated scaling. Implemented Terraform/GitHub Actions for AWS environments and optimized DynamoDB schemas with secondary indexes for improved query performance.",
+    bullets: [
+      "Architected and built the complete cloud infrastructure (frontend, backend, and AWS resources) from the ground up as an early engineering hire, standing up dev and production environments end-to-end",
+      "Designed a CI/CD pipeline using GitHub Actions and Terraform, so every push automatically deployed infrastructure-as-code changes across both environments with zero manual provisioning",
+      "Built the video processing pipeline for an AI dubbing product, orchestrating lip-sync generation (AWS SageMaker), audio translation, and transcription through AWS Step Functions",
+      "Integrated and deployed open-source lip-sync models on SageMaker, adapting third-party GitHub packages into a production-ready cloud inference workflow",
+      "Optimized DynamoDB schemas with secondary indexes to improve query performance across the platform",
+    ],
     skills: ["Amazon Web Services (AWS)", "Terraform", "Next.js"],
     logo: motate.src,
     url: "https://www.linkedin.com/company/motate-us/posts/?feedView=all"
@@ -34,6 +48,13 @@ let experience: IExperience[] = [
     duration: "Sep 2023 - Jul 2024",
     length: "11 months",
     description:"Developed internal learning platforms and retro tools using React and AWS with a serverless approach. Worked on projects involving WebRTC, CI/CD pipeline design, and mobile app development. Gained hands-on experience with Azure, DevOps, Flutter, Kotlin, AWS, and React Native through various trainings and projects.",
+    bullets: [
+      "Built an internal employee recognition/awards platform with a multi-cloud architecture -- Azure AD/SSO for authentication, AWS (Lambda, database, microservices) for the backend",
+      "Developed the awards platform's backend as Node.js microservices on AWS Lambda, with a React frontend for viewing award history, recipients, and award dates",
+      "Contributed to internal enterprise tooling, including a learning platform and other retro tools, alongside the awards system",
+      "Gained hands-on experience with CI/CD pipeline design and mobile app development (Flutter, Kotlin, React Native) through internal trainings and projects",
+      "Worked on the Sorenson client engagement as part of the Mercury team -- using WebRTC to reproduce reported bugs, perform root-cause analysis, and deliver fixes for production issues",
+    ],
     skills: ["Amazon Web Services (AWS)", "React.js"],
     logo: presidio.src,
     url: "https://www.linkedin.com/company/presidio-/posts/?feedView=all"
